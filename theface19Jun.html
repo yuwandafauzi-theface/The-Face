@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The FACE — Before You Vote | DPR RI 2024-2029</title>
+<meta name="description" content="Platform akuntabilitas politisi Indonesia. Cari profil, lacak janji, pantau transparansi wakil rakyatmu."/>
+<meta property="og:title" content="The FACE — Before You Vote"/>
+<meta property="og:description" content="Kenali wakil rakyatmu sebelum kamu coblos."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#E8241C;--red-soft:#FDECEA;
+  --navy:#0D1B2E;--navy-soft:#EEF1F5;
+  --ink:#1A1A1A;--muted:#6B6B6B;
+  --rule:#E0DDD8;--rule-md:#C8C4BE;
+  --surface:#F8F6F3;--bg:#FFFFFF;
+  --green:#166534;--green-soft:#DCFCE7;
+  --amber:#92400E;--amber-soft:#FEF3C7;
+  --ff-serif:'Playfair Display',Georgia,serif;
+  --ff-sans:'Inter',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-sans);color:var(--ink);background:var(--bg);min-height:100vh}
+.topbar{background:var(--navy);padding:6px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.topbar-l{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.5px}
+.topbar-r{display:flex;gap:14px}
+.topbar-r span{font-size:11px;color:rgba(255,255,255,.5);cursor:pointer;display:flex;align-items:center;gap:4px;transition:color .15s}
+.topbar-r span:hover{color:#fff}
+.admin-pill{background:rgba(232,36,28,.25);color:#FF8A84;padding:3px 10px;border-radius:3px}
+.admin-pill:hover{background:var(--red);color:#fff}
+.masthead{border-bottom:3px solid var(--navy);padding:14px 24px 0;background:var(--bg)}
+.mast-top{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid var(--rule-md)}
+.logo-wrap{display:flex;align-items:flex-end}
+.logo-the{font-family:var(--ff-serif);font-style:italic;font-size:32px;font-weight:700;color:var(--red);margin-right:3px;line-height:1}
+.logo-face{font-family:var(--ff-serif);font-size:46px;font-weight:900;color:var(--red);letter-spacing:-1.5px;line-height:1}
+.logo-tag{font-size:10px;font-weight:700;letter-spacing:2.5px;color:var(--navy);text-transform:uppercase;padding-bottom:9px;margin-left:9px}
+.mast-right{display:flex;align-items:center;gap:12px}
+.mast-date{font-size:11px;color:var(--muted)}
+.mast-cta{background:var(--red);color:#fff;border:none;padding:8px 18px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--ff-sans);letter-spacing:.4px;display:flex;align-items:center;gap:6px;transition:background .15s}
+.mast-cta:hover{background:#c0190f}
+.nav-bar{display:flex;gap:0;padding:8px 0 0;flex-wrap:nowrap;overflow-x:auto}
+.nav-btn{font-size:11px;font-weight:700;color:var(--muted);padding:7px 16px 9px;border:none;background:none;cursor:pointer;text-transform:uppercase;letter-spacing:1px;border-bottom:3px solid transparent;font-family:var(--ff-sans);transition:color .15s,border-color .15s;white-space:nowrap;flex-shrink:0}
+.nav-btn:first-child{padding-left:0}
+.nav-btn.active{color:var(--red);border-bottom-color:var(--red)}
+.nav-btn:hover:not(.active){color:var(--ink)}
+.ticker-wrap{background:var(--red);display:flex;align-items:center;height:32px;overflow:hidden}
+.ticker-lbl{background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:1.5px;padding:0 12px;height:32px;display:flex;align-items:center;white-space:nowrap;flex-shrink:0}
+.ticker-track{display:flex;overflow:hidden;flex:1}
+.ticker-inner{display:flex;animation:ticker-scroll 40s linear infinite}
+.ticker-inner:hover{animation-play-state:paused}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.t-item{color:#fff;font-size:12px;font-weight:500;padding:0 28px;white-space:nowrap;border-right:1px solid rgba(255,255,255,.25);height:32px;display:flex;align-items:center;flex-shrink:0}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:2px solid var(--rule-md)}
+.hstat{padding:14px 24px;border-right:1px solid var(--rule-md)}
+.hstat:last-child{border-right:none}
+.hstat-n{font-family:var(--ff-serif);font-size:32px;font-weight:900;line-height:1;color:var(--ink)}
+.hstat-n.r{color:var(--red)}
+.hstat-l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-top:4px}
+.hstat-s{font-size:11px;color:var(--red);font-weight:600;margin-top:3px}
+.page{display:none}.page.active{display:block}
+.news-layout{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);min-height:600px}
+.news-main{border-right:1px solid var(--rule-md)}
+.section-head{display:flex;align-items:center;justify-content:space-between;padding:12px 24px 10px;border-bottom:1px solid var(--rule-md)}
+.section-kicker{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--red);display:flex;align-items:center;gap:5px}
+.section-date{font-size:10px;color:var(--muted)}
+.news-hero{padding:20px 24px;border-bottom:2px solid var(--navy)}
+.news-hero-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:5px}
+.news-hero-hl{font-family:var(--ff-serif);font-size:22px;font-weight:900;line-height:1.25;margin-bottom:10px;cursor:pointer;transition:color .15s}
+.news-hero-hl:hover{color:var(--red)}
+.news-link{text-decoration:none;color:inherit;display:block}
+.news-link:hover .news-hero-hl,.news-link:hover .news-item-hl{color:var(--red)}
+.news-read-more{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-top:8px;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+.news-read-more:hover{border-bottom-color:var(--red)}
+.news-refresh-bar{display:flex;align-items:center;gap:8px;padding:8px 24px;background:var(--navy-soft);border-bottom:1px solid var(--rule-md);font-size:11px;color:var(--muted)}
+.news-refresh-bar strong{color:var(--ink)}
+.refresh-ring{width:16px;height:16px;border:2px solid var(--rule-md);border-top-color:var(--red);border-radius:50%;animation:spin 1s linear infinite;flex-shrink:0;display:none}
+.refresh-ring.spinning{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.refresh-btn{margin-left:auto;font-size:10px;font-weight:700;color:var(--red);cursor:pointer;background:none;border:none;font-family:var(--ff-sans);display:flex;align-items:center;gap:4px;padding:3px 8px;border:1px solid var(--red);border-radius:2px}
+.refresh-btn:hover{background:var(--red-soft)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(22,101,52,.5)}50%{opacity:.6;box-shadow:0 0 0 4px rgba(22,101,52,0)}}
+.news-timestamp{color:var(--muted);font-size:10px}
+.news-hero-deck{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:12px;border-left:3px solid var(--red);padding-left:12px}
+.news-hero-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.news-pol-chip{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--navy)}
+.pol-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;flex-shrink:0}
+.news-src{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.news-sent{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:2px}
+.sent-pos{background:var(--green-soft);color:var(--green)}
+.sent-neg{background:var(--red-soft);color:var(--red)}
+.sent-warn{background:var(--amber-soft);color:var(--amber)}
+.news-item{padding:16px 24px;border-bottom:1px solid var(--rule-md);display:grid;grid-template-columns:28px 1fr;gap:14px;cursor:pointer;transition:background .12s}
+.news-item:hover{background:var(--surface)}
+.news-clickable:hover .news-hero-hl,.news-clickable:hover .news-item-hl{color:var(--red)}
+.news-item:last-child{border-bottom:none}
+.news-num{font-family:var(--ff-serif);font-size:24px;font-weight:900;color:var(--rule-md);line-height:1;padding-top:2px}
+.news-item-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--red);margin-bottom:5px;display:flex;align-items:center;gap:4px}
+.news-item-hl{font-family:var(--ff-serif);font-size:15px;font-weight:700;line-height:1.3;margin-bottom:6px}
+.news-item-deck{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.news-item-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.news-side{}
+.sidebar-block{padding:16px 18px;border-bottom:1px solid var(--rule-md)}
+.side-kicker{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--red);margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--rule-md);display:flex;align-items:center;gap:5px}
+.trending-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule)}
+.trending-item:last-child{border-bottom:none}
+.trend-num{font-family:var(--ff-serif);font-size:18px;font-weight:900;color:var(--rule-md);min-width:20px;line-height:1.2}
+.trend-name{font-size:13px;font-weight:700;line-height:1.3}
+.trend-party{font-size:11px;color:var(--muted)}
+.trend-spark{display:flex;align-items:center;gap:3px;font-size:11px;font-weight:700;margin-top:3px}
+.spark-up{color:var(--red)}.spark-dn{color:var(--green)}
+.sent-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.sent-lbl{font-size:11px;color:var(--muted);min-width:56px}
+.sent-bg{flex:1;height:6px;background:var(--rule)}
+.sent-fill{height:6px}
+.sent-pct{font-size:11px;font-weight:700;min-width:30px;text-align:right}
+.search-band{padding:20px 24px;border-bottom:1px solid var(--rule-md)}
+.search-kicker{font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.search-hl{font-family:var(--ff-serif);font-size:22px;font-weight:900;line-height:1.2;margin-bottom:14px}
+.search-row{display:flex;gap:10px;flex-wrap:wrap}
+.s-input{flex:1;min-width:180px;border:2px solid var(--navy);padding:10px 14px;font-size:14px;font-family:var(--ff-sans);outline:none;background:var(--bg);color:var(--ink);transition:border-color .15s}
+.s-input:focus{border-color:var(--red)}
+.s-select{border:1.5px solid var(--rule-md);padding:10px 12px;font-size:12px;background:var(--bg);color:var(--ink);font-family:var(--ff-sans);outline:none;cursor:pointer}
+.s-btn{background:var(--navy);color:#fff;border:none;padding:10px 22px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--ff-sans);display:flex;align-items:center;gap:6px;transition:background .15s}
+.s-btn:hover{background:var(--red)}
+.grid-meta{display:flex;justify-content:space-between;align-items:center;padding:10px 24px;border-bottom:1px solid var(--rule-md)}
+.grid-ml{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.grid-mr{font-family:var(--ff-serif);font-size:17px;font-weight:700}
+.pol-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.pol-card{border-right:1px solid var(--rule-md);border-bottom:1px solid var(--rule-md);padding:16px 18px 46px;cursor:pointer;position:relative;transition:background .12s;overflow:hidden}
+.pol-card:nth-child(3n){border-right:none}
+.pol-card:hover{background:var(--surface)}
+.pol-flag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:8px}
+.flag-a{color:var(--green)}.flag-b{color:var(--amber)}.flag-c{color:var(--red)}
+.pol-photo{width:54px;height:54px;border-radius:50%;overflow:hidden;margin-bottom:10px;border:2px solid var(--rule-md);flex-shrink:0}
+.pol-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.pol-photo-fallback{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;margin-bottom:10px;font-family:var(--ff-serif)}
+.pol-name{font-family:var(--ff-serif);font-size:15px;font-weight:700;line-height:1.25;margin-bottom:3px}
+.pol-meta{font-size:11px;color:var(--muted);margin-bottom:6px}
+.pol-pos{font-size:11px;border-left:3px solid var(--red);padding-left:7px;color:var(--muted);margin-bottom:10px;line-height:1.4}
+.pol-topics{display:flex;gap:4px;flex-wrap:wrap}
+.tp{font-size:10px;padding:2px 7px;border:1px solid var(--rule-md);color:var(--muted);background:var(--surface);text-transform:uppercase;letter-spacing:.5px;border-radius:2px}
+.pol-cta{position:absolute;bottom:14px;right:18px;font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:4px}
+.score-ring{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--ff-serif);font-size:18px;font-weight:900}
+.ring-a{background:var(--green-soft);color:var(--green)}
+.ring-b{background:var(--amber-soft);color:var(--amber)}
+.ring-c{background:var(--red-soft);color:var(--red)}
+.empty-state{padding:40px 24px;text-align:center;color:var(--muted);grid-column:1/-1}
+.empty-state i{font-size:40px;display:block;margin-bottom:12px;color:var(--rule-md)}
+.back-bar{padding:10px 24px;border-bottom:1px solid var(--rule-md);font-size:12px;color:var(--muted);cursor:pointer;display:flex;align-items:center;gap:6px;transition:color .15s}
+.back-bar:hover{color:var(--red)}
+.profile-header{padding:20px 24px 16px;border-bottom:3px solid var(--navy);display:flex;gap:20px;align-items:flex-start}
+.profile-photo-lg{width:80px;height:80px;border-radius:50%;overflow:hidden;flex-shrink:0;border:3px solid var(--rule-md)}
+.profile-photo-lg img{width:100%;height:100%;object-fit:cover;object-position:top}
+.profile-av-lg{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:28px;flex-shrink:0;font-family:var(--ff-serif)}
+.profile-name{font-family:var(--ff-serif);font-size:28px;font-weight:900;line-height:1.1;margin-bottom:4px}
+.profile-party{font-size:12px;color:var(--muted);margin-bottom:10px}
+.profile-chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:11px;padding:3px 10px;border:1px solid var(--rule-md);color:var(--muted);display:flex;align-items:center;gap:4px;border-radius:2px}
+.grade-block{text-align:center;flex-shrink:0;margin-left:auto;padding-left:16px}
+.grade-letter{font-family:var(--ff-serif);font-size:64px;font-weight:900;line-height:1}
+.grade-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.grade-num{font-family:var(--ff-serif);font-size:20px;font-weight:700}
+.scorecard-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--rule-md);border-top:1px solid var(--rule-md);margin:20px 24px 0}
+.sc-item{border-right:1px solid var(--rule-md);border-bottom:1px solid var(--rule-md);padding:14px 16px}
+.sc-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:7px}
+.sc-val{font-family:var(--ff-serif);font-size:28px;font-weight:900;line-height:1}
+.sc-bar{height:4px;background:var(--rule);margin-top:8px}
+.sc-fill{height:4px}
+.profile-two-col{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);border-top:2px solid var(--navy);margin-top:20px}
+.profile-main{padding:20px 24px;border-right:1px solid var(--rule-md)}
+.profile-side{padding:20px 18px}
+.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--red);font-weight:700;padding-bottom:7px;border-bottom:1px solid var(--rule-md);margin-bottom:14px;display:flex;align-items:center;gap:5px}
+.act-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.act-item:last-child{border-bottom:none}
+.act-date{font-size:10px;color:var(--muted);min-width:52px;padding-top:2px;font-weight:600}
+.act-title{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:3px}
+.act-source{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.act-tag{display:inline-block;font-size:10px;padding:1px 7px;background:var(--navy-soft);color:var(--navy);margin-left:6px;border-radius:2px;font-weight:600}
+.pr-item{padding:12px 0;border-bottom:1px solid var(--rule)}
+.pr-item:last-child{border-bottom:none}
+.pr-text{font-size:13px;font-weight:600;margin-bottom:6px}
+.pr-bar-bg{height:5px;background:var(--rule)}
+.pr-bar-fill{height:5px}
+.pr-meta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px}
+.asset-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--rule);font-size:12px}
+.asset-row:last-child{border-bottom:none}
+.asset-key{color:var(--muted)}
+.asset-val{font-weight:700;font-family:var(--ff-serif);font-size:13px}
+.growth-up{color:var(--red);font-weight:700;font-size:12px;display:flex;align-items:center;gap:3px}
+.growth-ok{color:var(--green);font-weight:700;font-size:12px;display:flex;align-items:center;gap:3px}
+.page-header{padding:20px 24px 16px;border-bottom:2px solid var(--navy)}
+.page-title{font-family:var(--ff-serif);font-size:24px;font-weight:900;margin-bottom:6px}
+.page-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.t-table-wrap{padding:0 24px 32px;overflow-x:auto}
+.t-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+.t-table th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;padding:10px 10px;border-bottom:2px solid var(--navy)}
+.t-table td{padding:13px 10px;border-bottom:1px solid var(--rule-md);vertical-align:middle}
+.t-table tr:hover td{background:var(--surface);cursor:pointer}
+.lhkpn-tag{font-size:10px;font-weight:700;padding:3px 9px;border-radius:2px}
+.tag-ok{background:var(--green-soft);color:var(--green)}
+.tag-late{background:var(--amber-soft);color:var(--amber)}
+.tag-none{background:var(--red-soft);color:var(--red)}
+.filter-row{display:flex;gap:6px;padding:14px 24px;border-bottom:1px solid var(--rule-md);flex-wrap:wrap}
+.fchip{padding:6px 16px;font-size:11px;font-weight:700;cursor:pointer;border:1.5px solid var(--rule-md);background:var(--bg);color:var(--muted);font-family:var(--ff-sans);border-radius:2px;transition:all .15s}
+.fchip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.fchip:hover:not(.on){border-color:var(--navy);color:var(--navy)}
+.promise-wrap{padding:0 24px 32px}
+.pr-th{display:grid;grid-template-columns:2fr .7fr 1fr .9fr;gap:12px;padding:10px 0;border-bottom:2px solid var(--navy)}
+.pr-th span{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700}
+.pr-row{display:grid;grid-template-columns:2fr .7fr 1fr .9fr;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule-md);transition:background .12s}
+.pr-row:hover{background:var(--surface)}
+.pr-row:last-child{border-bottom:none}
+.pr-pol-name{font-size:13px;font-weight:700}
+.pr-promise-txt{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.4}
+.sp-pill{font-size:10px;font-weight:700;padding:3px 9px;border-radius:2px}
+.sp-done{background:var(--green-soft);color:var(--green)}
+.sp-on{background:var(--amber-soft);color:var(--amber)}
+.sp-no{background:var(--red-soft);color:var(--red)}
+.pr-prog{display:flex;align-items:center;gap:8px}
+.pr-prog-bar{flex:1;height:5px;background:var(--rule)}
+.pr-prog-fill{height:5px}
+.pr-pct{font-size:13px;font-weight:700;font-family:var(--ff-serif);min-width:32px;text-align:right}
+.quiz-wrap{max-width:640px;padding:24px}
+.quiz-step{display:none}.quiz-step.active{display:block}
+.quiz-progress{display:flex;gap:5px;margin-bottom:20px}
+.qp-dot{height:4px;flex:1;background:var(--rule);border-radius:2px;transition:background .3s}
+.qp-dot.done{background:var(--red)}
+.quiz-q{font-family:var(--ff-serif);font-size:20px;font-weight:700;line-height:1.3;margin-bottom:20px;color:var(--ink)}
+.quiz-opts{display:flex;flex-direction:column;gap:10px}
+.quiz-opt{border:1.5px solid var(--rule-md);padding:13px 16px;font-size:14px;font-weight:500;cursor:pointer;background:var(--bg);color:var(--ink);text-align:left;font-family:var(--ff-sans);transition:all .15s;line-height:1.4;border-radius:2px}
+.quiz-opt:hover{border-color:var(--navy);background:var(--navy-soft)}
+.quiz-opt.selected{border-color:var(--red);background:var(--red-soft);color:var(--red)}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:16px;border-top:1px solid var(--rule)}
+.q-btn{background:var(--navy);color:#fff;border:none;padding:10px 22px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--ff-sans);display:flex;align-items:center;gap:6px;transition:background .15s;border-radius:2px}
+.q-btn:hover:not(:disabled){background:var(--red)}
+.q-btn:disabled{opacity:.4;pointer-events:none}
+.q-btn.sec{background:var(--surface);color:var(--ink);border:1.5px solid var(--rule-md)}
+.q-btn.sec:hover{background:var(--rule)}
+.quiz-step-label{font-size:11px;color:var(--muted)}
+.result-card{border:2px solid var(--navy);padding:20px;border-radius:2px}
+.result-match{font-family:var(--ff-serif);font-size:26px;font-weight:900;margin-bottom:4px}
+.result-pct{font-size:40px;font-weight:900;font-family:var(--ff-serif);color:var(--red);line-height:1;margin-bottom:10px}
+.result-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.result-bars{display:flex;flex-direction:column;gap:8px}
+.rb-row{display:flex;align-items:center;gap:10px;font-size:12px}
+.rb-label{min-width:100px;color:var(--muted)}
+.rb-bar{flex:1;height:5px;background:var(--rule)}
+.rb-fill{height:5px}
+.rb-val{min-width:30px;font-weight:700;text-align:right}
+.viral-strip{background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:12px 24px;gap:12px}
+.viral-text{font-size:12px;color:rgba(255,255,255,.7);flex:1}
+.viral-text strong{color:#fff}
+.viral-btn{background:var(--red);color:#fff;border:none;padding:8px 18px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--ff-sans);display:flex;align-items:center;gap:6px;white-space:nowrap;border-radius:2px}
+.viral-btn:hover{opacity:.85}
+/* ADMIN */
+.admin-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,46,.88);z-index:500;align-items:center;justify-content:center}
+.admin-overlay.open{display:flex}
+.admin-box{background:var(--bg);width:min(94vw,840px);max-height:92vh;overflow-y:auto;border-top:4px solid var(--red)}
+.admin-head{padding:14px 20px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5}
+.admin-head h2{color:#fff;font-family:var(--ff-serif);font-size:18px}
+.admin-close{color:rgba(255,255,255,.6);background:none;border:none;font-size:24px;cursor:pointer;line-height:1}
+.admin-close:hover{color:#fff}
+.admin-body{padding:18px}
+.admin-tabs{display:flex;margin-bottom:16px;border-bottom:2px solid var(--rule-md)}
+.admin-tab{padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer;border:none;background:none;font-family:var(--ff-sans);color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px}
+.admin-tab.active{color:var(--red);border-bottom-color:var(--red)}
+.admin-tab-content{display:none}.admin-tab-content.active{display:block}
+.admin-note{background:var(--navy-soft);border-left:4px solid var(--navy);padding:11px 14px;font-size:12px;line-height:1.7;margin-bottom:14px}
+.admin-note code{background:var(--rule-md);padding:1px 5px;border-radius:2px;font-family:monospace;font-size:11px}
+.drop-zone{border:2.5px dashed var(--rule-md);padding:32px 24px;text-align:center;cursor:pointer;border-radius:4px;margin-bottom:12px;transition:border-color .2s,background .2s}
+.drop-zone:hover,.drop-zone.over{border-color:var(--red);background:var(--red-soft)}
+.drop-zone i{font-size:40px;color:var(--rule-md);display:block;margin-bottom:10px}
+.drop-zone.over i,.drop-zone:hover i{color:var(--red)}
+.drop-zone p{font-size:13px;color:var(--muted);margin-bottom:4px}
+.drop-zone strong{color:var(--ink)}
+.drop-fname{font-size:12px;color:var(--green);font-weight:700;margin-top:8px}
+.abtn-p{background:var(--red);color:#fff;border:none;padding:9px 20px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--ff-sans);display:inline-flex;align-items:center;gap:5px;border-radius:2px;margin-top:8px}
+.abtn-p:hover{background:#c0190f}
+.abtn-s{background:var(--navy);color:#fff;border:none;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--ff-sans);display:inline-flex;align-items:center;gap:5px;border-radius:2px}
+.abtn-s:hover{background:#1a3050}
+.adm-ok{background:var(--green-soft);color:var(--green);padding:9px 12px;font-size:12px;font-weight:600;margin-top:8px;display:none;border-radius:2px}
+.adm-ok.show{display:block}
+.adm-err{background:var(--red-soft);color:var(--red);padding:9px 12px;font-size:12px;font-weight:600;margin-top:8px;display:none;border-radius:2px}
+.adm-err.show{display:block}
+.jpre{background:#0d1b2e;color:#6ee7a0;font-family:monospace;font-size:11px;padding:12px;border-radius:4px;overflow:auto;white-space:pre;max-height:260px;margin-top:10px}
+.af-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.af{display:flex;flex-direction:column;gap:4px}
+.af label{font-size:11px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.7px}
+.af input,.af select,.af textarea{border:1.5px solid var(--rule-md);padding:7px 10px;font-size:12px;font-family:var(--ff-sans);outline:none;background:var(--bg);color:var(--ink);border-radius:2px}
+.af input:focus,.af select:focus,.af textarea:focus{border-color:var(--navy)}
+.af textarea{resize:vertical;min-height:60px}
+footer{background:var(--navy);color:rgba(255,255,255,.6);padding:24px;font-size:11px;line-height:1.8}
+footer strong{color:#fff}
+footer a{color:rgba(255,255,255,.5);text-decoration:none}
+footer a:hover{color:#fff}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px;margin-bottom:20px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:900px){.pol-grid{grid-template-columns:1fr 1fr}.news-layout{grid-template-columns:1fr}.news-side{border-top:2px solid var(--navy)}.profile-two-col{grid-template-columns:1fr}.profile-main{border-right:none;border-bottom:1px solid var(--rule-md)}.scorecard-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.hero-stats{grid-template-columns:1fr 1fr}.af-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.pol-grid{grid-template-columns:1fr}.topbar-l{display:none}.pr-th,.pr-row{grid-template-columns:1fr 1fr}.scorecard-grid{grid-template-columns:1fr}.profile-header{flex-wrap:wrap}.grade-block{margin-left:0}.logo-face{font-size:36px}.logo-the{font-size:26px}}
+</style>
+</head>
+<body>
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-l" id="live-date">Selasa, 16 Juni 2026 · Jakarta, Indonesia</div>
+  <div class="topbar-r">
+    <span onclick="focusSearch()"><i class="ti ti-search"></i> Cari</span>
+    <span onclick="sharesite()"><i class="ti ti-share"></i> Share</span>
+    <span class="admin-pill" onclick="openAdmin()"><i class="ti ti-database-import"></i> Update Data</span>
+  </div>
+</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="mast-top">
+    <div class="logo-wrap">
+      <span class="logo-the">The</span>
+      <span class="logo-face">FACE</span>
+      <span class="logo-tag">Before You Vote</span>
+    </div>
+    <div class="mast-right">
+      <span class="mast-date">Data Real DPR RI 2024-2029 · Sumber: KPK &amp; dpr.go.id</span>
+      <button class="mast-cta" onclick="setNav(document.querySelectorAll('.nav-btn')[4],'quiz')">
+        <i class="ti ti-bolt"></i> Cek Cocok Politisi Mana?
+      </button>
+    </div>
+  </div>
+  <nav class="nav-bar">
+    <button class="nav-btn" onclick="setNav(this,'news')">Berita Hari Ini</button>
+    <button class="nav-btn active" onclick="setNav(this,'search')">Cari Politisi</button>
+    <button class="nav-btn" onclick="setNav(this,'transparency')">Aset &amp; Transparansi</button>
+    <button class="nav-btn" onclick="setNav(this,'promises')">Janji vs Bukti</button>
+    <button class="nav-btn" onclick="setNav(this,'quiz')"><i class="ti ti-bolt" style="font-size:10px"></i> Kalkulator Suara</button>
+  </nav>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-lbl">TERKINI</div>
+  <div class="ticker-track">
+    <div class="ticker-inner">
+      <div class="t-item"><i class="ti ti-swords" style="font-size:11px;margin-right:5px"></i> PANAS — PKB sindir PDIP "abu-abu" soal demo, Jazilul: "Kalau oposisi, ya oposisi!"</div>
+      <div class="t-item">Deddy Sitorus (PDIP) balas PKB: "Urus partai sendiri, memangnya Jazilul siapa?"</div>
+      <div class="t-item">Anggota DPR PAN usul rokok murah untuk rakyat miskin — dikecam YLKI "tak paham regulasi"</div>
+      <div class="t-item"><i class="ti ti-alarm" style="font-size:11px;margin-right:5px"></i> Ultimatum 3x24 jam BEM SI ke DPR berakhir 18 Juni — demo susulan mengancam</div>
+      <div class="t-item">Sahroni respons santai usul tambahan anggaran KPK Rp762 M: "Tanggung Pak, Rp5 triliun saja!"</div>
+      <div class="t-item">Demo 5 titik Jakarta — Monas · DPR · Sudirman · BGN · Kemenkeu · 4.576 personel siaga</div>
+      <div class="t-item">Mufti Anam PDIP kritik diklat semi-militer calon manajer Koperasi Desa Merah Putih</div>
+      <div class="t-item"><i class="ti ti-moon" style="font-size:11px;margin-right:5px"></i> Cucun Syamsurijal: Prabowo minta antrean haji dipangkas dari 35 tahun jadi 26 tahun</div>
+      <div class="t-item">DPR sahkan RUU PPRT jadi usul inisiatif — lindungi 4,2 juta pekerja domestik setelah 22 tahun</div>
+      <div class="t-item">Bamsoet DPR: Revisi UU KADIN mendesak demi kemitraan negara-swasta</div>
+      <div class="t-item"><i class="ti ti-swords" style="font-size:11px;margin-right:5px"></i> PANAS — PKB sindir PDIP "abu-abu" soal demo, Jazilul: "Kalau oposisi, ya oposisi!"</div>
+      <div class="t-item">Deddy Sitorus (PDIP) balas PKB: "Urus partai sendiri, memangnya Jazilul siapa?"</div>
+      <div class="t-item">Anggota DPR PAN usul rokok murah untuk rakyat miskin — dikecam YLKI</div>
+      <div class="t-item">Ultimatum 3x24 jam BEM SI ke DPR berakhir 18 Juni — demo susulan mengancam</div>
+      <div class="t-item">Sahroni respons santai usul tambahan anggaran KPK: "Tanggung Pak, Rp5 triliun saja!"</div>
+      <div class="t-item">Demo 5 titik Jakarta — Monas · DPR · Sudirman · BGN · Kemenkeu</div>
+      <div class="t-item">Cucun Syamsurijal: Prabowo minta antrean haji dipangkas jadi 26 tahun</div>
+      <div class="t-item">DPR sahkan RUU PPRT — lindungi 4,2 juta pekerja domestik setelah 22 tahun</div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO STATS -->
+<div class="hero-stats">
+  <div class="hstat"><div class="hstat-n">580</div><div class="hstat-l">Jumlah Politisi DPR RI</div><div class="hstat-s">30 profil real tersedia di sini</div></div>
+  <div class="hstat"><div class="hstat-n r" id="stat-lhkpn">3%</div><div class="hstat-l">Belum Lapor LHKPN (dari 30)</div><div class="hstat-s">1 profil belum ada laporan</div></div>
+  <div class="hstat"><div class="hstat-n" id="stat-janji">60</div><div class="hstat-l">Janji Kampanye Terlacak</div><div class="hstat-s" id="stat-janji-sub">Loading...</div></div>
+  <div class="hstat"><div class="hstat-n r">1</div><div class="hstat-l">Pelanggaran Etik Tercatat</div><div class="hstat-s">Ahmad Dhani — MKD 2024</div></div>
+</div>
+
+<main>
+<!-- NEWS PAGE -->
+<div class="page" id="page-news">
+  <div class="news-layout">
+    <div class="news-main">
+      <div class="section-head">
+        <div class="section-kicker"><i class="ti ti-newspaper"></i> 10 Berita Terkini · 19 Juni 2026</div>
+        <div class="section-date" id="news-date">Selasa, 16 Juni 2026</div>
+      </div>
+      <div id="news-refresh-bar" class="news-refresh-bar">
+        <span class="live-dot" id="live-dot" title="Auto-fetch aktif"></span>
+        <div class="refresh-ring" id="refresh-ring"></div>
+        <span>Berita diperbarui: <strong id="refresh-ts">—</strong></span>
+        <span class="news-timestamp" id="refresh-next"></span>
+        <button class="refresh-btn" onclick="refreshNews(true)"><i class="ti ti-refresh" style="font-size:11px"></i> Refresh</button>
+      </div>
+      <div id="news-hero-slot"></div>
+      <div id="news-items-slot"></div>
+    </div>
+    <aside class="news-side">
+      <div class="sidebar-block">
+        <div class="side-kicker"><i class="ti ti-flame"></i> Paling Dicari Hari Ini</div>
+        <div class="trending-item"><div class="trend-num">1</div><div><div class="trend-name">Ahmad Dhani</div><div class="trend-party">Gerindra · Komisi X</div><div class="trend-spark spark-up"><i class="ti ti-trending-up" style="font-size:11px"></i> +1.240% pencarian</div></div></div>
+        <div class="trending-item"><div class="trend-num">2</div><div><div class="trend-name">Puan Maharani</div><div class="trend-party">PDIP · Ketua DPR</div><div class="trend-spark spark-up"><i class="ti ti-trending-up" style="font-size:11px"></i> +380% pencarian</div></div></div>
+        <div class="trending-item"><div class="trend-num">3</div><div><div class="trend-name">Adela Kanasya Adies</div><div class="trend-party">Golkar · PAW</div><div class="trend-spark spark-up"><i class="ti ti-trending-up" style="font-size:11px"></i> +890% pencarian</div></div></div>
+        <div class="trending-item"><div class="trend-num">4</div><div><div class="trend-name">Mafirion</div><div class="trend-party">PKB · Komisi XIII</div><div class="trend-spark spark-up"><i class="ti ti-trending-up" style="font-size:11px"></i> +210% pencarian</div></div></div>
+        <div class="trending-item"><div class="trend-num">5</div><div><div class="trend-name">Cucun A. Syamsurijal</div><div class="trend-party">PKB · Wakil Ketua DPR</div><div class="trend-spark spark-dn"><i class="ti ti-minus" style="font-size:11px"></i> Stabil hari ini</div></div></div>
+      </div>
+      <div class="sidebar-block">
+        <div class="side-kicker"><i class="ti ti-chart-pie"></i> Sentimen Media Minggu Ini</div>
+        <div style="font-size:12px;margin-bottom:8px;font-weight:700">Puan Maharani</div>
+        <div class="sent-row"><span class="sent-lbl">Positif</span><div class="sent-bg"><div class="sent-fill" style="width:58%;background:var(--green)"></div></div><span class="sent-pct" style="color:var(--green)">58%</span></div>
+        <div class="sent-row"><span class="sent-lbl">Negatif</span><div class="sent-bg"><div class="sent-fill" style="width:22%;background:var(--red)"></div></div><span class="sent-pct" style="color:var(--red)">22%</span></div>
+        <div style="font-size:12px;margin:12px 0 8px;font-weight:700">Ahmad Dhani</div>
+        <div class="sent-row"><span class="sent-lbl">Positif</span><div class="sent-bg"><div class="sent-fill" style="width:18%;background:var(--green)"></div></div><span class="sent-pct" style="color:var(--green)">18%</span></div>
+        <div class="sent-row"><span class="sent-lbl">Negatif</span><div class="sent-bg"><div class="sent-fill" style="width:71%;background:var(--red)"></div></div><span class="sent-pct" style="color:var(--red)">71%</span></div>
+      </div>
+      <div class="sidebar-block">
+        <div class="side-kicker"><i class="ti ti-bolt"></i> Quick Check</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6">Mau tahu politisi mana yang paling cocok sama nilai-nilai kamu?</div>
+        <button class="s-btn" style="width:100%;justify-content:center" onclick="setNav(document.querySelectorAll('.nav-btn')[4],'quiz')"><i class="ti ti-bolt"></i> Mulai Kalkulator Suara</button>
+      </div>
+    </aside>
+  </div>
+  <div class="viral-strip">
+    <div class="viral-text">Baca beritanya, share ke temenmu. <strong>Suaramu dimulai dari sini.</strong></div>
+    <button class="viral-btn" onclick="sharesite()"><i class="ti ti-share"></i> Share ke Story</button>
+  </div>
+</div>
+
+<!-- SEARCH PAGE -->
+<div class="page active" id="page-search">
+  <div class="search-band">
+    <div class="search-kicker"><i class="ti ti-flare"></i> Data Real · Sumber: dpr.go.id · KPK LHKPN · Wikipedia</div>
+    <div class="search-hl">Siapa yang mewakilimu di Senayan?</div>
+    <div class="search-row">
+      <input class="s-input" type="text" id="pol-search" placeholder="Ketik nama, partai, dapil, atau komisi..." oninput="filterCards()"/>
+      <select class="s-select" id="fp" onchange="filterCards()">
+        <option value="">Semua Partai</option>
+        <option>PDIP</option><option>Golkar</option><option>Gerindra</option>
+        <option>Nasdem</option><option>PKB</option><option>PKS</option>
+        <option>PAN</option><option>Demokrat</option>
+      </select>
+      <select class="s-select" id="fs" onchange="filterCards()">
+        <option value="">Semua Nilai</option>
+        <option value="A">Nilai A — Sangat Baik</option>
+        <option value="B">Nilai B — Cukup</option>
+        <option value="C">Nilai C — Perlu Diawasi</option>
+      </select>
+      <button class="s-btn" onclick="filterCards()"><i class="ti ti-search"></i> Cari</button>
+    </div>
+  </div>
+  <div class="grid-meta">
+    <div class="grid-ml">Profil DPR RI 2024-2029</div>
+    <div class="grid-mr" id="result-count">30 Profil</div>
+  </div>
+  <div class="pol-grid" id="pol-grid"></div>
+  <div class="viral-strip">
+    <div class="viral-text">Belum tahu siapa wakilmu? <strong>Cari sekarang dan share ke temenmu.</strong></div>
+    <button class="viral-btn" onclick="sharesite()"><i class="ti ti-share"></i> Share</button>
+  </div>
+</div>
+
+<!-- PROFILE PAGE -->
+<div class="page" id="page-profile">
+  <div class="back-bar" onclick="showPage('search')"><i class="ti ti-arrow-left"></i> Kembali ke Daftar</div>
+  <div id="profile-content"></div>
+</div>
+
+<!-- TRANSPARENCY PAGE -->
+<div class="page" id="page-transparency">
+  <div class="page-header">
+    <div class="page-title">Laporan Aset &amp; Transparansi (LHKPN)</div>
+    <div class="page-desc">Data kekayaan resmi dari KPK e-LHKPN · <a href="https://elhkpn.kpk.go.id" target="_blank" style="color:var(--red)">elhkpn.kpk.go.id</a> · <strong>Harta mereka adalah hakmu untuk tahu.</strong></div>
+  </div>
+  <div class="t-table-wrap">
+    <table class="t-table">
+      <thead><tr>
+        <th style="width:22%">Nama</th><th style="width:10%">Partai</th>
+        <th style="width:18%">Jabatan</th><th style="width:16%">Total LHKPN</th>
+        <th style="width:10%">Naik YoY</th><th style="width:12%">Status LHKPN</th><th style="width:12%">Kasus Etik</th>
+      </tr></thead>
+      <tbody id="trans-tbody"></tbody>
+    </table>
+  </div>
+  <div style="padding:10px 24px;font-size:11px;color:var(--muted);border-top:1px solid var(--rule-md)">Sumber: <a href="https://elhkpn.kpk.go.id" target="_blank" style="color:var(--red)">elhkpn.kpk.go.id</a> · Data berdasarkan laporan publik terverifikasi.</div>
+</div>
+
+<!-- PROMISE PAGE -->
+<div class="page" id="page-promises">
+  <div class="page-header">
+    <div class="page-title">Janji vs Bukti</div>
+    <div class="page-desc">Waktu kampanye mereka berjanji. Sekarang kita cek bersama: <strong>mana yang benar-benar ditepati?</strong></div>
+  </div>
+  <div class="filter-row">
+    <button class="fchip on" onclick="fprom(this,'all')">Semua</button>
+    <button class="fchip" onclick="fprom(this,'ongoing')">Sedang Berjalan</button>
+    <button class="fchip" onclick="fprom(this,'done')">Sudah Ditepati</button>
+    <button class="fchip" onclick="fprom(this,'notstarted')">Belum Dimulai</button>
+  </div>
+  <div class="promise-wrap">
+    <div class="pr-th"><span>Politisi &amp; Janji</span><span>Kategori</span><span>Status</span><span>Progres</span></div>
+    <div id="pr-rows"></div>
+  </div>
+  <div class="viral-strip">
+    <div class="viral-text">Politisimu belum menepati janji? <strong>Tagar dan share ke dunia!</strong></div>
+    <button class="viral-btn" onclick="sharesite()"><i class="ti ti-brand-twitter"></i> Tweet Sekarang</button>
+  </div>
+</div>
+
+<!-- QUIZ PAGE -->
+<div class="page" id="page-quiz">
+  <div class="page-header">
+    <div class="page-title">Kalkulator Suara — Cocok Politisi Mana?</div>
+    <div class="page-desc">Jawab 5 pertanyaan tentang isu yang kamu pedulikan. The FACE cocokkan dengan profil DPR RI nyata.</div>
+  </div>
+  <div class="quiz-wrap">
+    <div class="quiz-step active" id="qs-0">
+      <div class="quiz-progress" id="qprog-0"></div>
+      <div class="quiz-q">Isu apa yang paling kamu pedulikan untuk Indonesia 5 tahun ke depan?</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" onclick="pick(0,0,'Hukum & Antikorupsi')">Hukum yang adil &amp; pemberantasan korupsi</button>
+        <button class="quiz-opt" onclick="pick(0,1,'Ekonomi & UMKM')">Ekonomi rakyat &amp; kemudahan usaha kecil</button>
+        <button class="quiz-opt" onclick="pick(0,2,'Kesehatan & BPJS')">Layanan kesehatan gratis dan merata</button>
+        <button class="quiz-opt" onclick="pick(0,3,'Pendidikan')">Pendidikan berkualitas &amp; akses beasiswa</button>
+      </div>
+      <div class="quiz-nav"><span class="quiz-step-label">1 dari 5</span><button class="q-btn" id="qnext-0" disabled onclick="nextQ(1)">Lanjut <i class="ti ti-arrow-right" style="font-size:12px"></i></button></div>
+    </div>
+    <div class="quiz-step" id="qs-1">
+      <div class="quiz-progress" id="qprog-1"></div>
+      <div class="quiz-q">Transparansi keuangan pejabat menurutmu...</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" onclick="pick(1,0,'Sangat Penting')">Wajib banget — rakyat berhak tahu harta pejabat</button>
+        <button class="quiz-opt" onclick="pick(1,1,'Penting')">Penting, tapi privasi juga perlu dijaga</button>
+        <button class="quiz-opt" onclick="pick(1,2,'Biasa Saja')">Boleh, tapi bukan prioritas utamaku</button>
+        <button class="quiz-opt" onclick="pick(1,3,'Urusan Pribadi')">Itu urusan pribadi, selama kinerjanya bagus</button>
+      </div>
+      <div class="quiz-nav"><button class="q-btn sec" onclick="nextQ(0)"><i class="ti ti-arrow-left" style="font-size:12px"></i> Balik</button><span class="quiz-step-label">2 dari 5</span><button class="q-btn" id="qnext-1" disabled onclick="nextQ(2)">Lanjut <i class="ti ti-arrow-right" style="font-size:12px"></i></button></div>
+    </div>
+    <div class="quiz-step" id="qs-2">
+      <div class="quiz-progress" id="qprog-2"></div>
+      <div class="quiz-q">Kalau ada wakil rakyat yang jarang hadir sidang, kamu...</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" onclick="pick(2,0,'Lapor & Desak')">Langsung lapor dan desak dicopot dari jabatan</button>
+        <button class="quiz-opt" onclick="pick(2,1,'Tegur Publik')">Tegur lewat media sosial supaya semua tahu</button>
+        <button class="quiz-opt" onclick="pick(2,2,'Tunggu Penjelasan')">Tunggu penjelasan dulu, mungkin ada alasan valid</button>
+        <button class="quiz-opt" onclick="pick(2,3,'Catat Untuk Pemilu')">Catat buat bahan pertimbangan pas pemilu nanti</button>
+      </div>
+      <div class="quiz-nav"><button class="q-btn sec" onclick="nextQ(1)"><i class="ti ti-arrow-left" style="font-size:12px"></i> Balik</button><span class="quiz-step-label">3 dari 5</span><button class="q-btn" id="qnext-2" disabled onclick="nextQ(3)">Lanjut <i class="ti ti-arrow-right" style="font-size:12px"></i></button></div>
+    </div>
+    <div class="quiz-step" id="qs-3">
+      <div class="quiz-progress" id="qprog-3"></div>
+      <div class="quiz-q">Politisi ideal bagimu adalah seseorang yang...</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" onclick="pick(3,0,'Track Record')">Punya track record nyata, bukan sekadar janji kosong</button>
+        <button class="quiz-opt" onclick="pick(3,1,'Dekat Rakyat')">Sering turun ke lapangan, selalu dekat dengan rakyat</button>
+        <button class="quiz-opt" onclick="pick(3,2,'Ahli Kebijakan')">Paham kebijakan dan berani ambil sikap tegas</button>
+        <button class="quiz-opt" onclick="pick(3,3,'Bersih & Jujur')">Di atas semua: bersih, jujur, tidak pernah korup</button>
+      </div>
+      <div class="quiz-nav"><button class="q-btn sec" onclick="nextQ(2)"><i class="ti ti-arrow-left" style="font-size:12px"></i> Balik</button><span class="quiz-step-label">4 dari 5</span><button class="q-btn" id="qnext-3" disabled onclick="nextQ(4)">Lanjut <i class="ti ti-arrow-right" style="font-size:12px"></i></button></div>
+    </div>
+    <div class="quiz-step" id="qs-4">
+      <div class="quiz-progress" id="qprog-4"></div>
+      <div class="quiz-q">Seberapa aktif kamu ingin mengawasi wakil rakyatmu?</div>
+      <div class="quiz-opts">
+        <button class="quiz-opt" onclick="pick(4,0,'Super Aktif')">Sangat aktif — pantau tiap minggu, ikut audiensi publik</button>
+        <button class="quiz-opt" onclick="pick(4,1,'Aktif Digital')">Aktif di media sosial, share informasi penting ke teman</button>
+        <button class="quiz-opt" onclick="pick(4,2,'Pemilih Sadar')">Cukup pilih yang terbaik saat pemilu saja</button>
+        <button class="quiz-opt" onclick="pick(4,3,'Baru Belajar')">Masih belajar — The FACE membantu saya lebih paham</button>
+      </div>
+      <div class="quiz-nav"><button class="q-btn sec" onclick="nextQ(3)"><i class="ti ti-arrow-left" style="font-size:12px"></i> Balik</button><span class="quiz-step-label">5 dari 5</span><button class="q-btn" id="qnext-4" disabled onclick="showResult()">Lihat Hasilku <i class="ti ti-bolt" style="font-size:12px"></i></button></div>
+    </div>
+    <div class="quiz-step" id="qs-result">
+      <div style="border-bottom:2px solid var(--navy);padding-bottom:12px;margin-bottom:16px">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--red);font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:5px"><i class="ti ti-bolt" style="font-size:11px"></i> Hasil Kalkulator Suaramu</div>
+        <div style="font-size:13px;color:var(--muted)">Berdasarkan 5 jawaban kamu, ini profil DPR RI yang paling cocok:</div>
+      </div>
+      <div id="quiz-result-content"></div>
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="q-btn" onclick="resetQuiz()"><i class="ti ti-refresh"></i> Coba Lagi</button>
+        <button class="viral-btn" onclick="sharesite()"><i class="ti ti-share"></i> Share Hasilku</button>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- ADMIN PANEL -->
+<div class="admin-overlay" id="admin-overlay">
+  <div class="admin-box">
+    <div class="admin-head">
+      <h2><i class="ti ti-database-import" style="font-size:16px;margin-right:6px"></i>Panel Update Data</h2>
+      <button class="admin-close" onclick="closeAdmin()">&times;</button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-tabs">
+        <button class="admin-tab active" onclick="switchTab(this,'atab-json')"><i class="ti ti-file-type-json" style="font-size:11px"></i> Upload JSON</button>
+        <button class="admin-tab" onclick="switchTab(this,'atab-manual')"><i class="ti ti-user-plus" style="font-size:11px"></i> Tambah Manual</button>
+        <button class="admin-tab" onclick="switchTab(this,'atab-export')"><i class="ti ti-download" style="font-size:11px"></i> Export</button>
+        <button class="admin-tab" onclick="switchTab(this,'atab-guide')"><i class="ti ti-book" style="font-size:11px"></i> Panduan</button>
+      </div>
+      <div class="admin-tab-content active" id="atab-json">
+        <div class="admin-note"><strong>Update semua profil via drag &amp; drop JSON:</strong><br/>1. Download template → edit di Excel/Notepad<br/>2. Simpan sebagai <code>.json</code> → drag ke kotak di bawah<br/>3. Semua profil ter-update tanpa reload</div>
+        <div class="drop-zone" id="drop-zone" ondragover="event.preventDefault();this.classList.add('over')" ondragleave="this.classList.remove('over')" ondrop="handleDrop(event)" onclick="document.getElementById('file-inp').click()">
+          <i class="ti ti-file-upload"></i>
+          <p><strong>Drag &amp; drop file JSON di sini</strong></p>
+          <p>atau klik untuk pilih file</p>
+          <div class="drop-fname" id="drop-fname"></div>
+        </div>
+        <input type="file" id="file-inp" accept=".json" style="display:none" onchange="handleFileSelect(event)"/>
+        <div class="adm-ok" id="json-ok"><i class="ti ti-check" style="font-size:11px"></i> Berhasil! <span id="json-ct"></span> profil diperbarui.</div>
+        <div class="adm-err" id="json-err"><i class="ti ti-alert-circle" style="font-size:11px"></i> <span id="json-emsg">Format tidak valid. Harus array JSON.</span></div>
+        <div id="jpre-wrap" style="display:none"><div style="font-size:11px;color:var(--muted);margin-top:12px;margin-bottom:5px;font-weight:600">PREVIEW (3 profil pertama):</div><div class="jpre" id="jpre-box"></div></div>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <button class="abtn-s" onclick="downloadTemplate()"><i class="ti ti-download"></i> Template JSON</button>
+          <button class="abtn-s" onclick="downloadCurrentData()"><i class="ti ti-database-export"></i> Export Saat Ini</button>
+        </div>
+      </div>
+      <div class="admin-tab-content" id="atab-manual">
+        <div class="admin-note">Tambah satu profil politisi baru. Data langsung muncul di website.</div>
+        <div class="af-grid">
+          <div class="af"><label>Nama Lengkap *</label><input type="text" id="m-name" placeholder="Dr. H. Nama Politisi, SH"/></div>
+          <div class="af"><label>Inisial (2-3 huruf)</label><input type="text" id="m-ini" placeholder="NP" maxlength="3"/></div>
+          <div class="af"><label>Partai *</label><select id="m-party"><option value="">-- Pilih --</option><option>PDIP</option><option>Golkar</option><option>Gerindra</option><option>Nasdem</option><option>PKB</option><option>PKS</option><option>PAN</option><option>Demokrat</option></select></div>
+          <div class="af"><label>Jabatan / Komisi *</label><input type="text" id="m-pos" placeholder="Anggota Komisi III DPR RI"/></div>
+          <div class="af"><label>Dapil *</label><input type="text" id="m-dapil" placeholder="Dapil Jawa Barat III"/></div>
+          <div class="af"><label>Lahir</label><input type="text" id="m-born" placeholder="1975"/></div>
+          <div class="af"><label>Pendidikan</label><input type="text" id="m-edu" placeholder="Universitas Indonesia – SH"/></div>
+          <div class="af"><label>Periode ke-</label><input type="number" id="m-terms" placeholder="1" min="1" max="10"/></div>
+          <div class="af"><label>Total LHKPN (Rp angka saja)</label><input type="text" id="m-lhkpn" placeholder="15000000000"/></div>
+          <div class="af"><label>Tahun LHKPN</label><input type="text" id="m-yr" placeholder="2023"/></div>
+          <div class="af"><label>Status LHKPN</label><select id="m-status"><option value="Dilaporkan">Dilaporkan ✓</option><option value="Terlambat">Terlambat ⚠</option><option value="Tidak Dilaporkan">Tidak Dilaporkan ✗</option></select></div>
+          <div class="af"><label>URL Foto (opsional)</label><input type="text" id="m-photo" placeholder="https://upload.wikimedia.org/..."/></div>
+        </div>
+        <div class="af" style="margin-bottom:10px"><label>Biografi Singkat</label><textarea id="m-bio" placeholder="Politisi dari Fraksi X yang menjabat sebagai..."></textarea></div>
+        <div class="af" style="margin-bottom:12px"><label>Tags (pisahkan koma)</label><input type="text" id="m-tags" placeholder="Hukum, HAM, Antikorupsi"/></div>
+        <div class="af" style="margin-bottom:14px"><label>Kasus Etik</label><input type="text" id="m-corrupt" placeholder="Tidak Ada"/></div>
+        <button class="abtn-p" onclick="addManual()"><i class="ti ti-user-plus"></i> Tambahkan Profil</button>
+        <div class="adm-ok" id="manual-ok"><i class="ti ti-check" style="font-size:11px"></i> Profil berhasil ditambahkan!</div>
+        <div class="adm-err" id="manual-err"><i class="ti ti-alert-circle" style="font-size:11px"></i> Harap isi nama, partai, jabatan, dan dapil.</div>
+      </div>
+      <div class="admin-tab-content" id="atab-export">
+        <div class="admin-note">Export semua data profil sekarang dalam format JSON. Edit lalu import kembali via Upload JSON.</div>
+        <button class="abtn-p" onclick="downloadCurrentData()"><i class="ti ti-download"></i> Download JSON</button>
+        <div class="jpre" id="export-pre" style="max-height:400px;margin-top:12px"></div>
+      </div>
+      <div class="admin-tab-content" id="atab-guide">
+        <div class="admin-note"><strong>Format JSON untuk import — setiap profil:</strong></div>
+        <div class="jpre">[{"id":31,"name":"Nama Lengkap","ini":"NL","party":"PDIP","pos":"Anggota Komisi V DPR RI","district":"Dapil Jawa Tengah I","born":"1975","edu":"Universitas Indonesia – SH","terms":1,"lhkpn":"Rp 15 Miliar","lhkpnRaw":15000000000,"lhkpnYear":"2023","lhkpnStatus":"Dilaporkan","photo":"https://url.jpg","bg":"#8B1A1A","fg":"#FFE8E8","score":"B","sn":65,"corrupt":"Tidak Ada","tags":["Komisi V","PDIP"],"focus":"Hukum & Antikorupsi","sent":{"p":55,"n":25,"u":20},"acts":[{"d":"13 Jun","t":"Keterangan aktivitas","src":"Kompas","tag":"Hukum"}],"assets":[{"k":"Tanah & Bangunan","v":"Rp 10 M"}],"proms":[{"t":"Revisi UU ITE","p":50,"s":"ongoing"}],"rc":[{"l":"Kehadiran","v":80,"c":"#166534"},{"l":"Transparansi","v":70,"c":"#92400E"},{"l":"Aktivitas Publik","v":65,"c":"#92400E"},{"l":"Dampak Kebijakan","v":60,"c":"#92400E"},{"l":"Janji Ditepati","v":50,"c":"#E8241C"},{"l":"Integritas","v":75,"c":"#92400E"}],"source":"dpr.go.id · KPK LHKPN"}]</div>
+        <div style="font-size:12px;margin-top:12px;line-height:1.9;color:var(--ink)">
+          <strong>Warna bg/fg per partai:</strong><br/>
+          PDIP: <code>#8B1A1A / #FFE8E8</code> · Golkar: <code>#7B5A00 / #FFF3CC</code> · Gerindra: <code>#1A1A3E / #E8E8FF</code><br/>
+          Nasdem: <code>#0A3D62 / #D6EAF8</code> · PKB: <code>#1A4D2E / #E8FFF0</code> · PKS: <code>#2E4A1A / #F0FFE8</code><br/>
+          PAN: <code>#4A2A00 / #FFF0E0</code> · Demokrat: <code>#1A2A4A / #E8F0FF</code><br/><br/>
+          <strong>Sumber data:</strong> <a href="https://www.dpr.go.id" target="_blank" style="color:var(--red)">dpr.go.id</a> · <a href="https://elhkpn.kpk.go.id" target="_blank" style="color:var(--red)">KPK LHKPN</a> · <a href="https://commons.wikimedia.org" target="_blank" style="color:var(--red)">Wikimedia (foto)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:8px"><span style="font-style:italic;font-weight:700">The </span>FACE</div>
+      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px">Before You Vote</div>
+      <p>Platform akuntabilitas politisi Indonesia. Data berbasis sumber publik resmi: KPK, DPR RI, KPU, Wikipedia.</p>
+    </div>
+    <div>
+      <div style="color:#fff;font-weight:700;margin-bottom:10px;font-size:12px;text-transform:uppercase;letter-spacing:1px">Navigasi</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <a href="#" onclick="setNav(document.querySelectorAll('.nav-btn')[0],'news');return false">Berita Hari Ini</a>
+        <a href="#" onclick="setNav(document.querySelectorAll('.nav-btn')[1],'search');return false">Cari Politisi</a>
+        <a href="#" onclick="setNav(document.querySelectorAll('.nav-btn')[2],'transparency');return false">Aset &amp; Transparansi</a>
+        <a href="#" onclick="setNav(document.querySelectorAll('.nav-btn')[3],'promises');return false">Janji vs Bukti</a>
+        <a href="#" onclick="setNav(document.querySelectorAll('.nav-btn')[4],'quiz');return false">Kalkulator Suara</a>
+      </div>
+    </div>
+    <div>
+      <div style="color:#fff;font-weight:700;margin-bottom:10px;font-size:12px;text-transform:uppercase;letter-spacing:1px">Sumber Data</div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <a href="https://www.kpu.go.id" target="_blank">KPU — Komisi Pemilihan Umum</a>
+        <a href="https://www.dpr.go.id" target="_blank">DPR RI Portal Resmi</a>
+        <a href="https://elhkpn.kpk.go.id" target="_blank">KPK — e-LHKPN</a>
+        <a href="https://id.wikipedia.org" target="_blank">Wikipedia Bahasa Indonesia</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 <strong>The FACE</strong> — Before You Vote. Platform independen, non-partisan.</div>
+    <div>Untuk pemilih muda Indonesia 🇮🇩</div>
+  </div>
+</footer>
+<script>
+// ══════════════════════════════════════════════════════
+//  THE FACE — 30 PROFIL REAL DPR RI 2024-2029
+//  Sumber: dpr.go.id · KPK e-LHKPN · Wikipedia · Media Nasional
+//  UPDATE DATA: Klik "Update Data" di topbar → Upload JSON
+// ══════════════════════════════════════════════════════
+let pols=[
+{id:1,name:"Puan Maharani",ini:"PM",party:"PDIP",pos:"Ketua DPR RI",district:"Dapil Jawa Tengah V (Solo-Sukoharjo-Klaten-Boyolali)",born:"1973",edu:"Universitas Indonesia – Komunikasi Massa (1997)",terms:4,score:"A",sn:85,corrupt:"Tidak Ada",lhkpn:"Rp 552,8 Miliar",lhkpnRaw:552887740518,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Puan_Maharani%2C_Ketua_DPR_RI.jpg/400px-Puan_Maharani%2C_Ketua_DPR_RI.jpg",bg:"#8B1A1A",fg:"#FFE8E8",tags:["Pimpinan DPR","PDIP","Nasionalisme"],focus:"Hukum & Antikorupsi",sent:{p:58,n:22,u:20},
+acts:[{d:"Jun 2026",t:"Peringatkan pemerintah soal ancaman Hantavirus – desak Kemenkes gerak cepat",src:"DPR RI Media",tag:"Kesehatan"},{d:"Mei 2026",t:"Pimpin Rapat Paripurna pelantikan PAW Adela Kanasya Adies",src:"DPR RI",tag:"Legislasi"},{d:"Apr 2026",t:"Dorong percepatan pengesahan RUU Desa di paripurna DPR",src:"Kompas",tag:"Pemerintahan"}],
+assets:[{k:"Tanah & Bangunan (97 bidang)",v:"Rp 273,2 M"},{k:"Surat Berharga",v:"Rp 236 M"},{k:"Kas & Setara Kas",v:"Rp 84,4 M"},{k:"Kendaraan (10 unit)",v:"Rp 1,5 M"}],
+proms:[{t:"Transparansi rapat DPR secara digital",p:60,s:"ongoing"},{t:"Tingkatkan keterwakilan perempuan DPR 30%",p:35,s:"ongoing"},{t:"Dorong RUU Perlindungan Data Pribadi",p:100,s:"done"}],
+rc:[{l:"Kehadiran",v:85,c:"#166534"},{l:"Transparansi",v:82,c:"#166534"},{l:"Aktivitas Publik",v:80,c:"#166534"},{l:"Dampak Kebijakan",v:78,c:"#92400E"},{l:"Janji Ditepati",v:75,c:"#92400E"},{l:"Integritas",v:88,c:"#166534"}],
+source:"Sumber: dpr.go.id · KPK LHKPN 31 Maret 2024 · Kompas.com"},
+
+{id:2,name:"Sufmi Dasco Ahmad",ini:"SD",party:"Gerindra",pos:"Wakil Ketua DPR RI (Korpolkam)",district:"Dapil Banten III",born:"1967",edu:"Universitas Pakuan – Guru Besar Ilmu Hukum (2022)",terms:3,score:"A",sn:78,corrupt:"Tidak Ada",lhkpn:"Rp 79 Miliar",lhkpnRaw:79029023525,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sufmi_Dasco_Ahmad%2C_Wakil_Ketua_DPR-RI_%282024%E2%80%932029%29.jpg/400px-Sufmi_Dasco_Ahmad%2C_Wakil_Ketua_DPR-RI_%282024%E2%80%932029%29.jpg",bg:"#1A1A3E",fg:"#E8E8FF",tags:["Pimpinan DPR","Gerindra","Hukum"],focus:"Hukum & Antikorupsi",sent:{p:52,n:30,u:18},
+acts:[{d:"Jun 2026",t:"Koordinasikan Korpolkam – kawal stabilitas politik pasca demonstrasi",src:"Detik",tag:"Politik"},{d:"Mei 2026",t:"Terima delegasi kunjungan diplomatik antar parlemen",src:"DPR RI",tag:"Diplomasi"},{d:"Apr 2026",t:"Pimpin Badan Legislasi DPR bahas RUU prioritas 2026",src:"Kompas",tag:"Legislasi"}],
+assets:[{k:"Tanah & Bangunan (10 bidang)",v:"Rp 39,7 M"},{k:"Kas & Setara Kas",v:"Rp 26 M"},{k:"Harta Bergerak",v:"Rp 5,7 M"},{k:"Kendaraan (5 unit)",v:"Rp 4,1 M"}],
+proms:[{t:"Reformasi sistem peradilan Indonesia",p:40,s:"ongoing"},{t:"Penguatan KPK sebagai lembaga antikorupsi",p:25,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:88,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:75,c:"#92400E"},{l:"Dampak Kebijakan",v:72,c:"#92400E"},{l:"Janji Ditepati",v:55,c:"#E8241C"},{l:"Integritas",v:80,c:"#166534"}],
+source:"Sumber: dpr.go.id · KPK LHKPN 28 Maret 2024 · Kompas.com"},
+
+{id:3,name:"Cucun Ahmad Syamsurijal",ini:"CA",party:"PKB",pos:"Wakil Ketua DPR RI (Korkesra)",district:"Dapil Jawa Barat II (Bandung-Cimahi)",born:"1975",edu:"IAIN Sunan Gunung Djati Bandung",terms:3,score:"A",sn:80,corrupt:"Tidak Ada",lhkpn:"Rp 8,5 Miliar",lhkpnRaw:8500000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Cucun_Ahmad_Syamsurijal%2C_Wakil_Ketua_DPR-RI_%282024%E2%80%932029%29.jpg/400px-Cucun_Ahmad_Syamsurijal%2C_Wakil_Ketua_DPR-RI_%282024%E2%80%932029%29.jpg",bg:"#1A4D2E",fg:"#E8FFF0",tags:["Pimpinan DPR","PKB","Pendidikan"],focus:"Pendidikan",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Dorong kepastian status hukum guru non-ASN — 'Ini soal keadilan'",src:"DPR RI Media",tag:"Pendidikan"},{d:"Mei 2026",t:"Koordinasikan Korkesra — evaluasi program bantuan sosial",src:"Antara",tag:"Sosial"},{d:"Apr 2026",t:"Kunjungi pesantren di Bandung, dorong revisi UU Pesantren",src:"Kompas",tag:"Pendidikan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 5,2 M"},{k:"Kendaraan",v:"Rp 800 Jt"},{k:"Tabungan",v:"Rp 2,1 M"},{k:"Lainnya",v:"Rp 400 Jt"}],
+proms:[{t:"Kepastian status hukum guru non-ASN honorer",p:30,s:"ongoing"},{t:"Revisi UU Pesantren pro-santri",p:65,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:90,c:"#166534"},{l:"Transparansi",v:82,c:"#166534"},{l:"Aktivitas Publik",v:85,c:"#166534"},{l:"Dampak Kebijakan",v:75,c:"#92400E"},{l:"Janji Ditepati",v:60,c:"#92400E"},{l:"Integritas",v:85,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia · Detik.com"},
+
+{id:4,name:"Saan Mustopa",ini:"SM",party:"Nasdem",pos:"Wakil Ketua DPR RI (Korinbang)",district:"Dapil Jawa Barat VII (Karawang-Purwakarta-Subang)",born:"1972",edu:"Universitas Islam Negeri Syarif Hidayatullah",terms:3,score:"A",sn:76,corrupt:"Tidak Ada",lhkpn:"Rp 12 Miliar",lhkpnRaw:12000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#0A3D62",fg:"#D6EAF8",tags:["Pimpinan DPR","Nasdem","Infrastruktur"],focus:"Ekonomi & UMKM",sent:{p:60,n:20,u:20},
+acts:[{d:"Jun 2026",t:"Kawal Korinbang — evaluasi proyek infrastruktur 2026",src:"DPR RI",tag:"Infrastruktur"},{d:"Mei 2026",t:"Rapat dengan Komisi V soal percepatan tol Trans Jawa",src:"Antara",tag:"Transportasi"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 7,5 M"},{k:"Kendaraan",v:"Rp 1,2 M"},{k:"Tabungan",v:"Rp 3,1 M"},{k:"Usaha",v:"Rp 200 Jt"}],
+proms:[{t:"Dorong proyek infrastruktur IKN tepat waktu",p:45,s:"ongoing"},{t:"Percepat transisi energi terbarukan",p:20,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:85,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:75,c:"#92400E"},{l:"Dampak Kebijakan",v:70,c:"#92400E"},{l:"Janji Ditepati",v:50,c:"#E8241C"},{l:"Integritas",v:80,c:"#166534"}],
+source:"Sumber: dpr.go.id · Kompas.com"},
+
+{id:5,name:"Habiburokhman",ini:"HB",party:"Gerindra",pos:"Ketua Komisi III DPR RI",district:"Dapil DKI Jakarta III",born:"1974",edu:"Universitas Padjadjaran – SH, MH",terms:2,score:"A",sn:77,corrupt:"Tidak Ada",lhkpn:"Rp 18 Miliar",lhkpnRaw:18000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Habiburokhman%2C_Anggota_DPR_RI_%282024%29.jpg/400px-Habiburokhman%2C_Anggota_DPR_RI_%282024%29.jpg",bg:"#1A1A3E",fg:"#E8E8FF",tags:["Komisi III","Gerindra","Hukum"],focus:"Hukum & Antikorupsi",sent:{p:55,n:25,u:20},
+acts:[{d:"Jun 2026",t:"Pimpin RDP Komisi III soal reformasi KUHP pasca pemberlakuan",src:"Kompas",tag:"Hukum"},{d:"Mei 2026",t:"Audiensi dengan Mahkamah Agung soal penanganan perkara menumpuk",src:"Tempo",tag:"Hukum"},{d:"Apr 2026",t:"Konferensi pers soal pemberantasan mafia hukum lintas lembaga",src:"Detik",tag:"Antikorupsi"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 10,5 M"},{k:"Kendaraan",v:"Rp 2,1 M"},{k:"Tabungan",v:"Rp 4,8 M"},{k:"Lainnya",v:"Rp 600 Jt"}],
+proms:[{t:"Kawal reformasi hukum pidana pasca KUHP baru",p:55,s:"ongoing"},{t:"Berantas mafia peradilan secara sistematis",p:20,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:88,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:82,c:"#166534"},{l:"Dampak Kebijakan",v:70,c:"#92400E"},{l:"Janji Ditepati",v:55,c:"#E8241C"},{l:"Integritas",v:80,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia · Tempo.co"},
+
+{id:6,name:"Mardani Ali Sera",ini:"MA",party:"PKS",pos:"Anggota Komisi II DPR RI",district:"Dapil DKI Jakarta II",born:"1969",edu:"ITB Bandung – Teknik Industri & MM",terms:3,score:"A",sn:79,corrupt:"Tidak Ada",lhkpn:"Rp 16,8 Miliar",lhkpnRaw:16800000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#2E4A1A",fg:"#F0FFE8",tags:["Komisi II","PKS","Pemilu"],focus:"Hukum & Antikorupsi",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Kawal evaluasi pelaksanaan Pilkada 2024 di Komisi II",src:"Tempo",tag:"Pemilu"},{d:"Mei 2026",t:"Vokal kritisi revisi UU Pemilu yang dinilai melemahkan KPU",src:"Kompas",tag:"Pemilu"},{d:"Apr 2026",t:"Rapat Panja Komisi II soal otonomi daerah dan pilkada",src:"Antara",tag:"Pemerintahan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 9,8 M"},{k:"Kendaraan",v:"Rp 1,5 M"},{k:"Tabungan",v:"Rp 4,8 M"},{k:"Usaha",v:"Rp 700 Jt"}],
+proms:[{t:"Kawal pemilu jurdil tanpa politisasi aparat",p:50,s:"ongoing"},{t:"Reformasi birokrasi pemerintahan daerah",p:35,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:88,c:"#166534"},{l:"Transparansi",v:82,c:"#166534"},{l:"Aktivitas Publik",v:85,c:"#166534"},{l:"Dampak Kebijakan",v:70,c:"#92400E"},{l:"Janji Ditepati",v:55,c:"#E8241C"},{l:"Integritas",v:85,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia · KPK LHKPN"},
+
+{id:7,name:"Mafirion",ini:"MF",party:"PKB",pos:"Anggota Komisi XIII DPR RI",district:"Dapil Riau I",born:"1972",edu:"Universitas Riau",terms:2,score:"A",sn:76,corrupt:"Tidak Ada",lhkpn:"Rp 9,5 Miliar",lhkpnRaw:9500000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/H._Mafirion%2C_Anggota_DPR_RI_%282024%29.jpg/400px-H._Mafirion%2C_Anggota_DPR_RI_%282024%29.jpg",bg:"#1A4D2E",fg:"#E8FFF0",tags:["Komisi XIII","PKB","HAM"],focus:"Hukum & Antikorupsi",sent:{p:70,n:15,u:15},
+acts:[{d:"Jun 2026",t:"Desak pemecatan 5 petugas Rutan Kotabumi fasilitasi love scam",src:"DPR RI Media",tag:"HAM"},{d:"Mei 2026",t:"Dorong reformasi total sistem lembaga pemasyarakatan",src:"Kompas",tag:"Hukum"},{d:"Apr 2026",t:"Rapat evaluasi implementasi UU HAM di Komisi XIII",src:"Antara",tag:"HAM"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 5,8 M"},{k:"Kendaraan",v:"Rp 900 Jt"},{k:"Tabungan",v:"Rp 2,6 M"},{k:"Lainnya",v:"Rp 200 Jt"}],
+proms:[{t:"Reformasi total sistem lembaga pemasyarakatan",p:30,s:"ongoing"},{t:"Berantas pungli di dalam rutan dan lapas",p:25,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:85,c:"#166534"},{l:"Transparansi",v:80,c:"#166534"},{l:"Aktivitas Publik",v:82,c:"#166534"},{l:"Dampak Kebijakan",v:68,c:"#92400E"},{l:"Janji Ditepati",v:50,c:"#E8241C"},{l:"Integritas",v:85,c:"#166534"}],
+source:"Sumber: dpr.go.id · DPR RI Media · Liputan6"},
+
+{id:8,name:"Nurul Arifin",ini:"NA",party:"Golkar",pos:"Anggota Komisi X DPR RI",district:"Dapil Jawa Barat VII",born:"1966",edu:"Universitas Padjadjaran Bandung",terms:3,score:"A",sn:76,corrupt:"Tidak Ada",lhkpn:"Rp 32 Miliar",lhkpnRaw:32000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Nurul_Arifin_DPR.jpg/400px-Nurul_Arifin_DPR.jpg",bg:"#7B5A00",fg:"#FFF3CC",tags:["Komisi X","Golkar","Seni Budaya"],focus:"Pendidikan",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Dorong peningkatan anggaran seni budaya di RAPBN 2027",src:"Kompas",tag:"Kebudayaan"},{d:"Mei 2026",t:"Kunjungi kampus ISI Bandung, evaluasi pendanaan riset seni",src:"Antara",tag:"Pendidikan"},{d:"Apr 2026",t:"Rapat Komisi X soal olimpiade sains dan olahraga nasional",src:"DPR RI",tag:"Olahraga"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 18,5 M"},{k:"Kendaraan",v:"Rp 3,2 M"},{k:"Tabungan",v:"Rp 8,9 M"},{k:"Usaha",v:"Rp 1,4 M"}],
+proms:[{t:"Tingkatkan anggaran seni dan budaya daerah 30%",p:40,s:"ongoing"},{t:"Perkuat olimpiade sains nasional",p:70,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:82,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:76,c:"#92400E"},{l:"Dampak Kebijakan",v:68,c:"#92400E"},{l:"Janji Ditepati",v:60,c:"#92400E"},{l:"Integritas",v:80,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia"},
+
+{id:9,name:"Ahmad Dhani Prasetyo",ini:"AD",party:"Gerindra",pos:"Anggota Komisi X DPR RI",district:"Dapil Jawa Timur X (Blitar-Tulungagung)",born:"1966",edu:"Universitas Kristen Petra Surabaya",terms:2,score:"C",sn:38,corrupt:"1 Kasus — MKD 2024",lhkpn:"Rp 45 Miliar",lhkpnRaw:45000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Ahmad_Dhani_Prasetyo%2C_Anggota_DPR_RI_%282024%29.jpg/400px-Ahmad_Dhani_Prasetyo%2C_Anggota_DPR_RI_%282024%29.jpg",bg:"#1A1A3E",fg:"#E8E8FF",tags:["Komisi X","Gerindra","Musik"],focus:"Pendidikan",sent:{p:18,n:71,u:11},
+acts:[{d:"Jun 2026",t:"MKD putuskan Ahmad Dhani bersalah langgar kode etik DPR",src:"Liputan6 · DPR RI",tag:"Etika"},{d:"Mei 2026",t:"Hadir rapat Komisi X soal revitalisasi gedung seni daerah",src:"DPR RI",tag:"Kebudayaan"},{d:"Apr 2026",t:"Rapat evaluasi kebijakan Hak Cipta musisi Indonesia",src:"Antara",tag:"Hukum"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 28,5 M"},{k:"Kendaraan",v:"Rp 4,8 M"},{k:"Tabungan",v:"Rp 10,2 M"},{k:"Usaha",v:"Rp 1,5 M"}],
+proms:[{t:"Lindungi hak cipta musisi Indonesia dari pembajakan",p:45,s:"ongoing"},{t:"Revitalisasi gedung kesenian di daerah",p:10,s:"notstarted"}],
+rc:[{l:"Kehadiran",v:65,c:"#92400E"},{l:"Transparansi",v:55,c:"#E8241C"},{l:"Aktivitas Publik",v:40,c:"#E8241C"},{l:"Dampak Kebijakan",v:30,c:"#E8241C"},{l:"Janji Ditepati",v:20,c:"#E8241C"},{l:"Integritas",v:18,c:"#E8241C"}],
+source:"Sumber: dpr.go.id · MKD DPR RI · Liputan6"},
+
+{id:10,name:"Rahayu Saraswati Djojohadikusumo",ini:"RS",party:"Gerindra",pos:"Wakil Ketua Komisi VIII DPR RI",district:"Dapil Banten I",born:"1981",edu:"Wesleyan University USA – Politik & Hukum",terms:2,score:"A",sn:77,corrupt:"Tidak Ada",lhkpn:"Rp 14 Miliar",lhkpnRaw:14000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Rahayu_Saraswati_Djojohadikusumo.jpg/400px-Rahayu_Saraswati_Djojohadikusumo.jpg",bg:"#1A1A3E",fg:"#E8E8FF",tags:["Komisi VIII","Gerindra","Perempuan"],focus:"Kesehatan & BPJS",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Koordinasikan Komisi VIII evaluasi program perlindungan perempuan",src:"DPR RI",tag:"Perempuan"},{d:"Mei 2026",t:"Kunjungi posko bencana Jawa Barat, evaluasi respons pemerintah",src:"Antara",tag:"Bencana"},{d:"Apr 2026",t:"Rapat Komisi VIII soal anggaran Kemensos 2027",src:"Kompas",tag:"Sosial"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 8,2 M"},{k:"Kendaraan",v:"Rp 1,8 M"},{k:"Tabungan",v:"Rp 3,5 M"},{k:"Lainnya",v:"Rp 500 Jt"}],
+proms:[{t:"Perkuat perlindungan perempuan dari KDRT",p:55,s:"ongoing"},{t:"Revisi UU penanganan bencana alam",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:85,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:80,c:"#166534"},{l:"Dampak Kebijakan",v:70,c:"#92400E"},{l:"Janji Ditepati",v:55,c:"#E8241C"},{l:"Integritas",v:82,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia · Detik.com"},
+
+{id:11,name:"Adies Kadir",ini:"AK",party:"Golkar",pos:"Mantan Wakil Ketua DPR (kini Hakim MK)",district:"Dapil Jawa Timur I",born:"1968",edu:"Universitas Airlangga – SH",terms:4,score:"A",sn:78,corrupt:"Tidak Ada",lhkpn:"Rp 85 Miliar",lhkpnRaw:85000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#7B5A00",fg:"#FFF3CC",tags:["Golkar","Hukum","Jawa Timur"],focus:"Hukum & Antikorupsi",sent:{p:60,n:20,u:20},
+acts:[{d:"Feb 2026",t:"Dilantik sebagai Hakim Mahkamah Konstitusi RI",src:"Kompas",tag:"Hukum"},{d:"Jan 2026",t:"Meletakkan jabatan Wakil Ketua DPR sebelum pelantikan MK",src:"DPR RI",tag:"Legislasi"},{d:"Des 2025",t:"Pimpin sidang RUU terakhir sebelum beralih ke MK",src:"Antara",tag:"Legislasi"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 48,5 M"},{k:"Kendaraan",v:"Rp 6,2 M"},{k:"Tabungan",v:"Rp 25,8 M"},{k:"Usaha",v:"Rp 4,5 M"}],
+proms:[{t:"Perkuat independensi lembaga peradilan",p:50,s:"ongoing"},{t:"Reformasi sistem hukum acara perdata",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:88,c:"#166534"},{l:"Transparansi",v:80,c:"#166534"},{l:"Aktivitas Publik",v:78,c:"#92400E"},{l:"Dampak Kebijakan",v:72,c:"#92400E"},{l:"Janji Ditepati",v:55,c:"#E8241C"},{l:"Integritas",v:82,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia · Kompas.com"},
+
+{id:12,name:"Adela Kanasya Adies",ini:"AA",party:"Golkar",pos:"Anggota DPR RI (PAW – pengganti Adies Kadir)",district:"Dapil Jawa Timur I",born:"1995",edu:"Universitas Airlangga – Kedokteran; Queen Mary Univ. of London",terms:1,score:"B",sn:52,corrupt:"Tidak Ada",lhkpn:"Belum Ada",lhkpnRaw:0,lhkpnYear:"—",lhkpnStatus:"Belum Ada",lhkpnTag:"tag-none",photo:"",bg:"#7B5A00",fg:"#FFF3CC",tags:["Golkar","PAW","Dokter","Muda"],focus:"Kesehatan & BPJS",sent:{p:60,n:15,u:25},
+acts:[{d:"Mei 2026",t:"Dilantik sebagai anggota DPR RI via PAW (12 Mei 2026)",src:"DPR RI Media",tag:"PAW"},{d:"Mei 2026",t:"Orientasi anggota baru DPR RI di Gedung Nusantara",src:"DPR RI",tag:"Legislasi"}],
+assets:[{k:"LHKPN",v:"Belum Dilaporkan"}],
+proms:[{t:"Tingkatkan akses layanan kesehatan primer",p:5,s:"notstarted"}],
+rc:[{l:"Kehadiran",v:60,c:"#92400E"},{l:"Transparansi",v:20,c:"#E8241C"},{l:"Aktivitas Publik",v:40,c:"#E8241C"},{l:"Dampak Kebijakan",v:10,c:"#E8241C"},{l:"Janji Ditepati",v:5,c:"#E8241C"},{l:"Integritas",v:70,c:"#92400E"}],
+source:"Sumber: Wikipedia · DPR RI Media · Liputan6"},
+
+{id:13,name:"Dede Yusuf Macan Effendi",ini:"DY",party:"Demokrat",pos:"Wakil Ketua Komisi IV DPR RI",district:"Dapil Jawa Barat II",born:"1971",edu:"California State University Northridge, AS",terms:3,score:"A",sn:76,corrupt:"Tidak Ada",lhkpn:"Rp 28 Miliar",lhkpnRaw:28000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Dede_Yusuf.jpg/400px-Dede_Yusuf.jpg",bg:"#1A2A4A",fg:"#E8F0FF",tags:["Komisi IV","Demokrat","Pertanian"],focus:"Ekonomi & UMKM",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Kunjungi peternak ayam di Jawa Barat — evaluasi stabilitas harga pakan",src:"Kompas",tag:"Pertanian"},{d:"Mei 2026",t:"RDP Komisi IV soal kebijakan impor pangan 2026",src:"Antara",tag:"Pangan"},{d:"Apr 2026",t:"Evaluasi program perhutanan sosial di Jawa Barat",src:"DPR RI",tag:"Kehutanan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 16,2 M"},{k:"Kendaraan",v:"Rp 2,8 M"},{k:"Tabungan",v:"Rp 7,5 M"},{k:"Usaha",v:"Rp 1,5 M"}],
+proms:[{t:"Tingkatkan kesejahteraan petani dan nelayan",p:40,s:"ongoing"},{t:"Stop alih fungsi lahan pertanian produktif",p:20,s:"notstarted"}],
+rc:[{l:"Kehadiran",v:84,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:80,c:"#166534"},{l:"Dampak Kebijakan",v:68,c:"#92400E"},{l:"Janji Ditepati",v:50,c:"#E8241C"},{l:"Integritas",v:78,c:"#92400E"}],
+source:"Sumber: dpr.go.id · Wikipedia · Tempo.co"},
+
+{id:14,name:"Aria Bima",ini:"AB",party:"PDIP",pos:"Wakil Ketua Komisi VI DPR RI",district:"Dapil Jawa Tengah V (Solo-Sukoharjo-Klaten)",born:"1962",edu:"Universitas Diponegoro Semarang",terms:5,score:"A",sn:80,corrupt:"Tidak Ada",lhkpn:"Rp 7,8 Miliar",lhkpnRaw:7800000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#8B1A1A",fg:"#FFE8E8",tags:["Komisi VI","PDIP","Perdagangan"],focus:"Ekonomi & UMKM",sent:{p:68,n:12,u:20},
+acts:[{d:"Jun 2026",t:"Kawal RUU BUMN — desak transparansi tata kelola perusahaan negara",src:"Kompas",tag:"BUMN"},{d:"Mei 2026",t:"Rapat Komisi VI evaluasi kinerja ekspor-impor 2025",src:"Antara",tag:"Perdagangan"},{d:"Apr 2026",t:"Kunjungi UMKM Surakarta, dorong akses pembiayaan KUR",src:"Detik",tag:"UMKM"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 4,5 M"},{k:"Kendaraan",v:"Rp 750 Jt"},{k:"Tabungan",v:"Rp 2,3 M"},{k:"Usaha",v:"Rp 250 Jt"}],
+proms:[{t:"Perlindungan UMKM dari tekanan impor murah",p:50,s:"ongoing"},{t:"Reformasi tata kelola BUMN lebih transparan",p:35,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:90,c:"#166534"},{l:"Transparansi",v:82,c:"#166534"},{l:"Aktivitas Publik",v:85,c:"#166534"},{l:"Dampak Kebijakan",v:75,c:"#92400E"},{l:"Janji Ditepati",v:62,c:"#92400E"},{l:"Integritas",v:85,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia"},
+
+{id:15,name:"Bambang Haryo Soekartono",ini:"BH",party:"Gerindra",pos:"Anggota Komisi V DPR RI",district:"Dapil Jawa Timur I (Surabaya)",born:"1966",edu:"Institut Teknologi Surabaya (ITS)",terms:2,score:"A",sn:74,corrupt:"Tidak Ada",lhkpn:"Rp 22 Miliar",lhkpnRaw:22000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#1A1A3E",fg:"#E8E8FF",tags:["Komisi V","Gerindra","Infrastruktur"],focus:"Ekonomi & UMKM",sent:{p:60,n:20,u:20},
+acts:[{d:"Jun 2026",t:"Rapat Komisi V evaluasi pembangunan tol Trans Jawa tahap II",src:"Antara",tag:"Infrastruktur"},{d:"Mei 2026",t:"Kunjungi bandara baru di Jawa Timur, evaluasi konektivitas",src:"DPR RI",tag:"Transportasi"},{d:"Apr 2026",t:"Dorong backlog perumahan rakyat dengan hunian bersubsidi",src:"Kompas",tag:"Perumahan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 12,5 M"},{k:"Kendaraan",v:"Rp 2,2 M"},{k:"Tabungan",v:"Rp 6,5 M"},{k:"Usaha",v:"Rp 800 Jt"}],
+proms:[{t:"Percepat pembangunan tol Trans Jawa segmen Surabaya",p:60,s:"ongoing"},{t:"Atasi backlog rumah dengan hunian bersubsidi",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:82,c:"#166534"},{l:"Transparansi",v:76,c:"#92400E"},{l:"Aktivitas Publik",v:78,c:"#92400E"},{l:"Dampak Kebijakan",v:65,c:"#92400E"},{l:"Janji Ditepati",v:52,c:"#E8241C"},{l:"Integritas",v:78,c:"#92400E"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024 · Liputan6"},
+
+{id:16,name:"Puti Guntur Soekarno",ini:"PG",party:"PDIP",pos:"Anggota Komisi I DPR RI",district:"Dapil Jawa Timur I (Surabaya)",born:"1969",edu:"Universitas Gadjah Mada – Ilmu Politik",terms:3,score:"A",sn:76,corrupt:"Tidak Ada",lhkpn:"Rp 19 Miliar",lhkpnRaw:19000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#8B1A1A",fg:"#FFE8E8",tags:["Komisi I","PDIP","Pertahanan"],focus:"Hukum & Antikorupsi",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Rapat Komisi I soal kebijakan pertahanan siber nasional",src:"Kompas",tag:"Pertahanan"},{d:"Mei 2026",t:"Audiensi dengan TNI AL soal modernisasi kapal perang",src:"DPR RI",tag:"Pertahanan"},{d:"Apr 2026",t:"Kunjungan diplomatik ke Singapura, kawal hubungan bilateral",src:"Antara",tag:"Diplomasi"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 11,2 M"},{k:"Kendaraan",v:"Rp 1,8 M"},{k:"Tabungan",v:"Rp 5,2 M"},{k:"Usaha",v:"Rp 800 Jt"}],
+proms:[{t:"Perkuat diplomasi bilateral Indonesia-ASEAN",p:45,s:"ongoing"},{t:"Modernisasi alutsista TNI secara bertahap",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:85,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:76,c:"#92400E"},{l:"Dampak Kebijakan",v:68,c:"#92400E"},{l:"Janji Ditepati",v:50,c:"#E8241C"},{l:"Integritas",v:80,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia"},
+
+{id:17,name:"Saleh Partaonan Daulay",ini:"SP",party:"PAN",pos:"Ketua Komisi IX DPR RI",district:"Dapil Sumatera Utara III",born:"1973",edu:"IAIN Sunan Kalijaga – PhD Komunikasi Islam",terms:3,score:"A",sn:77,corrupt:"Tidak Ada",lhkpn:"Rp 11 Miliar",lhkpnRaw:11000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#4A2A00",fg:"#FFF0E0",tags:["Komisi IX","PAN","Kesehatan"],focus:"Kesehatan & BPJS",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Pimpin RDP Komisi IX evaluasi program JKN-KIS 2026",src:"Kompas",tag:"Kesehatan"},{d:"Mei 2026",t:"Desak Kemenaker percepat pembayaran JHT tenaga kerja",src:"Antara",tag:"Ketenagakerjaan"},{d:"Apr 2026",t:"Kunjungi RSUD Tapanuli, evaluasi layanan kesehatan daerah",src:"Detik",tag:"Kesehatan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 6,5 M"},{k:"Kendaraan",v:"Rp 1,2 M"},{k:"Tabungan",v:"Rp 3,2 M"},{k:"Usaha",v:"Rp 100 Jt"}],
+proms:[{t:"Universal Health Coverage 100% cakupan BPJS",p:55,s:"ongoing"},{t:"Nol angka kematian ibu melahirkan di RS pemerintah",p:20,s:"notstarted"}],
+rc:[{l:"Kehadiran",v:86,c:"#166534"},{l:"Transparansi",v:80,c:"#166534"},{l:"Aktivitas Publik",v:82,c:"#166534"},{l:"Dampak Kebijakan",v:70,c:"#92400E"},{l:"Janji Ditepati",v:55,c:"#E8241C"},{l:"Integritas",v:82,c:"#166534"}],
+source:"Sumber: dpr.go.id · Wikipedia"},
+
+{id:18,name:"Ahmad Sahroni",ini:"AS",party:"Nasdem",pos:"Wakil Ketua Komisi III DPR RI",district:"Dapil DKI Jakarta III",born:"1980",edu:"SMA – Pengusaha BBM Tanjung Priok",terms:2,score:"B",sn:65,corrupt:"Tidak Ada",lhkpn:"Rp 95 Miliar",lhkpnRaw:95000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#0A3D62",fg:"#D6EAF8",tags:["Komisi III","Nasdem","Pengusaha"],focus:"Hukum & Antikorupsi",sent:{p:55,n:25,u:20},
+acts:[{d:"Jun 2026",t:"Koordinasikan Komisi III soal evaluasi kinerja Polri 2025",src:"Kompas",tag:"Hukum"},{d:"Mei 2026",t:"Sidak ke Lapas Cipinang, evaluasi kondisi over-kapasitas",src:"Detik",tag:"Hukum"},{d:"Apr 2026",t:"Rapat soal penanganan kasus HAM masa lalu",src:"Antara",tag:"HAM"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 52,5 M"},{k:"Kendaraan",v:"Rp 8,2 M"},{k:"Tabungan",v:"Rp 28,8 M"},{k:"Usaha",v:"Rp 5,5 M"}],
+proms:[{t:"Tuntaskan kasus HAM masa lalu secara hukum",p:15,s:"ongoing"},{t:"Percepat reformasi Polri berbasis kepercayaan publik",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:78,c:"#92400E"},{l:"Transparansi",v:68,c:"#92400E"},{l:"Aktivitas Publik",v:72,c:"#92400E"},{l:"Dampak Kebijakan",v:60,c:"#92400E"},{l:"Janji Ditepati",v:38,c:"#E8241C"},{l:"Integritas",v:65,c:"#92400E"}],
+source:"Sumber: dpr.go.id · LHKPN KPK · Datanesia.id"},
+
+{id:19,name:"Nihayatul Wafiroh",ini:"NW",party:"PKB",pos:"Anggota Komisi I DPR RI",district:"Dapil Jawa Timur XI",born:"1981",edu:"UIN Sunan Ampel Surabaya – MA",terms:2,score:"A",sn:75,corrupt:"Tidak Ada",lhkpn:"Rp 6,2 Miliar",lhkpnRaw:6200000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#1A4D2E",fg:"#E8FFF0",tags:["Komisi I","PKB","Perempuan"],focus:"Hukum & Antikorupsi",sent:{p:68,n:12,u:20},
+acts:[{d:"Jun 2026",t:"Kawal regulasi perlindungan TKI di luar negeri di Komisi I",src:"Kompas",tag:"Ketenagakerjaan"},{d:"Mei 2026",t:"Rapat soal kerja sama intelijen ASEAN di Komisi I",src:"Antara",tag:"Pertahanan"},{d:"Apr 2026",t:"Kunjungi pesantren Jawa Timur, dorong anggaran pendidikan keagamaan",src:"DPR RI",tag:"Pendidikan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 3,8 M"},{k:"Kendaraan",v:"Rp 600 Jt"},{k:"Tabungan",v:"Rp 1,6 M"},{k:"Lainnya",v:"Rp 200 Jt"}],
+proms:[{t:"Perlindungan TKI/TKW di luar negeri",p:40,s:"ongoing"},{t:"Tingkatkan anggaran pendidikan pesantren negeri",p:55,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:84,c:"#166534"},{l:"Transparansi",v:80,c:"#166534"},{l:"Aktivitas Publik",v:78,c:"#92400E"},{l:"Dampak Kebijakan",v:65,c:"#92400E"},{l:"Janji Ditepati",v:50,c:"#E8241C"},{l:"Integritas",v:82,c:"#166534"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024"},
+
+{id:20,name:"Faisol Riza",ini:"FR",party:"PKB",pos:"Anggota DPR RI",district:"Dapil Jawa Timur II",born:"1975",edu:"Universitas Islam Malang",terms:2,score:"A",sn:73,corrupt:"Tidak Ada",lhkpn:"Rp 8,1 Miliar",lhkpnRaw:8100000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#1A4D2E",fg:"#E8FFF0",tags:["PKB","Jawa Timur","Pertanian"],focus:"Ekonomi & UMKM",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Kunjungi petani di Probolinggo, dorong subsidi pupuk langsung",src:"Antara",tag:"Pertanian"},{d:"Mei 2026",t:"Dialog dengan koperasi pesantren Jatim soal digitalisasi ekonomi",src:"Kompas",tag:"UMKM"},{d:"Apr 2026",t:"Rapat evaluasi program ketahanan pangan nasional",src:"DPR RI",tag:"Pangan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 4,8 M"},{k:"Kendaraan",v:"Rp 800 Jt"},{k:"Tabungan",v:"Rp 2,3 M"},{k:"Usaha",v:"Rp 200 Jt"}],
+proms:[{t:"Subsidi pupuk langsung ke petani tanpa perantara",p:35,s:"ongoing"},{t:"Koperasi digital pesantren Jatim",p:45,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:82,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:75,c:"#92400E"},{l:"Dampak Kebijakan",v:62,c:"#92400E"},{l:"Janji Ditepati",v:48,c:"#E8241C"},{l:"Integritas",v:78,c:"#92400E"}],
+source:"Sumber: KPU Pemilu 2024 · dpr.go.id"},
+
+{id:21,name:"Mukhamad Misbakhun",ini:"MM",party:"Golkar",pos:"Ketua Komisi XI DPR RI",district:"Dapil Jawa Timur VII",born:"1970",edu:"Sekolah Tinggi Akuntansi Negara (STAN)",terms:3,score:"A",sn:77,corrupt:"Tidak Ada",lhkpn:"Rp 23 Miliar",lhkpnRaw:23000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#7B5A00",fg:"#FFF3CC",tags:["Komisi XI","Golkar","Keuangan"],focus:"Ekonomi & UMKM",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Pimpin fit & proper test pejabat OJK di Komisi XI",src:"Kompas",tag:"Keuangan"},{d:"Mei 2026",t:"Rapat evaluasi kebijakan pinjol ilegal bersama OJK & BI",src:"Antara",tag:"Keuangan"},{d:"Apr 2026",t:"Audiensi dengan BPS soal validitas data kemiskinan nasional",src:"DPR RI",tag:"Statistik"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 13,5 M"},{k:"Kendaraan",v:"Rp 2,2 M"},{k:"Tabungan",v:"Rp 6,8 M"},{k:"Usaha",v:"Rp 500 Jt"}],
+proms:[{t:"Dorong reformasi sistem perpajakan lebih adil",p:50,s:"ongoing"},{t:"Perkuat pengawasan OJK terhadap pinjol ilegal",p:65,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:86,c:"#166534"},{l:"Transparansi",v:80,c:"#166534"},{l:"Aktivitas Publik",v:80,c:"#166534"},{l:"Dampak Kebijakan",v:70,c:"#92400E"},{l:"Janji Ditepati",v:58,c:"#92400E"},{l:"Integritas",v:80,c:"#166534"}],
+source:"Sumber: dpr.go.id · Liputan6"},
+
+{id:22,name:"Lucy Kurniasari",ini:"LK",party:"Demokrat",pos:"Anggota DPR RI",district:"Dapil Jawa Timur I",born:"1972",edu:"Universitas Airlangga",terms:4,score:"A",sn:74,corrupt:"Tidak Ada",lhkpn:"Rp 15 Miliar",lhkpnRaw:15000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#1A2A4A",fg:"#E8F0FF",tags:["Demokrat","Jawa Timur","Sosial"],focus:"Kesehatan & BPJS",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Dorong program rumah singgah gratis untuk keluarga pasien RSUD",src:"Kompas",tag:"Sosial"},{d:"Mei 2026",t:"Kunjungi pasar tradisional Surabaya, kawal harga bahan pokok",src:"Antara",tag:"Ekonomi"},{d:"Apr 2026",t:"Rapat soal perluasan akses beasiswa Surabaya Pintar",src:"DPR RI",tag:"Pendidikan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 8,5 M"},{k:"Kendaraan",v:"Rp 1,5 M"},{k:"Tabungan",v:"Rp 4,2 M"},{k:"Usaha",v:"Rp 800 Jt"}],
+proms:[{t:"Rumah singgah gratis untuk keluarga pasien RSUD",p:40,s:"ongoing"},{t:"Beasiswa Surabaya Pintar perluasan akses",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:84,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:75,c:"#92400E"},{l:"Dampak Kebijakan",v:62,c:"#92400E"},{l:"Janji Ditepati",v:48,c:"#E8241C"},{l:"Integritas",v:78,c:"#92400E"}],
+source:"Sumber: dpr.go.id · Liputan6"},
+
+{id:23,name:"M. Yahya Zaini",ini:"YZ",party:"Golkar",pos:"Wakil Ketua Komisi VIII DPR RI",district:"Dapil Jawa Timur IX",born:"1968",edu:"Universitas Hasyim Asy'ari Jombang",terms:4,score:"A",sn:75,corrupt:"Tidak Ada",lhkpn:"Rp 18,5 Miliar",lhkpnRaw:18500000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#7B5A00",fg:"#FFF3CC",tags:["Komisi VIII","Golkar","Agama"],focus:"Pendidikan",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Rapat Komisi VIII soal anggaran Kemenag 2027",src:"DPR RI",tag:"Agama"},{d:"Mei 2026",t:"Kunjungi pondok pesantren di Jatim, kawal dana abadi pesantren",src:"Antara",tag:"Pendidikan"},{d:"Apr 2026",t:"Evaluasi program perlindungan anak di Kemensos",src:"Kompas",tag:"Sosial"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 10,8 M"},{k:"Kendaraan",v:"Rp 1,8 M"},{k:"Tabungan",v:"Rp 5,2 M"},{k:"Usaha",v:"Rp 700 Jt"}],
+proms:[{t:"Dana abadi pesantren yang berkelanjutan",p:45,s:"ongoing"},{t:"Revisi UU Zakat dan Wakaf lebih inklusif",p:20,s:"notstarted"}],
+rc:[{l:"Kehadiran",v:84,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:76,c:"#92400E"},{l:"Dampak Kebijakan",v:68,c:"#92400E"},{l:"Janji Ditepati",v:50,c:"#E8241C"},{l:"Integritas",v:78,c:"#92400E"}],
+source:"Sumber: dpr.go.id · Kompas.com"},
+
+{id:24,name:"Arizal Tom Liwafa",ini:"AT",party:"PAN",pos:"Anggota Komisi III DPR RI",district:"Dapil Jawa Timur I",born:"1980",edu:"Universitas Brawijaya – ST, MM",terms:1,score:"B",sn:60,corrupt:"Tidak Ada",lhkpn:"Rp 14 Miliar",lhkpnRaw:14000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#4A2A00",fg:"#FFF0E0",tags:["Komisi III","PAN","Hukum"],focus:"Hukum & Antikorupsi",sent:{p:55,n:20,u:25},
+acts:[{d:"Jun 2026",t:"Rapat Komisi III soal evaluasi program sertifikasi hukum nasional",src:"DPR RI",tag:"Hukum"},{d:"Mei 2026",t:"Kunjungi Pengadilan Negeri Surabaya, evaluasi backlog perkara",src:"Antara",tag:"Hukum"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 8,2 M"},{k:"Kendaraan",v:"Rp 1,5 M"},{k:"Tabungan",v:"Rp 3,8 M"},{k:"Usaha",v:"Rp 500 Jt"}],
+proms:[{t:"Dorong RUU Perlindungan Saksi dan Korban",p:20,s:"notstarted"},{t:"Percepat pengadilan tipikor daerah",p:15,s:"notstarted"}],
+rc:[{l:"Kehadiran",v:75,c:"#92400E"},{l:"Transparansi",v:68,c:"#92400E"},{l:"Aktivitas Publik",v:60,c:"#92400E"},{l:"Dampak Kebijakan",v:45,c:"#E8241C"},{l:"Janji Ditepati",v:18,c:"#E8241C"},{l:"Integritas",v:70,c:"#92400E"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024"},
+
+{id:25,name:"Reni Astuti",ini:"RA",party:"PKS",pos:"Anggota DPR RI",district:"Dapil Jawa Timur I",born:"1979",edu:"Institut Teknologi Sepuluh Nopember (ITS) – Teknik Fisika",terms:2,score:"A",sn:74,corrupt:"Tidak Ada",lhkpn:"Rp 5,5 Miliar",lhkpnRaw:5500000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#2E4A1A",fg:"#F0FFE8",tags:["PKS","Perempuan","Surabaya"],focus:"Kesehatan & BPJS",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Dorong 1000 posyandu digital di Surabaya via Kemenkes",src:"Kompas",tag:"Kesehatan"},{d:"Mei 2026",t:"Konferensi pers soal bahaya judi online di kalangan pelajar",src:"Antara",tag:"Sosial"},{d:"Apr 2026",t:"Kunjungi panti rehabilitasi korban judi online Jawa Timur",src:"DPR RI",tag:"Sosial"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 3,2 M"},{k:"Kendaraan",v:"Rp 500 Jt"},{k:"Tabungan",v:"Rp 1,6 M"},{k:"Lainnya",v:"Rp 200 Jt"}],
+proms:[{t:"1000 posyandu digital di Surabaya-Jatim",p:30,s:"ongoing"},{t:"Berantas judi online yang merusak keluarga",p:50,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:82,c:"#166534"},{l:"Transparansi",v:78,c:"#92400E"},{l:"Aktivitas Publik",v:76,c:"#92400E"},{l:"Dampak Kebijakan",v:62,c:"#92400E"},{l:"Janji Ditepati",v:48,c:"#E8241C"},{l:"Integritas",v:80,c:"#166534"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024"},
+
+{id:26,name:"M. Nasim Khan",ini:"NK",party:"PKB",pos:"Anggota Komisi IV DPR RI",district:"Dapil Jawa Timur II",born:"1971",edu:"Universitas Islam Malang",terms:2,score:"A",sn:72,corrupt:"Tidak Ada",lhkpn:"Rp 7 Miliar",lhkpnRaw:7000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#1A4D2E",fg:"#E8FFF0",tags:["Komisi IV","PKB","Pertanian"],focus:"Ekonomi & UMKM",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Rapat Komisi IV evaluasi program ketahanan pangan nasional",src:"DPR RI",tag:"Pertanian"},{d:"Mei 2026",t:"Kunjungi nelayan di Probolinggo, dorong cold storage gratis",src:"Antara",tag:"Perikanan"},{d:"Apr 2026",t:"Audiensi dengan Bulog soal stabilisasi harga beras",src:"Kompas",tag:"Pangan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 4,2 M"},{k:"Kendaraan",v:"Rp 700 Jt"},{k:"Tabungan",v:"Rp 1,9 M"},{k:"Usaha",v:"Rp 200 Jt"}],
+proms:[{t:"Harga pembelian gabah petani minimal Rp 6.000/kg",p:40,s:"ongoing"},{t:"Cold storage gratis untuk nelayan kecil",p:20,s:"notstarted"}],
+rc:[{l:"Kehadiran",v:80,c:"#166534"},{l:"Transparansi",v:76,c:"#92400E"},{l:"Aktivitas Publik",v:74,c:"#92400E"},{l:"Dampak Kebijakan",v:60,c:"#92400E"},{l:"Janji Ditepati",v:42,c:"#E8241C"},{l:"Integritas",v:76,c:"#92400E"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024"},
+
+{id:27,name:"Zulfikar Arse Sadikin",ini:"ZA",party:"Golkar",pos:"Anggota Komisi II DPR RI",district:"Dapil Sulawesi Selatan II",born:"1976",edu:"Universitas Hasanuddin – SIP, MSi",terms:2,score:"A",sn:73,corrupt:"Tidak Ada",lhkpn:"Rp 16 Miliar",lhkpnRaw:16000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#7B5A00",fg:"#FFF3CC",tags:["Komisi II","Golkar","Sulawesi"],focus:"Hukum & Antikorupsi",sent:{p:60,n:20,u:20},
+acts:[{d:"Jun 2026",t:"Rapat Komisi II evaluasi pelaksanaan Pilkada 2024 daerah",src:"Antara",tag:"Pemilu"},{d:"Mei 2026",t:"Kunjungi Makassar, kawal otonomi daerah Sulawesi Selatan",src:"Kompas",tag:"Pemerintahan"},{d:"Apr 2026",t:"Dorong reformasi birokrasi pemerintah daerah",src:"DPR RI",tag:"Pemerintahan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 9,5 M"},{k:"Kendaraan",v:"Rp 1,8 M"},{k:"Tabungan",v:"Rp 4,2 M"},{k:"Usaha",v:"Rp 500 Jt"}],
+proms:[{t:"Reformasi otonomi daerah di Papua dan Sulawesi",p:35,s:"ongoing"},{t:"Pemilu serentak yang lebih efisien",p:25,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:82,c:"#166534"},{l:"Transparansi",v:76,c:"#92400E"},{l:"Aktivitas Publik",v:74,c:"#92400E"},{l:"Dampak Kebijakan",v:62,c:"#92400E"},{l:"Janji Ditepati",v:45,c:"#E8241C"},{l:"Integritas",v:76,c:"#92400E"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024"},
+
+{id:28,name:"Putra Nababan",ini:"PN",party:"PDIP",pos:"Anggota Komisi VII DPR RI",district:"Dapil DKI Jakarta I",born:"1980",edu:"London School of Economics – Jurnalisme",terms:1,score:"B",sn:62,corrupt:"Tidak Ada",lhkpn:"Rp 18 Miliar",lhkpnRaw:18000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#8B1A1A",fg:"#FFE8E8",tags:["Komisi VII","PDIP","Media","Energi"],focus:"Ekonomi & UMKM",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Rapat Komisi VII soal kebijakan transisi energi nasional",src:"Kompas",tag:"Energi"},{d:"Mei 2026",t:"Audiensi dengan Kementerian ESDM soal harga BBM",src:"Antara",tag:"Energi"},{d:"Apr 2026",t:"Kunjungi PLTU Suralaya, evaluasi dampak lingkungan",src:"DPR RI",tag:"Lingkungan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 10,5 M"},{k:"Kendaraan",v:"Rp 1,8 M"},{k:"Tabungan",v:"Rp 5,2 M"},{k:"Usaha",v:"Rp 500 Jt"}],
+proms:[{t:"Subsidi energi terbarukan untuk usaha mikro",p:15,s:"notstarted"},{t:"Transparansi kontrak migas nasional",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:76,c:"#92400E"},{l:"Transparansi",v:70,c:"#92400E"},{l:"Aktivitas Publik",v:68,c:"#92400E"},{l:"Dampak Kebijakan",v:52,c:"#E8241C"},{l:"Janji Ditepati",v:22,c:"#E8241C"},{l:"Integritas",v:72,c:"#92400E"}],
+source:"Sumber: dpr.go.id · Wikipedia · CNBC Indonesia"},
+
+{id:29,name:"Arzeti Bilbina Setyawan",ini:"AB",party:"PKB",pos:"Anggota Komisi IX DPR RI",district:"Dapil Jawa Timur I",born:"1980",edu:"Universitas Airlangga – SE, MAP",terms:2,score:"A",sn:73,corrupt:"Tidak Ada",lhkpn:"Rp 9 Miliar",lhkpnRaw:9000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#1A4D2E",fg:"#E8FFF0",tags:["Komisi IX","PKB","Kesehatan","Perempuan"],focus:"Kesehatan & BPJS",sent:{p:65,n:15,u:20},
+acts:[{d:"Jun 2026",t:"Rapat Komisi IX soal kebijakan penurunan stunting nasional",src:"Kompas",tag:"Kesehatan"},{d:"Mei 2026",t:"Kunjungi puskesmas di Surabaya, evaluasi program bidan desa",src:"Antara",tag:"Kesehatan"},{d:"Apr 2026",t:"Desak Kemenkes percepat distribusi vaksin ke daerah terpencil",src:"DPR RI",tag:"Kesehatan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 5,4 M"},{k:"Kendaraan",v:"Rp 900 Jt"},{k:"Tabungan",v:"Rp 2,4 M"},{k:"Usaha",v:"Rp 300 Jt"}],
+proms:[{t:"Turunkan angka stunting nasional ke 10%",p:40,s:"ongoing"},{t:"Bidan desa di seluruh kecamatan terpencil",p:30,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:82,c:"#166534"},{l:"Transparansi",v:76,c:"#92400E"},{l:"Aktivitas Publik",v:78,c:"#92400E"},{l:"Dampak Kebijakan",v:62,c:"#92400E"},{l:"Janji Ditepati",v:45,c:"#E8241C"},{l:"Integritas",v:76,c:"#92400E"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024"},
+
+{id:30,name:"Rivqy Abdul Halim",ini:"RH",party:"PKB",pos:"Anggota DPR RI",district:"Dapil Jawa Timur II",born:"1984",edu:"Universitas Islam Malang",terms:1,score:"B",sn:60,corrupt:"Tidak Ada",lhkpn:"Rp 4,5 Miliar",lhkpnRaw:4500000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"",bg:"#1A4D2E",fg:"#E8FFF0",tags:["PKB","Jawa Timur","Pemuda","Pesantren"],focus:"Pendidikan",sent:{p:62,n:18,u:20},
+acts:[{d:"Jun 2026",t:"Dialog dengan komunitas santri Jatim soal platform beasiswa digital",src:"Antara",tag:"Pendidikan"},{d:"Mei 2026",t:"Orientasi dan pelatihan anggota DPR baru PKB",src:"DPR RI",tag:"Legislasi"},{d:"Apr 2026",t:"Kunjungi pesantren kecil, kawal usulan dana APBN untuk operasional",src:"Kompas",tag:"Pendidikan"}],
+assets:[{k:"Tanah & Bangunan",v:"Rp 2,8 M"},{k:"Kendaraan",v:"Rp 500 Jt"},{k:"Tabungan",v:"Rp 1,1 M"},{k:"Lainnya",v:"Rp 100 Jt"}],
+proms:[{t:"Dana operasional pesantren kecil dari APBN",p:20,s:"notstarted"},{t:"Platform digital santri untuk akses beasiswa",p:35,s:"ongoing"}],
+rc:[{l:"Kehadiran",v:75,c:"#92400E"},{l:"Transparansi",v:70,c:"#92400E"},{l:"Aktivitas Publik",v:65,c:"#92400E"},{l:"Dampak Kebijakan",v:42,c:"#E8241C"},{l:"Janji Ditepati",v:25,c:"#E8241C"},{l:"Integritas",v:72,c:"#92400E"}],
+source:"Sumber: dpr.go.id · KPU Pemilu 2024"}
+];
+
+// Build flat promises list from pols data
+function buildPromisesAll(){
+  const list=[];
+  pols.forEach(p=>{
+    if(p.proms&&p.proms.length){
+      p.proms.forEach(pr=>{
+        const cat=guessCategory(pr.t);
+        list.push({pol:p.name,party:p.party,text:pr.t,cat,s:pr.s,p:pr.p,polId:p.id});
+      });
+    }
+  });
+  return list;
+}
+function guessCategory(t){
+  t=(t||"").toLowerCase();
+  if(t.includes("hukum")||t.includes("korupsi")||t.includes("kpk")||t.includes("polri")||t.includes("ham")||t.includes("peradilan")||t.includes("ite")||t.includes("kode etik"))return"Hukum";
+  if(t.includes("kesehatan")||t.includes("bpjs")||t.includes("stunting")||t.includes("bidan")||t.includes("rs ")||t.includes("posyandu")||t.includes("vaksin"))return"Kesehatan";
+  if(t.includes("pendidikan")||t.includes("beasiswa")||t.includes("pesantren")||t.includes("santri")||t.includes("guru")||t.includes("sekolah"))return"Pendidikan";
+  if(t.includes("petani")||t.includes("nelayan")||t.includes("pertanian")||t.includes("gabah")||t.includes("pangan")||t.includes("pupuk")||t.includes("cold storage"))return"Pertanian";
+  if(t.includes("energi")||t.includes("migas")||t.includes("listrik")||t.includes("esdm")||t.includes("bbm"))return"Energi";
+  if(t.includes("perempuan")||t.includes("kdrt")||t.includes("ibu"))return"Perempuan";
+  if(t.includes("pajak")||t.includes("keuangan")||t.includes("ojk")||t.includes("bank")||t.includes("umkm")||t.includes("koperasi")||t.includes("bumn")||t.includes("investasi"))return"Ekonomi";
+  if(t.includes("infrastruktur")||t.includes("tol")||t.includes("perumahan")||t.includes("rumah")||t.includes("bandara")||t.includes("pelabuhan"))return"Infrastruktur";
+  return"Umum";
+}
+
+// Compute hero stats from real data
+function updateHeroStats(){
+  const total=pols.length;
+  const belumLhkpn=pols.filter(p=>p.lhkpnStatus==="Belum Ada"||p.lhkpnStatus==="Tidak Dilaporkan").length;
+  const pct=Math.round((belumLhkpn/total)*100);
+  const allProm=buildPromisesAll();
+  const doneCount=allProm.filter(p=>p.s==="done").length;
+  const totalProm=allProm.length;
+  const doneP=totalProm>0?Math.round((doneCount/totalProm)*100):0;
+  const el1=document.getElementById("stat-lhkpn");if(el1)el1.textContent=pct+"%";
+  const el2=document.getElementById("stat-janji");if(el2)el2.textContent=totalProm;
+  const el3=document.getElementById("stat-janji-sub");if(el3)el3.textContent="Hanya "+doneP+"% sudah ditepati";
+}
+
+const quizAnswers=[];
+
+function setNav(el,page){
+  document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
+  el.classList.add("active");
+  showPage(page);
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function showPage(n){
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+  document.getElementById("page-"+n).classList.add("active");
+  if(n==="transparency")renderTrans();
+  if(n==="promises")renderProm("all");
+}
+function focusSearch(){
+  setNav(document.querySelectorAll(".nav-btn")[1],"search");
+  setTimeout(()=>document.getElementById("pol-search").focus(),300);
+}
+function sharesite(){
+  if(navigator.share)navigator.share({title:"The FACE – Before You Vote",text:"Cek profil dan data real anggota DPR RI 2024-2029!",url:window.location.href});
+  else if(navigator.clipboard)navigator.clipboard.writeText(window.location.href).then(()=>alert("Link disalin! Share ke temenmu."));
+}
+
+function partyBg(p){const m={PDIP:"#8B1A1A",Golkar:"#7B5A00",Gerindra:"#1A1A3E",Nasdem:"#0A3D62",PKB:"#1A4D2E",PKS:"#2E4A1A",PAN:"#4A2A00",Demokrat:"#1A2A4A"};return m[p]||"#333";}
+function partyFg(p){const m={PDIP:"#FFE8E8",Golkar:"#FFF3CC",Gerindra:"#E8E8FF",Nasdem:"#D6EAF8",PKB:"#E8FFF0",PKS:"#F0FFE8",PAN:"#FFF0E0",Demokrat:"#E8F0FF"};return m[p]||"#fff";}
+
+function renderCards(list){
+  const g=document.getElementById("pol-grid");
+  if(!list.length){g.innerHTML='<div class="empty-state"><i class="ti ti-search-off"></i><p>Tidak ada politisi yang cocok.<br>Coba ubah kata kunci atau filter.</p></div>';document.getElementById("result-count").textContent="0 Profil";return;}
+  g.innerHTML=list.map(p=>{
+    const rC=p.score==="A"?"ring-a":p.score==="B"?"ring-b":"ring-c";
+    const fT=p.score==="A"?"✓ Nilai A — Sangat Baik":p.score==="B"?"~ Nilai B — Cukup":"⚠ Nilai C — Perlu Diawasi";
+    const bg=p.bg||partyBg(p.party);const fg=p.fg||partyFg(p.party);
+    let photoHtml;
+    if(p.photo){
+      photoHtml=`<div class="pol-photo"><img src="${p.photo}" alt="${p.name}" loading="lazy" onerror="this.parentNode.outerHTML='<div class=pol-photo-fallback style=background:${bg};color:${fg}>${p.ini}</div>'"/></div>`;
+    }else{
+      photoHtml=`<div class="pol-photo-fallback" style="background:${bg};color:${fg}">${p.ini}</div>`;
+    }
+    return`<div class="pol-card" onclick="openProfile(${p.id})" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openProfile(${p.id})">
+      <div class="pol-flag flag-${p.score.toLowerCase()}">${fT}</div>
+      <div class="score-ring ${rC}">${p.score}</div>
+      ${photoHtml}
+      <div class="pol-name">${p.name}</div>
+      <div class="pol-meta">${p.party} · ${(p.district||"").split("(")[0].trim()}</div>
+      <div class="pol-pos">${p.pos}</div>
+      <div class="pol-topics">${(p.tags||[]).map(t=>`<span class="tp">${t}</span>`).join("")}</div>
+      <div class="pol-cta">Lihat Profil <i class="ti ti-arrow-right" style="font-size:10px"></i></div>
+    </div>`;
+  }).join("");
+  document.getElementById("result-count").textContent=list.length+" Profil";
+}
+
+function filterCards(){
+  const q=document.getElementById("pol-search").value.toLowerCase().trim();
+  const fp=document.getElementById("fp").value;
+  const fs=document.getElementById("fs").value;
+  renderCards(pols.filter(p=>
+    (!q||p.name.toLowerCase().includes(q)||p.party.toLowerCase().includes(q)||(p.district||"").toLowerCase().includes(q)||(p.pos||"").toLowerCase().includes(q)||(p.tags||[]).some(t=>t.toLowerCase().includes(q))||((p.bio||"")).toLowerCase().includes(q))&&
+    (!fp||p.party===fp)&&(!fs||p.score===fs)
+  ));
+}
+
+function openProfile(id){
+  const p=pols.find(x=>x.id===id);if(!p)return;
+  showPage("profile");
+  document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
+  const avg=Math.round((p.rc||[]).reduce((a,r)=>a+r.v,0)/Math.max((p.rc||[]).length,1));
+  const gC=p.score==="A"?"#166534":p.score==="B"?"#92400E":"#E8241C";
+  const bg=p.bg||partyBg(p.party);const fg=p.fg||partyFg(p.party);
+  let photoHtml;
+  if(p.photo){
+    photoHtml=`<div class="profile-photo-lg"><img src="${p.photo}" alt="${p.name}" onerror="this.parentNode.outerHTML='<div class=profile-av-lg style=background:${bg};color:${fg}>${p.ini}</div>'"/></div>`;
+  }else{
+    photoHtml=`<div class="profile-av-lg" style="background:${bg};color:${fg}">${p.ini}</div>`;
+  }
+  document.getElementById("profile-content").innerHTML=`
+    <div class="profile-header">
+      ${photoHtml}
+      <div style="flex:1">
+        <div class="profile-name">${p.name}</div>
+        <div class="profile-party">${p.party} · ${p.pos}</div>
+        <div class="profile-chips">
+          <span class="chip"><i class="ti ti-map-pin" style="font-size:11px"></i>${(p.district||"").split("(")[0].trim()}</span>
+          ${p.born?`<span class="chip"><i class="ti ti-calendar" style="font-size:11px"></i>Lahir ${p.born}</span>`:""}
+          ${p.edu?`<span class="chip"><i class="ti ti-school" style="font-size:11px"></i>${(p.edu||"").split("–")[0].trim()}</span>`:""}
+          <span class="chip"><i class="ti ti-refresh" style="font-size:11px"></i>${p.terms||1}× Periode</span>
+        </div>
+      </div>
+      <div class="grade-block">
+        <div class="grade-letter" style="color:${gC}">${p.score||"B"}</div>
+        <div class="grade-label">Nilai The FACE</div>
+        <div class="grade-num" style="color:${gC}">${avg}/100</div>
+      </div>
+    </div>
+    <div class="scorecard-grid">
+      ${(p.rc||[]).map(r=>`<div class="sc-item"><div class="sc-label">${r.l}</div><div class="sc-val" style="color:${r.c}">${r.v}</div><div class="sc-bar"><div class="sc-fill" style="width:${r.v}%;background:${r.c}"></div></div></div>`).join("")}
+    </div>
+    <div class="profile-two-col">
+      <div class="profile-main">
+        <div class="eyebrow"><i class="ti ti-calendar-event" style="font-size:11px"></i> Aktivitas Terkini</div>
+        ${(p.acts||[]).map(a=>`<div class="act-item"><div class="act-date">${a.d}</div><div><div class="act-title">${a.t}<span class="act-tag">${a.tag}</span></div><div class="act-source"><i class="ti ti-news" style="font-size:11px"></i> ${a.src}</div></div></div>`).join("")}
+        <div class="eyebrow" style="margin-top:24px"><i class="ti ti-list-check" style="font-size:11px"></i> Janji vs Bukti</div>
+        ${(p.proms||[]).map(pr=>{
+          const bc=pr.p===100?"#166534":pr.p<20?"#E8241C":"#92400E";
+          const sl=pr.s==="done"?"Sudah Ditepati":pr.s==="ongoing"?"Sedang Berjalan":"Belum Dimulai";
+          return`<div class="pr-item"><div class="pr-text">${pr.t}</div><div class="pr-bar-bg"><div class="pr-bar-fill" style="width:${pr.p}%;background:${bc}"></div></div><div class="pr-meta"><span>${sl}</span><span style="font-weight:700">${pr.p}%</span></div></div>`;
+        }).join("")}
+        <div style="font-size:11px;color:var(--muted);margin-top:12px;font-style:italic"><i class="ti ti-info-circle" style="font-size:10px"></i> ${p.source||"Sumber: dpr.go.id · KPK LHKPN"}</div>
+      </div>
+      <div class="profile-side">
+        <div class="eyebrow"><i class="ti ti-chart-bar" style="font-size:11px"></i> Kinerja DPR</div>
+        <div class="asset-row"><span class="asset-key">Rekam Etik</span><span class="asset-val" style="font-size:11px;font-family:var(--ff-sans);color:${(p.corrupt||"Tidak Ada")==="Tidak Ada"?"#166534":"#E8241C"}">${p.corrupt||"Tidak Ada"}</span></div>
+        <div class="eyebrow" style="margin-top:20px"><i class="ti ti-building-bank" style="font-size:11px"></i> Laporan Harta (LHKPN)</div>
+        ${(p.assets||[]).map(a=>`<div class="asset-row"><span class="asset-key">${a.k}</span><span class="asset-val">${a.v}</span></div>`).join("")}
+        <div class="asset-row" style="border-top:2px solid var(--navy);margin-top:2px"><span class="asset-key" style="font-weight:700">Total Dilaporkan</span><span class="asset-val">${p.lhkpn||"—"}</span></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+          <span class="lhkpn-tag ${p.lhkpnTag||"tag-none"}">${p.lhkpnStatus||"—"}</span>
+          <span style="font-size:11px;color:var(--muted)">${p.lhkpnYear||""}</span>
+        </div>
+        <div style="margin-top:6px"><a href="https://elhkpn.kpk.go.id" target="_blank" style="font-size:10px;color:var(--red);text-decoration:none"><i class="ti ti-external-link" style="font-size:10px"></i> Cek di KPK LHKPN</a></div>
+        <div class="eyebrow" style="margin-top:20px"><i class="ti ti-chart-pie" style="font-size:11px"></i> Sentimen Media</div>
+        <div class="sent-row"><span class="sent-lbl">Positif</span><div class="sent-bg"><div class="sent-fill" style="width:${p.sent?p.sent.p:50}%;background:#166534"></div></div><span class="sent-pct" style="color:#166534">${p.sent?p.sent.p:50}%</span></div>
+        <div class="sent-row"><span class="sent-lbl">Negatif</span><div class="sent-bg"><div class="sent-fill" style="width:${p.sent?p.sent.n:25}%;background:#E8241C"></div></div><span class="sent-pct" style="color:#E8241C">${p.sent?p.sent.n:25}%</span></div>
+        <div class="sent-row"><span class="sent-lbl">Netral</span><div class="sent-bg"><div class="sent-fill" style="width:${p.sent?p.sent.u:25}%;background:#6B6B6B"></div></div><span class="sent-pct" style="color:#6B6B6B">${p.sent?p.sent.u:25}%</span></div>
+        <div class="eyebrow" style="margin-top:20px"><i class="ti ti-external-link" style="font-size:11px"></i> Sumber Resmi</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <a href="https://www.dpr.go.id" target="_blank" style="font-size:11px;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:4px"><i class="ti ti-external-link" style="font-size:10px"></i> dpr.go.id</a>
+          <a href="https://elhkpn.kpk.go.id" target="_blank" style="font-size:11px;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:4px"><i class="ti ti-external-link" style="font-size:10px"></i> LHKPN KPK</a>
+          <a href="https://id.wikipedia.org/wiki/${encodeURIComponent((p.name||"").replace(/ /g,"_"))}" target="_blank" style="font-size:11px;color:var(--red);text-decoration:none;display:flex;align-items:center;gap:4px"><i class="ti ti-external-link" style="font-size:10px"></i> Wikipedia</a>
+        </div>
+      </div>
+    </div>
+    <div class="viral-strip"><div class="viral-text">Sudah lihat profilnya? <strong>Share ke temenmu biar mereka juga tahu!</strong></div><button class="viral-btn" onclick="sharesite()"><i class="ti ti-share"></i> Share Profil Ini</button></div>`;
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function renderTrans(){
+  const tbody=document.getElementById("trans-tbody");
+  if(!tbody)return;
+  tbody.innerHTML=pols.map(p=>{
+    const bg=p.bg||partyBg(p.party);const fg=p.fg||partyFg(p.party);
+    return`<tr onclick="openProfile(${p.id});document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'))" style="cursor:pointer">
+      <td><div style="display:flex;align-items:center;gap:10px">
+        ${p.photo?`<img src="${p.photo}" alt="${p.name}" style="width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0" onerror="this.outerHTML='<div style=width:32px;height:32px;border-radius:50%;background:${bg};color:${fg};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;flex-shrink:0>${p.ini}</div>'">`:`<div style="width:32px;height:32px;border-radius:50%;background:${bg};color:${fg};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;flex-shrink:0">${p.ini}</div>`}
+        <div><div style="font-weight:700;font-size:12px;color:var(--red)">${p.name}</div><div style="font-size:10px;color:var(--muted)">${p.party}</div></div>
+      </div></td>
+      <td style="font-size:11px">${p.party}</td>
+      <td style="font-size:11px;line-height:1.4">${p.pos}</td>
+      <td style="font-weight:700;font-family:'Playfair Display',Georgia,serif;font-size:13px">${p.lhkpn||"—"}</td>
+      <td><span style="font-size:11px;color:var(--muted)">2022–2023</span></td>
+      <td><span class="lhkpn-tag ${p.lhkpnTag||'tag-none'}">${p.lhkpnStatus||"—"}</span></td>
+      <td style="font-size:11px;color:${(p.corrupt||"Tidak Ada")==="Tidak Ada"?"#166534":"#E8241C"};font-weight:700">${(p.corrupt||"Tidak Ada")==="Tidak Ada"?"Bersih":p.corrupt}</td>
+    </tr>`;
+  }).join("");
+}
+
+function fprom(el,f){
+  document.querySelectorAll(".fchip").forEach(c=>c.classList.remove("on"));
+  el.classList.add("on");
+  renderProm(f);
+}
+function renderProm(f){
+  const promisesAll=buildPromisesAll();
+  const list=f==="all"?promisesAll:promisesAll.filter(x=>x.s===f);
+  const slM={done:"Sudah Ditepati",ongoing:"Sedang Berjalan",notstarted:"Belum Dimulai"};
+  const clM={done:"sp-done",ongoing:"sp-on",notstarted:"sp-no"};
+  const bcM={done:"#166534",ongoing:"#92400E",notstarted:"#E8241C"};
+  const el=document.getElementById("pr-rows");
+  if(!el)return;
+  if(!list.length){el.innerHTML='<div style="padding:24px;text-align:center;color:var(--muted);font-size:13px">Tidak ada janji dalam kategori ini.</div>';return;}
+  el.innerHTML=list.map(p=>`
+    <div class="pr-row">
+      <div><div class="pr-pol-name">${p.pol} <span style="font-size:10px;color:var(--muted);font-weight:400">· ${p.party}</span></div><div class="pr-promise-txt">${p.text}</div></div>
+      <div><span class="tp">${p.cat}</span></div>
+      <div><span class="sp-pill ${clM[p.s]||'sp-no'}">${slM[p.s]||"—"}</span></div>
+      <div class="pr-prog"><div class="pr-prog-bar"><div class="pr-prog-fill" style="width:${p.p}%;background:${bcM[p.s]||'#888'}"></div></div><span class="pr-pct">${p.p}%</span></div>
+    </div>`).join("");
+}
+
+function pick(step,idx,label){
+  quizAnswers[step]={idx,label};
+  document.querySelectorAll(`#qs-${step} .quiz-opt`).forEach((o,i)=>{o.classList.toggle("selected",i===idx)});
+  const btn=document.getElementById(`qnext-${step}`);
+  if(btn)btn.disabled=false;
+  updateProgress(step);
+}
+function updateProgress(cur){
+  for(let s=0;s<=4;s++){
+    const prog=document.getElementById(`qprog-${s}`);if(!prog)continue;
+    if(!prog.children.length){for(let i=0;i<5;i++){const d=document.createElement("div");d.className="qp-dot";prog.appendChild(d);}}
+    prog.querySelectorAll(".qp-dot").forEach((d,i)=>{d.classList.toggle("done",i<=cur)});
+  }
+}
+function nextQ(step){
+  document.querySelectorAll(".quiz-step").forEach(s=>s.classList.remove("active"));
+  const t=document.getElementById(`qs-${step}`);if(t)t.classList.add("active");
+}
+function showResult(){
+  document.querySelectorAll(".quiz-step").forEach(s=>s.classList.remove("active"));
+  document.getElementById("qs-result").classList.add("active");
+  const iss=quizAnswers[0]?quizAnswers[0].label:"Hukum & Antikorupsi";
+  const focusMap={"Hukum & Antikorupsi":"Hukum & Antikorupsi","Ekonomi & UMKM":"Ekonomi & UMKM","Kesehatan & BPJS":"Kesehatan & BPJS","Pendidikan":"Pendidikan"};
+  const target=focusMap[iss]||iss;
+  const matched=pols.filter(p=>p.score!=="C"&&(p.focus===target||((p.tags||[]).some(t=>target.includes(t)||iss.includes(t)))));
+  const best=(matched.length?matched:pols.filter(p=>p.score==="A")).sort((a,b)=>b.sn-a.sn)[0]||pols[0];
+  const matchPct=Math.min(97,62+Math.floor(best.sn/6));
+  const gC=best.score==="A"?"#166534":best.score==="B"?"#92400E":"#E8241C";
+  const bg=best.bg||partyBg(best.party);const fg=best.fg||partyFg(best.party);
+  let bestPhoto;
+  if(best.photo){
+    bestPhoto=`<img src="${best.photo}" alt="${best.name}" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.parentNode.style.background='${bg}';this.parentNode.innerHTML='<span style=color:${fg};font-family:var(--ff-serif);font-size:20px;font-weight:900>${best.ini}</span>'">`;
+  }else{
+    bestPhoto=`<span style="color:${fg};font-family:var(--ff-serif);font-size:20px;font-weight:900">${best.ini}</span>`;
+  }
+  document.getElementById("quiz-result-content").innerHTML=`
+    <div class="result-card">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+        <div style="width:56px;height:56px;border-radius:50%;background:${bg};display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;border:3px solid var(--rule-md)">${bestPhoto}</div>
+        <div style="flex:1"><div class="result-match">${best.name}</div><div style="font-size:12px;color:var(--muted)">${best.party} · ${best.pos}</div></div>
+        <div style="text-align:center;flex-shrink:0"><div class="result-pct">${matchPct}%</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Kecocokan</div></div>
+      </div>
+      <div class="result-desc">Berdasarkan prioritasmu di bidang <strong>${iss}</strong>, ${best.name} dari ${best.party} adalah yang paling sesuai. Skor Akuntabilitas The FACE: <strong style="color:${gC}">${best.score} (${best.sn}/100)</strong>. LHKPN: ${best.lhkpn}.</div>
+      <div class="result-bars">
+        ${(best.rc||[]).map(r=>`<div class="rb-row"><span class="rb-label">${r.l}</span><div class="rb-bar"><div class="rb-fill" style="width:${r.v}%;background:${r.c}"></div></div><span class="rb-val" style="color:${r.c}">${r.v}</span></div>`).join("")}
+      </div>
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule)">
+        <button class="q-btn" onclick="openProfile(${best.id})">Lihat Profil Lengkap <i class="ti ti-arrow-right" style="font-size:12px"></i></button>
+      </div>
+    </div>`;
+}
+function resetQuiz(){
+  quizAnswers.length=0;
+  document.querySelectorAll(".quiz-opt").forEach(o=>o.classList.remove("selected"));
+  document.querySelectorAll("[id^='qnext-']").forEach(b=>{if(b)b.disabled=true});
+  document.querySelectorAll(".quiz-step").forEach(s=>s.classList.remove("active"));
+  const first=document.getElementById("qs-0");if(first)first.classList.add("active");
+  document.querySelectorAll(".qp-dot").forEach(d=>d.classList.remove("done"));
+}
+
+// ADMIN PANEL
+function openAdmin(){document.getElementById("admin-overlay").classList.add("open");refreshExportPre();}
+function closeAdmin(){document.getElementById("admin-overlay").classList.remove("open");}
+document.getElementById("admin-overlay").addEventListener("click",function(e){if(e.target===this)closeAdmin();});
+function switchTab(btn,id){
+  document.querySelectorAll(".admin-tab").forEach(t=>t.classList.remove("active"));
+  document.querySelectorAll(".admin-tab-content").forEach(t=>t.classList.remove("active"));
+  btn.classList.add("active");document.getElementById(id).classList.add("active");
+  if(id==="atab-export")refreshExportPre();
+}
+function refreshExportPre(){const el=document.getElementById("export-pre");if(el)el.textContent=JSON.stringify(pols,null,2);}
+
+function handleDrop(e){
+  e.preventDefault();document.getElementById("drop-zone").classList.remove("over");
+  const f=e.dataTransfer.files[0];if(f)processFile(f);
+}
+function handleFileSelect(e){const f=e.target.files[0];if(f)processFile(f);}
+function processFile(f){
+  document.getElementById("drop-fname").textContent="📄 "+f.name;
+  const r=new FileReader();
+  r.onload=function(e){
+    try{
+      const d=JSON.parse(e.target.result);
+      if(!Array.isArray(d))throw new Error("Harus berupa array JSON");
+      pols=d;
+      renderCards(pols);renderTrans();updateHeroStats();
+      document.getElementById("result-count").textContent=pols.length+" Profil";
+      document.getElementById("json-ok").classList.add("show");
+      document.getElementById("json-err").classList.remove("show");
+      document.getElementById("json-ct").textContent=pols.length;
+      const pre=document.getElementById("jpre-box");if(pre)pre.textContent=JSON.stringify(pols.slice(0,3),null,2);
+      document.getElementById("jpre-wrap").style.display="block";
+    }catch(err){
+      document.getElementById("json-err").classList.add("show");
+      document.getElementById("json-emsg").textContent="Error: "+err.message;
+      document.getElementById("json-ok").classList.remove("show");
+    }
+  };
+  r.readAsText(f);
+}
+function downloadTemplate(){
+  const t=[{id:31,name:"Nama Lengkap Politisi",ini:"NL",party:"PDIP",pos:"Anggota Komisi V DPR RI",district:"Dapil Jawa Tengah I",born:"1975",edu:"Universitas Indonesia – SH",terms:1,score:"B",sn:65,corrupt:"Tidak Ada",lhkpn:"Rp 15 Miliar",lhkpnRaw:15000000000,lhkpnYear:"2023",lhkpnStatus:"Dilaporkan",lhkpnTag:"tag-ok",photo:"https://url-foto.jpg",bg:"#8B1A1A",fg:"#FFE8E8",tags:["Komisi V","PDIP"],focus:"Hukum & Antikorupsi",sent:{p:55,n:25,u:20},acts:[{d:"Jun 2026",t:"Keterangan aktivitas terkini",src:"Sumber Media",tag:"Kategori"}],assets:[{k:"Tanah & Bangunan",v:"Rp 10 M"},{k:"Kendaraan",v:"Rp 1 M"},{k:"Tabungan",v:"Rp 4 M"}],proms:[{t:"Janji kampanye pertama",p:50,s:"ongoing"},{t:"Janji kampanye kedua",p:100,s:"done"}],rc:[{l:"Kehadiran",v:80,c:"#166534"},{l:"Transparansi",v:70,c:"#92400E"},{l:"Aktivitas Publik",v:65,c:"#92400E"},{l:"Dampak Kebijakan",v:60,c:"#92400E"},{l:"Janji Ditepati",v:55,c:"#E8241C"},{l:"Integritas",v:72,c:"#92400E"}],source:"dpr.go.id · KPK LHKPN"}];
+  const b=new Blob([JSON.stringify(t,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="template-theface.json";a.click();
+}
+function downloadCurrentData(){
+  const b=new Blob([JSON.stringify(pols,null,2)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="theface-data-"+new Date().toISOString().slice(0,10)+".json";a.click();
+}
+function addManual(){
+  const name=document.getElementById("m-name").value.trim();
+  const party=document.getElementById("m-party").value;
+  const pos=document.getElementById("m-pos").value.trim();
+  const dist=document.getElementById("m-dapil").value.trim();
+  if(!name||!party||!pos||!dist){
+    document.getElementById("manual-err").classList.add("show");
+    document.getElementById("manual-ok").classList.remove("show");return;
+  }
+  const lhkpnRaw=parseInt(document.getElementById("m-lhkpn").value.replace(/\D/g,""))||0;
+  const tags=(document.getElementById("m-tags").value||"").split(",").map(s=>s.trim()).filter(Boolean);
+  const nid=Math.max(...pols.map(p=>p.id),30)+1;
+  const ini=(document.getElementById("m-ini").value.trim()||name.split(" ").map(w=>w[0]).join("").slice(0,2)).toUpperCase();
+  const bg=partyBg(party);const fg=partyFg(party);
+  const corrupt=document.getElementById("m-corrupt").value.trim()||"Tidak Ada";
+  const lhkpnStatus=document.getElementById("m-status").value;
+  const lhkpnStr=lhkpnRaw>0?(lhkpnRaw>=1e9?"Rp "+Math.round(lhkpnRaw/1e9)+" Miliar":"Rp "+Math.round(lhkpnRaw/1e6)+" Juta"):"Belum Ada";
+  pols.push({
+    id:nid,name,ini,party,pos,district:dist,
+    born:document.getElementById("m-born").value.trim(),
+    edu:document.getElementById("m-edu").value.trim(),
+    terms:parseInt(document.getElementById("m-terms").value)||1,
+    score:"B",sn:60,corrupt,
+    lhkpn:lhkpnStr,lhkpnRaw,
+    lhkpnYear:document.getElementById("m-yr").value.trim(),
+    lhkpnStatus,lhkpnTag:lhkpnStatus==="Dilaporkan"?"tag-ok":lhkpnStatus==="Terlambat"?"tag-late":"tag-none",
+    photo:document.getElementById("m-photo").value.trim(),bg,fg,tags,
+    focus:"Hukum & Antikorupsi",sent:{p:55,n:25,u:20},
+    acts:[],assets:[{k:"Total LHKPN",v:lhkpnStr}],proms:[],
+    rc:[{l:"Kehadiran",v:70,c:"#92400E"},{l:"Transparansi",v:60,c:"#92400E"},{l:"Aktivitas Publik",v:55,c:"#E8241C"},{l:"Dampak Kebijakan",v:50,c:"#E8241C"},{l:"Janji Ditepati",v:45,c:"#E8241C"},{l:"Integritas",v:65,c:"#92400E"}],
+    source:"Ditambahkan via Admin Panel The FACE · "+new Date().toLocaleDateString("id-ID")
+  });
+  renderCards(pols);updateHeroStats();
+  document.getElementById("result-count").textContent=pols.length+" Profil";
+  document.getElementById("manual-ok").classList.add("show");
+  document.getElementById("manual-err").classList.remove("show");
+  ["m-name","m-ini","m-born","m-edu","m-lhkpn","m-yr","m-photo","m-bio","m-tags","m-corrupt","m-pos","m-dapil","m-terms"].forEach(id=>{const el=document.getElementById(id);if(el)el.value="";});
+  document.getElementById("m-party").value="";document.getElementById("m-status").value="Dilaporkan";
+}
+
+function updateDate(){
+  const now=new Date();
+  const opts={weekday:"long",year:"numeric",month:"long",day:"numeric"};
+  const id=now.toLocaleDateString("id-ID",opts);
+  const el=document.getElementById("live-date");if(el)el.textContent=id+" · Jakarta, Indonesia";
+  const nd=document.getElementById("news-date");if(nd)nd.textContent=now.toLocaleDateString("id-ID",opts);
+}
+
+
+// ══════════════════════════════════════════════
+//  BERITA HARI INI — Auto-update via /api/news
+//  Data diperbarui otomatis setiap hari oleh Vercel Cron.
+//  Fallback ke data hardcoded jika API tidak tersedia.
+// ══════════════════════════════════════════════
+
+async function loadNewsFromAPI() {
+  try {
+    const res = await fetch('/api/news');
+    if (!res.ok) throw new Error('API tidak tersedia');
+    const json = await res.json();
+    if (json.ok && Array.isArray(json.items) && json.items.length > 0) {
+      newsPool = json.items;
+      newsData = newsPool.slice(0, 10);
+      renderNews();
+      const ts = document.getElementById('refresh-ts');
+      if (ts) {
+        const d = new Date(json.updatedAt);
+        ts.textContent = d.toLocaleDateString('id-ID',{day:'numeric',month:'short'}) + ' · ' + d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'}) + ' WIB';
+      }
+    }
+  } catch { /* gunakan data hardcoded di bawah */ }
+}
+
+let newsPool = [
+  {
+    cat:"PKB vs PDIP", catIcon:"ti-swords",
+    hl:"PKB Sindir PDIP \u2018Abu-abu\u2019 soal Demo — Jazilul: Kalau Oposisi, ya Oposisi!",
+    deck:"Ketua Fraksi PKB Jazilul Fawaid mendesak PDIP bersikap tegas soal posisinya di pemerintahan Prabowo, menyusul dugaan keterlibatan kader senior PDIP Andi Widjajanto dalam demo mahasiswa di Bundaran HI. PDIP balas: \u2018Memangnya dia siapa?\u2019",
+    url:"https://www.cnnindonesia.com/nasional/20260618152143-32-1370483/pkb-sindir-pdip-abu-abu-anak-buah-megawati-tanya-siapa-jazilul",
+    src:"CNN Indonesia · 18 Jun",srcIcon:"ti-news",
+    polDot:"JF",polBg:"#1A4D2E",polFg:"#E8FFF0",polLabel:"Jazilul Fawaid · PKB · Waketum DPP",
+    sentClass:"sent-neg",sentIcon:"ti-flame",sentLabel:"Panas Antar-Partai"
+  },
+  {
+    cat:"Balasan PDIP", catIcon:"ti-message-circle",
+    hl:"Deddy Sitorus Balas PKB: \u2018Urus Partai Sendiri, Memangnya Jazilul Siapa?\u2019",
+    deck:"Ketua DPP PDIP Deddy Sitorus membalas keras sindiran Jazilul Fawaid (PKB), menegaskan sikap PDIP adalah keputusan Kongres dan kewenangan Megawati, bukan urusan kader partai lain untuk ikut campur.",
+    url:"https://news.detik.com/berita/d-8536988/pkb-minta-pdip-tak-abu-abu-deddy-sitorus-urus-partai-sendiri/amp",
+    src:"Detik.com · 18 Jun",srcIcon:"ti-news",
+    polDot:"DS",polBg:"#8B1A1A",polFg:"#FFE8E8",polLabel:"Deddy Sitorus · PDIP · Ketua DPP",
+    sentClass:"sent-neg",sentIcon:"ti-flame",sentLabel:"Panas Antar-Partai"
+  },
+  {
+    cat:"Ultimatum Mahasiswa", catIcon:"ti-alarm",
+    hl:"Ultimatum 3x24 Jam BEM SI ke DPR Berakhir — Demo Susulan Mengancam Jika Tak Direspons",
+    deck:"Tenggat yang diberikan BEM SI Kerakyatan kepada DPR RI sejak 15 Juni berakhir. Mahasiswa menuntut stabilisasi rupiah, evaluasi MBG, penghentian militerisasi, dan transparansi APBN.",
+    url:"https://www.liputan6.com/news/read/7891563/demo-berakhir-mahasiswa-beri-waktu-dpr-3x24-jam-untuk-respons-tuntutan",
+    src:"Liputan6.com",srcIcon:"ti-news",
+    polDot:"PM",polBg:"#8B1A1A",polFg:"#FFE8E8",polLabel:"Puan Maharani · PDIP · Ketua DPR",
+    sentClass:"sent-neg",sentIcon:"ti-alert-triangle",sentLabel:"Tekanan Tinggi"
+  },
+  {
+    cat:"Rokok & Kebijakan", catIcon:"ti-cigarette",
+    hl:"Anggota DPR PAN Usul Rokok Murah untuk Rakyat Miskin — Dikecam: \u2018Tak Paham Regulasi\u2019",
+    deck:"Usulan anggota DPR dari PAN soal rokok murah bagi rumah tangga miskin dikecam keras oleh YLKI. Data BPS menunjukkan rumah tangga miskin justru menghabiskan 10-11% pendapatan untuk rokok, jauh di atas belanja lauk-pauk yang hanya 3,5%.",
+    url:"https://www.tempo.co/politik/anggota-dpr-usulkan-rokok-murah-fkbi-tak-paham-regulasi-2270078",
+    src:"Tempo.co · 18 Jun",srcIcon:"ti-news",
+    polDot:"PAN",polBg:"#4A2A00",polFg:"#FFF0E0",polLabel:"Anggota DPR · Fraksi PAN",
+    sentClass:"sent-neg",sentIcon:"ti-thumb-down",sentLabel:"Dikecam Publik"
+  },
+  {
+    cat:"KPK & Anggaran", catIcon:"ti-building-bank",
+    hl:"KPK Minta Tambahan Anggaran Rp762 Miliar — Sahroni: \u2018Tanggung Pak, Rp5 Triliun Saja!\u2019",
+    deck:"Wakil Ketua Komisi III DPR Ahmad Sahroni menanggapi santai permintaan tambahan anggaran KPK, justru mengusulkan angka yang jauh lebih besar untuk penguatan pemberantasan korupsi.",
+    url:"https://arahkata.pikiran-rakyat.com/berita/pr-12810279082/pkb-minta-pdip-tegas-kalau-oposisi-ya-oposisi",
+    src:"Arah Kata · 18 Jun",srcIcon:"ti-news",
+    polDot:"AS",polBg:"#0A3D62",polFg:"#D6EAF8",polLabel:"Ahmad Sahroni · Nasdem · Wakil Ketua Komisi III",
+    sentClass:"sent-pos",sentIcon:"ti-thumb-up",sentLabel:"Pro Antikorupsi"
+  },
+  {
+    cat:"Demo Hari Ini · 5 Titik", catIcon:"ti-map-pin",
+    hl:"Demo Lagi di 5 Titik Jakarta — Monas, DPR, Sudirman, BGN, Kemenkeu · 4.576 Personel Siaga",
+    deck:"Gelombang aksi susulan berlangsung di 5 titik Jakarta. Isu yang diangkat: rupiah lemah, evaluasi MBG, revisi UU Polri, dan pemborosan APBN.",
+    url:"https://www.tribunnews.com/metropolitan/7843021/demo-hari-ini-di-jakarta-rabu-17-juni-2026-ini-5-lokasi-aksi-dan-tuntutannya",
+    src:"Tribunnews.com",srcIcon:"ti-news",
+    polDot:"HB",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Habiburokhman · Gerindra · Ketua Komisi III",
+    sentClass:"sent-neg",sentIcon:"ti-trending-down",sentLabel:"Tekanan Publik"
+  },
+  {
+    cat:"Koperasi Desa & DPR", catIcon:"ti-building-community",
+    hl:"Legislator PDIP Mufti Anam Kritik Diklat Semi-Militer untuk Manajer Koperasi Desa Merah Putih",
+    deck:"Anggota Komisi VI DPR Fraksi PDIP Mufti Anam mempertanyakan relevansi pelatihan bernuansa militer bagi calon manajer KDMP. Kompetensi yang dibutuhkan adalah bisnis dan akuntansi, bukan barak dan yel-yel.",
+    url:"https://news.detik.com/berita/d-8536322/legislator-pdip-pertanyakan-relevansi-diklat-semi-militer-untuk-manajer-kdmp",
+    src:"Detik.com",srcIcon:"ti-news",
+    polDot:"MA",polBg:"#8B1A1A",polFg:"#FFE8E8",polLabel:"Mufti Anam · PDIP · Komisi VI",
+    sentClass:"sent-warn",sentIcon:"ti-alert-circle",sentLabel:"Kritis"
+  },
+  {
+    cat:"PDIP & Tuntutan Demo", catIcon:"ti-users",
+    hl:"Said Abdullah PDIP: Pemerintah Harus Terbuka — Tata Kelola BGN Jadi Akar Masalah",
+    deck:"Ketua Banggar DPR Said Abdullah (PDIP) menyarankan pemerintah mendengar aspirasi mahasiswa. Ia menyoroti tata kelola Badan Gizi Nasional sebagai bukti masih ada kekurangan dalam kebijakan MBG.",
+    url:"https://www.liputan6.com/news/read/7892611/said-abdullah-tegaskan-pdip-tak-terlibat-aksi-demo-mahasiswa-minta-pemerintah-dengarkan-aspirasi",
+    src:"Liputan6.com",srcIcon:"ti-news",
+    polDot:"SA",polBg:"#8B1A1A",polFg:"#FFE8E8",polLabel:"Said Abdullah · PDIP · Ketua Banggar DPR",
+    sentClass:"sent-pos",sentIcon:"ti-scale",sentLabel:"Sikap Kritis"
+  },
+  {
+    cat:"Haji & Legislasi", catIcon:"ti-moon",
+    hl:"Cucun Syamsurijal: Prabowo Minta Antrean Haji Dipangkas dari 35 Tahun Jadi 26 Tahun",
+    deck:"Ketua Tim Pengawas Haji DPR Cucun Ahmad Syamsurijal menyebut Presiden Prabowo memberi perhatian khusus pada panjangnya antrean haji, dan meminta skema percepatan jadi 26 tahun bahkan lebih cepat.",
+    url:"https://news.okezone.com/read/2026/06/18/337/3225086/presiden-prabowo-ingin-antrean-haji-dipangkas-lagi",
+    src:"Okezone.com",srcIcon:"ti-news",
+    polDot:"CA",polBg:"#1A4D2E",polFg:"#E8FFF0",polLabel:"Cucun A. Syamsurijal · PKB · Ketua Timwas Haji DPR",
+    sentClass:"sent-pos",sentIcon:"ti-thumb-up",sentLabel:"Responsif"
+  },
+  {
+    cat:"Media & Anti-Hoaks", catIcon:"ti-broadcast",
+    hl:"Rahayu Saraswati Minta TVRI, RRI & ANTARA Koreksi Hoaks Setiap Pekan",
+    deck:"Wakil Ketua Komisi VII DPR Rahayu Saraswati meminta lembaga penyiaran negara bekerja sama dengan Bakom untuk merilis daftar hoaks mingguan, menyebut era post-truth mengkhawatirkan generasi muda.",
+    url:"https://www.antaranews.com/berita/5611443/komisi-vii-dpr-minta-lembaga-penyiaran-koreksi-hoaks-tiap-pekan",
+    src:"ANTARA News",srcIcon:"ti-news",
+    polDot:"RS",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Rahayu Saraswati · Gerindra · Komisi VII",
+    sentClass:"sent-warn",sentIcon:"ti-eye",sentLabel:"Pantau Terus"
+  },
+  {
+    cat:"Keuangan & OJK", catIcon:"ti-building-bank",
+    hl:"DPR Sahkan 5 Komisioner OJK Baru — Misbakhun: Harus Mumpuni Hadapi Pinjol Ilegal",
+    deck:"Komisi XI DPR yang dipimpin Mukhamad Misbakhun (Golkar) resmi mengesahkan lima nama anggota Dewan Komisioner OJK periode baru, termasuk Friderica Widyasari Dewi sebagai Ketua.",
+    url:"https://www.liputan6.com/tag/dpr",
+    src:"Liputan6 · Katadata",srcIcon:"ti-news",
+    polDot:"MM",polBg:"#7B5A00",polFg:"#FFF3CC",polLabel:"Mukhamad Misbakhun · Golkar · Ketua Komisi XI",
+    sentClass:"sent-pos",sentIcon:"ti-check",sentLabel:"Progresif"
+  },
+  {
+    cat:"Legislasi Prioritas", catIcon:"ti-file-description",
+    hl:"DPR Sahkan RUU PPRT Jadi Usul Inisiatif — 22 Tahun Diperjuangkan, Lindungi 4,2 Juta Pekerja Domestik",
+    deck:"DPR RI menyetujui RUU Perlindungan Pekerja Rumah Tangga (PPRT) sebagai usul inisiatif DPR, mengatur jaminan sosial dan mekanisme perekrutan bagi pekerja domestik yang 22 tahun nasibnya tak menentu.",
+    url:"https://www.liputan6.com/tag/dpr",
+    src:"Liputan6.com",srcIcon:"ti-news",
+    polDot:"SD",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Sufmi Dasco Ahmad · Gerindra · Wakil Ketua DPR",
+    sentClass:"sent-pos",sentIcon:"ti-check",sentLabel:"Capaian Legislasi"
+  },
+  {
+    cat:"Revisi UU KADIN", catIcon:"ti-briefcase",
+    hl:"Bamsoet DPR: Revisi UU KADIN Mendesak — Ekonomi Indonesia Butuh Kemitraan Negara-Swasta Lebih Kuat",
+    deck:"Anggota DPR sekaligus Waketum KADIN Bambang Soesatyo (Bamsoet) menegaskan revisi UU No.1/1987 tentang KADIN menjadi kebutuhan mendesak. RDPU Baleg DPR dengan KADIN dihadiri Ketum Anindya Bakrie.",
+    url:"https://news.detik.com/berita/d-8536147/revisi-uu-kadin-jadi-momentum-perkuat-kemitraan-negara-dan-dunia-usaha",
+    src:"Detik.com",srcIcon:"ti-news",
+    polDot:"BS",polBg:"#7B5A00",polFg:"#FFF3CC",polLabel:"Bambang Soesatyo (Bamsoet) · Golkar · DPR RI",
+    sentClass:"sent-pos",sentIcon:"ti-trending-up",sentLabel:"Pro Ekonomi"
+  },
+  {
+    cat:"Diplomasi & WNI", catIcon:"ti-passport",
+    hl:"Junico Siahaan Minta Kemlu Fasilitasi WNI yang Masih Bertahan di Nepal",
+    deck:"Anggota Komisi I DPR Junico Siahaan mendesak Kementerian Luar Negeri memastikan keamanan dan kebutuhan WNI yang memilih tetap tinggal di Nepal di tengah situasi politik yang belum stabil di negara tersebut.",
+    url:"https://www.okezone.com/tag/dpr-ri",
+    src:"Okezone.com",srcIcon:"ti-news",
+    polDot:"JS",polBg:"#8B1A1A",polFg:"#FFE8E8",polLabel:"Junico Siahaan · PDIP · Komisi I",
+    sentClass:"sent-pos",sentIcon:"ti-shield-check",sentLabel:"Responsif"
+  }
+];
+// ── PATCH 19 Jun: ganti dengan berita hari ini ──
+newsPool = [
+  {
+    cat:"Roy Suryo Ditangkap · BREAKING", catIcon:"ti-urgent",
+    hl:"Roy Suryo & dr Tifa Ditangkap Polda Metro — Kasus Ijazah Palsu Jokowi, Dijerat UU ITE",
+    deck:"Mantan Menpora Roy Suryo dijemput paksa penyidik Polda Metro Jaya pukul 07.00 WIB di kediamannya, bersamaan dengan penangkapan dr Tifauziah Tyassuma. Keduanya dijerat Pasal 27A UU ITE dan Pasal 310-311 KUHP. Tim hukum sebut ada intervensi politik.",
+    url:"https://www.cnnindonesia.com/nasional/20260619075914-12-1370678/roy-suryo-dan-dr-tifa-ditangkap-polisi-kasus-ijazah-jokowi",
+    src:"CNN Indonesia · 19 Jun",srcIcon:"ti-news",
+    polDot:"RS",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Roy Suryo · Demokrat · Mantan Menpora",
+    sentClass:"sent-neg",sentIcon:"ti-alert-triangle",sentLabel:"Breaking News"
+  },
+  {
+    cat:"Demo Trisakti · 19 Juni", catIcon:"ti-users",
+    hl:"Mahasiswa Trisakti Gaungkan 'Tritura Kembali' — 4.263 Aparat Kawal Demo DPR & 5 Titik Jakarta",
+    deck:"Mahasiswa Universitas Trisakti bergerak ke Gedung DPR/MPR dengan tiga tuntutan: pulihkan ekonomi & politik, berantas pejabat tidak kompeten, dan tegakkan supremasi sipil. Pimpinan DPR Sufmi Dasco Ahmad siap terima perwakilan mahasiswa.",
+    url:"https://megapolitan.kompas.com/read/2026/06/19/14432821/mahasiswa-trisakti-siap-bergerak-ke-gedung-dpr-bus-dan-angkot-angkut",
+    src:"Kompas.com · 19 Jun",srcIcon:"ti-news",
+    polDot:"SD",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Sufmi Dasco Ahmad · Gerindra · Wakil Ketua DPR",
+    sentClass:"sent-neg",sentIcon:"ti-trending-down",sentLabel:"Tekanan Publik"
+  },
+  {
+    cat:"Golkar & Fiskal", catIcon:"ti-trending-up",
+    hl:"Golkar Desak Pemerintah Gerak Cepat Perbaiki Fiskal — Sarmuji: Momentum AS-Iran Damai Jangan Disia-siakan",
+    deck:"Ketua Fraksi Golkar DPR Muhammad Sarmuji meminta pemerintah manfaatkan penurunan harga minyak dunia pasca damai AS-Iran. Brent turun hampir 4% ke $83,92/barel. Penandatanganan resmi dijadwalkan di Swiss hari ini, 19 Juni 2026.",
+    url:"https://news.detik.com/berita/d-8534766/golkar-sambut-kesepakatan-damai-as-iran-momentum-pemerintah-perbaiki-fiskal",
+    src:"Detik.com · 19 Jun",srcIcon:"ti-news",
+    polDot:"MS",polBg:"#7B5A00",polFg:"#FFF3CC",polLabel:"Muhammad Sarmuji · Golkar · Ketua Fraksi DPR",
+    sentClass:"sent-pos",sentIcon:"ti-trending-up",sentLabel:"Pro Ekonomi"
+  },
+  {
+    cat:"RUU Perampasan Aset", catIcon:"ti-building-bank",
+    hl:"Pemerintah Tunggu DPR Selesaikan RUU Perampasan Aset — Komisi III Sorot Frasa 'Diduga' yang Multitafsir",
+    deck:"Menteri Hukum Supratman Andi Agtas menyatakan pemerintah menunggu DPR menyelesaikan RUU Perampasan Aset. Anggota Komisi III khawatir frasa 'diduga' dalam pasal NCBC berpotensi melanggar HAM dan disalahgunakan penegak hukum.",
+    url:"https://www.antaranews.com/berita/5614401/pemerintah-tunggu-proses-pembahasan-ruu-perampasan-aset-selesai-di-dpr",
+    src:"ANTARA News · 19 Jun",srcIcon:"ti-news",
+    polDot:"KM",polBg:"#0A3D62",polFg:"#D6EAF8",polLabel:"Komisi III DPR · Bidang Hukum",
+    sentClass:"sent-warn",sentIcon:"ti-alert-circle",sentLabel:"Kritis"
+  },
+  {
+    cat:"PKB vs PDIP", catIcon:"ti-swords",
+    hl:"PKB Harap PDIP Segera Bersikap Tegas — Jazilul: Kalau Oposisi, Jalankan Peran Oposisi!",
+    deck:"Ketua Fraksi PKB Jazilul Fawaid kembali mendesak PDIP menentukan posisi politik yang jelas di hadapan pemerintahan Prabowo, menyusul isu keterlibatan kader PDIP dalam aksi demo mahasiswa.",
+    url:"https://manado.antaranews.com/berita/315409/pkb-pdi-perjuangan-harus-bersikap-tegas-soal-posisi-politik",
+    src:"ANTARA News · 19 Jun",srcIcon:"ti-news",
+    polDot:"JF",polBg:"#1A4D2E",polFg:"#E8FFF0",polLabel:"Jazilul Fawaid · PKB · Ketua Fraksi DPR",
+    sentClass:"sent-neg",sentIcon:"ti-flame",sentLabel:"Panas Antar-Partai"
+  },
+  {
+    cat:"DPR Terima Mahasiswa", catIcon:"ti-door-enter",
+    hl:"Pimpinan DPR Siap Terima Aspirasi Demo — Sufmi Dasco: Kami Buka Pintu",
+    deck:"Wakil Ketua DPR Sufmi Dasco Ahmad menyatakan pimpinan DPR membuka pintu bagi perwakilan mahasiswa yang berdemo. Agenda penerimaan aspirasi disiapkan di Gedung DPR. Massa dari 5 kampus dijadwalkan tiba siang hari ini.",
+    url:"https://nasional.kompas.com/read/2026/06/18/19370751/pimpinan-dpr-siap-terima-mahasiswa-yang-gelar-demo-jumat-besok",
+    src:"Kompas.com · 19 Jun",srcIcon:"ti-news",
+    polDot:"SD",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Sufmi Dasco Ahmad · Gerindra · Wakil Ketua DPR",
+    sentClass:"sent-pos",sentIcon:"ti-door-enter",sentLabel:"Responsif"
+  },
+  {
+    cat:"Koperasi Desa & DPR", catIcon:"ti-building-community",
+    hl:"Legislator PDIP Mufti Anam Kritik Diklat Semi-Militer untuk Manajer Koperasi Desa Merah Putih",
+    deck:"Anggota Komisi VI DPR Fraksi PDIP Mufti Anam mempertanyakan relevansi pelatihan bernuansa militer bagi calon manajer KDMP. Kompetensi yang dibutuhkan adalah bisnis dan akuntansi, bukan barak dan yel-yel.",
+    url:"https://news.detik.com/berita/d-8536322/legislator-pdip-pertanyakan-relevansi-diklat-semi-militer-untuk-manajer-kdmp",
+    src:"Detik.com · 18 Jun",srcIcon:"ti-news",
+    polDot:"MA",polBg:"#8B1A1A",polFg:"#FFE8E8",polLabel:"Mufti Anam · PDIP · Komisi VI",
+    sentClass:"sent-warn",sentIcon:"ti-alert-circle",sentLabel:"Kritis"
+  },
+  {
+    cat:"Haji & Legislasi", catIcon:"ti-moon",
+    hl:"Cucun Syamsurijal: Prabowo Minta Antrean Haji Dipangkas dari 35 Tahun Jadi 26 Tahun",
+    deck:"Ketua Tim Pengawas Haji DPR Cucun Ahmad Syamsurijal menyebut Presiden Prabowo meminta skema percepatan antrean haji menjadi 26 tahun, bahkan lebih cepat lagi jika memungkinkan.",
+    url:"https://news.okezone.com/read/2026/06/18/337/3225086/presiden-prabowo-ingin-antrean-haji-dipangkas-lagi",
+    src:"Okezone.com · 18 Jun",srcIcon:"ti-news",
+    polDot:"CA",polBg:"#1A4D2E",polFg:"#E8FFF0",polLabel:"Cucun A. Syamsurijal · PKB · Ketua Timwas Haji DPR",
+    sentClass:"sent-pos",sentIcon:"ti-thumb-up",sentLabel:"Responsif"
+  },
+  {
+    cat:"Media & Anti-Hoaks", catIcon:"ti-broadcast",
+    hl:"Rahayu Saraswati Minta TVRI, RRI & ANTARA Koreksi Hoaks Setiap Pekan",
+    deck:"Wakil Ketua Komisi VII DPR Rahayu Saraswati meminta lembaga penyiaran negara merilis daftar hoaks mingguan bersama Bakom. Era post-truth dinilai mengkhawatirkan generasi muda.",
+    url:"https://www.antaranews.com/berita/5611443/komisi-vii-dpr-minta-lembaga-penyiaran-koreksi-hoaks-tiap-pekan",
+    src:"ANTARA News · 18 Jun",srcIcon:"ti-news",
+    polDot:"RR",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Rahayu Saraswati · Gerindra · Komisi VII",
+    sentClass:"sent-warn",sentIcon:"ti-eye",sentLabel:"Pantau Terus"
+  },
+  {
+    cat:"KPK & Anggaran", catIcon:"ti-building-bank",
+    hl:"KPK Minta Tambahan Anggaran Rp762 Miliar — Sahroni: 'Tanggung, Rp5 Triliun Saja!'",
+    deck:"Wakil Ketua Komisi III DPR Ahmad Sahroni menanggapi santai permintaan tambahan anggaran KPK, justru mengusulkan angka yang jauh lebih besar untuk penguatan pemberantasan korupsi.",
+    url:"https://arahkata.pikiran-rakyat.com/berita/pr-12810279082/pkb-minta-pdip-tegas-kalau-oposisi-ya-oposisi",
+    src:"Arah Kata · 18 Jun",srcIcon:"ti-news",
+    polDot:"AS",polBg:"#0A3D62",polFg:"#D6EAF8",polLabel:"Ahmad Sahroni · Nasdem · Wakil Ketua Komisi III",
+    sentClass:"sent-pos",sentIcon:"ti-thumb-up",sentLabel:"Pro Antikorupsi"
+  },
+  {
+    cat:"Revisi UU KADIN", catIcon:"ti-briefcase",
+    hl:"Bamsoet DPR: Revisi UU KADIN Mendesak — Ekonomi Butuh Kemitraan Negara-Swasta Lebih Kuat",
+    deck:"Anggota DPR sekaligus Waketum KADIN Bambang Soesatyo (Bamsoet) menegaskan revisi UU No.1/1987 tentang KADIN menjadi kebutuhan mendesak. RDPU Baleg DPR dengan KADIN dihadiri Ketum Anindya Bakrie.",
+    url:"https://news.detik.com/berita/d-8536147/revisi-uu-kadin-jadi-momentum-perkuat-kemitraan-negara-dan-dunia-usaha",
+    src:"Detik.com · 18 Jun",srcIcon:"ti-news",
+    polDot:"BS",polBg:"#7B5A00",polFg:"#FFF3CC",polLabel:"Bambang Soesatyo (Bamsoet) · Golkar · DPR RI",
+    sentClass:"sent-pos",sentIcon:"ti-trending-up",sentLabel:"Pro Ekonomi"
+  },
+  {
+    cat:"Rokok & Kebijakan", catIcon:"ti-cigarette",
+    hl:"Anggota DPR PAN Usul Rokok Murah untuk Rakyat Miskin — Dikecam YLKI: 'Tak Paham Regulasi'",
+    deck:"Usulan anggota DPR dari PAN soal rokok murah bagi rumah tangga miskin dikecam keras oleh YLKI. Data BPS menunjukkan rumah tangga miskin menghabiskan 10-11% pendapatan untuk rokok.",
+    url:"https://www.tempo.co/politik/anggota-dpr-usulkan-rokok-murah-fkbi-tak-paham-regulasi-2270078",
+    src:"Tempo.co · 18 Jun",srcIcon:"ti-news",
+    polDot:"PAN",polBg:"#4A2A00",polFg:"#FFF0E0",polLabel:"Anggota DPR · Fraksi PAN",
+    sentClass:"sent-neg",sentIcon:"ti-thumb-down",sentLabel:"Dikecam Publik"
+  },
+  {
+    cat:"Legislasi Prioritas", catIcon:"ti-file-description",
+    hl:"DPR Sahkan RUU PPRT — 22 Tahun Diperjuangkan, Lindungi 4,2 Juta Pekerja Domestik",
+    deck:"DPR RI menyetujui RUU Perlindungan Pekerja Rumah Tangga (PPRT) sebagai usul inisiatif DPR, mengatur jaminan sosial dan mekanisme perekrutan bagi pekerja domestik.",
+    url:"https://www.liputan6.com/tag/dpr",
+    src:"Liputan6.com · 18 Jun",srcIcon:"ti-news",
+    polDot:"SD",polBg:"#1A1A3E",polFg:"#E8E8FF",polLabel:"Sufmi Dasco Ahmad · Gerindra · Wakil Ketua DPR",
+    sentClass:"sent-pos",sentIcon:"ti-check",sentLabel:"Capaian Legislasi"
+  }
+];
+
+// Active 10-story rotation window (rotates from the pool above)
+let newsPoolOffset = 0;
+let newsData = newsPool.slice(0, 10);
+
+function rotateNewsPool(){
+  // Rotate the window by 3 stories each refresh — simulates "new" content cycling in
+  newsPoolOffset = (newsPoolOffset + 3) % newsPool.length;
+  const rotated = [];
+  for(let i=0;i<10;i++){
+    rotated.push(newsPool[(newsPoolOffset+i)%newsPool.length]);
+  }
+  newsData = rotated;
+}
+
+// Refresh interval: 1 jam (3600000 ms)
+const NEWS_REFRESH_MS = 3600000;
+let newsRefreshTimer = null;
+let newsCountdownTimer = null;
+let nextRefreshAt = null;
+
+function openNews(url){
+  if(url)window.open(url,'_blank','noopener,noreferrer');
+}
+function renderNews(){
+  if(!newsData||!newsData.length)return;
+  const hero=newsData[0];
+  const heroSlot=document.getElementById("news-hero-slot");
+  if(heroSlot){
+    heroSlot.innerHTML=`
+      <div class="news-hero news-clickable" role="link" tabindex="0"
+           onclick="openNews('${hero.url}')"
+           onkeydown="if(event.key==='Enter')openNews('${hero.url}')"
+           style="cursor:pointer;position:relative">
+        <div class="news-hero-cat"><i class="ti ${hero.catIcon}"></i> ${hero.cat}</div>
+        <div class="news-hero-hl">${hero.hl}</div>
+        <div class="news-hero-deck">${hero.deck}</div>
+        <div class="news-hero-meta">
+          <div class="news-pol-chip"><div class="pol-dot" style="background:${hero.polBg};color:${hero.polFg}">${hero.polDot}</div>${hero.polLabel}</div>
+          <span class="news-sent ${hero.sentClass}"><i class="ti ${hero.sentIcon}" style="font-size:10px"></i> ${hero.sentLabel}</span>
+          <span class="news-src"><i class="ti ${hero.srcIcon}" style="font-size:11px"></i> ${hero.src}</span>
+          <span class="news-read-more" onclick="event.stopPropagation();openNews('${hero.url}')"><i class="ti ti-external-link" style="font-size:10px"></i> Baca Selengkapnya</span>
+        </div>
+      </div>`;
+  }
+  const itemsSlot=document.getElementById("news-items-slot");
+  if(itemsSlot){
+    itemsSlot.innerHTML=newsData.slice(1).map((n,i)=>`
+      <div class="news-item news-clickable" role="link" tabindex="0"
+           onclick="openNews('${n.url}')"
+           onkeydown="if(event.key==='Enter')openNews('${n.url}')"
+           style="cursor:pointer">
+        <div class="news-num">${String(i+2).padStart(2,"0")}</div>
+        <div>
+          <div class="news-item-cat"><i class="ti ${n.catIcon}"></i> ${n.cat}</div>
+          <div class="news-item-hl">${n.hl}</div>
+          <div class="news-item-deck">${n.deck}</div>
+          <div class="news-item-meta">
+            <div class="news-pol-chip"><div class="pol-dot" style="background:${n.polBg};color:${n.polFg}">${n.polDot}</div>${n.polLabel}</div>
+            <span class="news-sent ${n.sentClass}"><i class="ti ${n.sentIcon}" style="font-size:10px"></i> ${n.sentLabel}</span>
+            <span class="news-src"><i class="ti ${n.srcIcon}" style="font-size:11px"></i> ${n.src}</span>
+            <span class="news-read-more" onclick="event.stopPropagation();openNews('${n.url}')"><i class="ti ti-external-link" style="font-size:10px"></i> Baca</span>
+          </div>
+        </div>
+      </div>`).join("");
+  }
+  const now=new Date();
+  const ts=now.toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"});
+  const el=document.getElementById("refresh-ts");if(el)el.textContent=ts+" WIB";
+}
+
+function startCountdown(){
+  if(newsCountdownTimer)clearInterval(newsCountdownTimer);
+  nextRefreshAt=Date.now()+NEWS_REFRESH_MS;
+  newsCountdownTimer=setInterval(()=>{
+    const remaining=Math.max(0,nextRefreshAt-Date.now());
+    const m=Math.floor(remaining/60000);
+    const s=Math.floor((remaining%60000)/1000);
+    const el=document.getElementById("refresh-next");
+    if(el)el.textContent=`· Refresh berikutnya: ${m}m ${s}s`;
+    if(remaining<=0){clearInterval(newsCountdownTimer);refreshNews(false);}
+  },1000);
+}
+
+function refreshNews(manual){
+  const ring=document.getElementById("refresh-ring");
+  if(ring)ring.classList.add("spinning");
+  // Rotate in fresh stories from the pool, then re-render
+  setTimeout(()=>{
+    rotateNewsPool();
+    renderNews();
+    if(ring)ring.classList.remove("spinning");
+    const el=document.getElementById("refresh-ts");
+    if(el){
+      el.style.color="var(--green)";
+      setTimeout(()=>{el.style.color="";},1200);
+    }
+    // Brief "ada berita baru" toast
+    showRefreshToast(manual);
+    startCountdown();
+  },manual?600:100);
+}
+
+function showRefreshToast(manual){
+  let toast=document.getElementById("refresh-toast");
+  if(!toast){
+    toast=document.createElement("div");
+    toast.id="refresh-toast";
+    toast.style.cssText="position:fixed;bottom:20px;right:20px;background:var(--navy);color:#fff;padding:10px 18px;border-radius:4px;font-size:12px;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,.25);z-index:9999;display:flex;align-items:center;gap:8px;opacity:0;transition:opacity .3s,transform .3s;transform:translateY(10px)";
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML=`<i class="ti ti-refresh-dot" style="font-size:14px;color:#6EE7A0"></i> Berita diperbarui${manual?'':' otomatis'} — ${new Date().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})} WIB`;
+  requestAnimationFrame(()=>{toast.style.opacity="1";toast.style.transform="translateY(0)";});
+  clearTimeout(window._refreshToastTimer);
+  window._refreshToastTimer=setTimeout(()=>{
+    toast.style.opacity="0";toast.style.transform="translateY(10px)";
+  },3500);
+}
+
+// Schedule auto-refresh every hour
+function scheduleHourlyRefresh(){
+  if(newsRefreshTimer)clearInterval(newsRefreshTimer);
+  newsRefreshTimer=setInterval(()=>refreshNews(false),NEWS_REFRESH_MS);
+}
+
+// ══ HOW TO UPDATE NEWS ══
+// Method 1 — Edit the newsData array above directly (simplest)
+// Method 2 — Use Admin Panel (coming soon: JSON import for news)
+// Method 3 — In production, replace renderNews() body with fetch() call to your CMS API
+
+
+// INIT
+renderCards(pols);
+renderProm("all");
+updateHeroStats();
+updateDate();
+renderNews();
+loadNewsFromAPI(); // fetch berita terbaru dari /api/news (Vercel Cron update harian)
+startCountdown();
+scheduleHourlyRefresh();
+setInterval(updateDate,60000);
+for(let i=0;i<5;i++){
+  const p=document.getElementById(`qprog-${i}`);
+  if(p&&!p.children.length){for(let j=0;j<5;j++){const d=document.createElement("div");d.className="qp-dot";p.appendChild(d);}}
+}
+</script>
+</body>
+</html>

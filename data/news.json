@@ -1,0 +1,145 @@
+{
+  "updatedAt": "2026-06-19T01:00:00.000Z",
+  "items": [
+    {
+      "cat": "PKB vs PDIP", "catIcon": "ti-swords",
+      "hl": "PKB Sindir PDIP 'Abu-abu' soal Demo — Jazilul: Kalau Oposisi, ya Oposisi!",
+      "deck": "Ketua Fraksi PKB Jazilul Fawaid mendesak PDIP bersikap tegas soal posisinya di pemerintahan Prabowo, menyusul dugaan keterlibatan kader senior PDIP Andi Widjajanto dalam demo mahasiswa di Bundaran HI.",
+      "url": "https://www.cnnindonesia.com/nasional/20260618152143-32-1370483/pkb-sindir-pdip-abu-abu-anak-buah-megawati-tanya-siapa-jazilul",
+      "src": "CNN Indonesia · 18 Jun", "srcIcon": "ti-news",
+      "polDot": "JF", "polBg": "#1A4D2E", "polFg": "#E8FFF0",
+      "polLabel": "Jazilul Fawaid · PKB · Waketum DPP",
+      "sentClass": "sent-neg", "sentIcon": "ti-flame", "sentLabel": "Panas Antar-Partai"
+    },
+    {
+      "cat": "Balasan PDIP", "catIcon": "ti-message-circle",
+      "hl": "Deddy Sitorus Balas PKB: 'Urus Partai Sendiri, Memangnya Jazilul Siapa?'",
+      "deck": "Ketua DPP PDIP Deddy Sitorus membalas keras sindiran Jazilul Fawaid (PKB), menegaskan sikap PDIP adalah keputusan Kongres dan kewenangan Megawati.",
+      "url": "https://news.detik.com/berita/d-8536988/pkb-minta-pdip-tak-abu-abu-deddy-sitorus-urus-partai-sendiri/amp",
+      "src": "Detik.com · 18 Jun", "srcIcon": "ti-news",
+      "polDot": "DS", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Deddy Sitorus · PDIP · Ketua DPP",
+      "sentClass": "sent-neg", "sentIcon": "ti-flame", "sentLabel": "Panas Antar-Partai"
+    },
+    {
+      "cat": "Ultimatum Mahasiswa", "catIcon": "ti-alarm",
+      "hl": "Ultimatum 3x24 Jam BEM SI ke DPR Berakhir — Demo Susulan Mengancam",
+      "deck": "Tenggat yang diberikan BEM SI Kerakyatan kepada DPR RI sejak 15 Juni berakhir. Mahasiswa menuntut stabilisasi rupiah, evaluasi MBG, penghentian militerisasi, dan transparansi APBN.",
+      "url": "https://www.liputan6.com/news/read/7891563/demo-berakhir-mahasiswa-beri-waktu-dpr-3x24-jam-untuk-respons-tuntutan",
+      "src": "Liputan6.com", "srcIcon": "ti-news",
+      "polDot": "PM", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Puan Maharani · PDIP · Ketua DPR",
+      "sentClass": "sent-neg", "sentIcon": "ti-alert-triangle", "sentLabel": "Tekanan Tinggi"
+    },
+    {
+      "cat": "Rokok & Kebijakan", "catIcon": "ti-cigarette",
+      "hl": "Anggota DPR PAN Usul Rokok Murah untuk Rakyat Miskin — Dikecam YLKI",
+      "deck": "Usulan anggota DPR dari PAN soal rokok murah bagi rumah tangga miskin dikecam keras oleh YLKI. Data BPS menunjukkan rumah tangga miskin menghabiskan 10-11% pendapatan untuk rokok.",
+      "url": "https://www.tempo.co/politik/anggota-dpr-usulkan-rokok-murah-fkbi-tak-paham-regulasi-2270078",
+      "src": "Tempo.co · 18 Jun", "srcIcon": "ti-news",
+      "polDot": "PAN", "polBg": "#4A2A00", "polFg": "#FFF0E0",
+      "polLabel": "Anggota DPR · Fraksi PAN",
+      "sentClass": "sent-neg", "sentIcon": "ti-thumb-down", "sentLabel": "Dikecam Publik"
+    },
+    {
+      "cat": "KPK & Anggaran", "catIcon": "ti-building-bank",
+      "hl": "KPK Minta Tambahan Anggaran Rp762 Miliar — Sahroni: 'Tanggung, Rp5 Triliun Saja!'",
+      "deck": "Wakil Ketua Komisi III DPR Ahmad Sahroni menanggapi santai permintaan tambahan anggaran KPK, justru mengusulkan angka yang jauh lebih besar untuk penguatan pemberantasan korupsi.",
+      "url": "https://arahkata.pikiran-rakyat.com/berita/pr-12810279082/pkb-minta-pdip-tegas-kalau-oposisi-ya-oposisi",
+      "src": "Arah Kata · 18 Jun", "srcIcon": "ti-news",
+      "polDot": "AS", "polBg": "#0A3D62", "polFg": "#D6EAF8",
+      "polLabel": "Ahmad Sahroni · Nasdem · Wakil Ketua Komisi III",
+      "sentClass": "sent-pos", "sentIcon": "ti-thumb-up", "sentLabel": "Pro Antikorupsi"
+    },
+    {
+      "cat": "Demo Hari Ini · 5 Titik", "catIcon": "ti-map-pin",
+      "hl": "Demo di 5 Titik Jakarta — Monas, DPR, Sudirman, BGN, Kemenkeu · 4.576 Personel Siaga",
+      "deck": "Gelombang aksi susulan berlangsung di 5 titik Jakarta. Isu: rupiah lemah, evaluasi MBG, revisi UU Polri, dan pemborosan APBN.",
+      "url": "https://www.tribunnews.com/metropolitan/7843021/demo-hari-ini-di-jakarta-rabu-17-juni-2026-ini-5-lokasi-aksi-dan-tuntutannya",
+      "src": "Tribunnews.com", "srcIcon": "ti-news",
+      "polDot": "HB", "polBg": "#1A1A3E", "polFg": "#E8E8FF",
+      "polLabel": "Habiburokhman · Gerindra · Ketua Komisi III",
+      "sentClass": "sent-neg", "sentIcon": "ti-trending-down", "sentLabel": "Tekanan Publik"
+    },
+    {
+      "cat": "Koperasi Desa & DPR", "catIcon": "ti-building-community",
+      "hl": "Legislator PDIP Mufti Anam Kritik Diklat Semi-Militer untuk Manajer Koperasi Desa Merah Putih",
+      "deck": "Anggota Komisi VI DPR Fraksi PDIP Mufti Anam mempertanyakan relevansi pelatihan bernuansa militer bagi calon manajer KDMP.",
+      "url": "https://news.detik.com/berita/d-8536322/legislator-pdip-pertanyakan-relevansi-diklat-semi-militer-untuk-manajer-kdmp",
+      "src": "Detik.com", "srcIcon": "ti-news",
+      "polDot": "MA", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Mufti Anam · PDIP · Komisi VI",
+      "sentClass": "sent-warn", "sentIcon": "ti-alert-circle", "sentLabel": "Kritis"
+    },
+    {
+      "cat": "PDIP & Tuntutan Demo", "catIcon": "ti-users",
+      "hl": "Said Abdullah PDIP: Pemerintah Harus Terbuka — Tata Kelola BGN Jadi Akar Masalah",
+      "deck": "Ketua Banggar DPR Said Abdullah (PDIP) menyarankan pemerintah mendengar aspirasi mahasiswa dan menyoroti tata kelola Badan Gizi Nasional.",
+      "url": "https://www.liputan6.com/news/read/7892611/said-abdullah-tegaskan-pdip-tak-terlibat-aksi-demo-mahasiswa-minta-pemerintah-dengarkan-aspirasi",
+      "src": "Liputan6.com", "srcIcon": "ti-news",
+      "polDot": "SA", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Said Abdullah · PDIP · Ketua Banggar DPR",
+      "sentClass": "sent-pos", "sentIcon": "ti-scale", "sentLabel": "Sikap Kritis"
+    },
+    {
+      "cat": "Haji & Legislasi", "catIcon": "ti-moon",
+      "hl": "Cucun Syamsurijal: Prabowo Minta Antrean Haji Dipangkas dari 35 Tahun Jadi 26 Tahun",
+      "deck": "Ketua Tim Pengawas Haji DPR Cucun Ahmad Syamsurijal menyebut Presiden Prabowo meminta skema percepatan antrean haji menjadi 26 tahun bahkan lebih cepat.",
+      "url": "https://news.okezone.com/read/2026/06/18/337/3225086/presiden-prabowo-ingin-antrean-haji-dipangkas-lagi",
+      "src": "Okezone.com", "srcIcon": "ti-news",
+      "polDot": "CA", "polBg": "#1A4D2E", "polFg": "#E8FFF0",
+      "polLabel": "Cucun A. Syamsurijal · PKB · Ketua Timwas Haji DPR",
+      "sentClass": "sent-pos", "sentIcon": "ti-thumb-up", "sentLabel": "Responsif"
+    },
+    {
+      "cat": "Media & Anti-Hoaks", "catIcon": "ti-broadcast",
+      "hl": "Rahayu Saraswati Minta TVRI, RRI & ANTARA Koreksi Hoaks Setiap Pekan",
+      "deck": "Wakil Ketua Komisi VII DPR Rahayu Saraswati meminta lembaga penyiaran negara bekerja sama dengan Bakom untuk merilis daftar hoaks mingguan.",
+      "url": "https://www.antaranews.com/berita/5611443/komisi-vii-dpr-minta-lembaga-penyiaran-koreksi-hoaks-tiap-pekan",
+      "src": "ANTARA News", "srcIcon": "ti-news",
+      "polDot": "RS", "polBg": "#1A1A3E", "polFg": "#E8E8FF",
+      "polLabel": "Rahayu Saraswati · Gerindra · Komisi VII",
+      "sentClass": "sent-warn", "sentIcon": "ti-eye", "sentLabel": "Pantau Terus"
+    },
+    {
+      "cat": "Keuangan & OJK", "catIcon": "ti-building-bank",
+      "hl": "DPR Sahkan 5 Komisioner OJK Baru — Misbakhun: Harus Mumpuni Hadapi Pinjol Ilegal",
+      "deck": "Komisi XI DPR yang dipimpin Mukhamad Misbakhun (Golkar) resmi mengesahkan lima nama anggota Dewan Komisioner OJK periode baru.",
+      "url": "https://www.liputan6.com/tag/dpr",
+      "src": "Liputan6 · Katadata", "srcIcon": "ti-news",
+      "polDot": "MM", "polBg": "#7B5A00", "polFg": "#FFF3CC",
+      "polLabel": "Mukhamad Misbakhun · Golkar · Ketua Komisi XI",
+      "sentClass": "sent-pos", "sentIcon": "ti-check", "sentLabel": "Progresif"
+    },
+    {
+      "cat": "Legislasi Prioritas", "catIcon": "ti-file-description",
+      "hl": "DPR Sahkan RUU PPRT Jadi Usul Inisiatif — 22 Tahun Diperjuangkan, Lindungi 4,2 Juta Pekerja",
+      "deck": "DPR RI menyetujui RUU Perlindungan Pekerja Rumah Tangga (PPRT) sebagai usul inisiatif DPR, mengatur jaminan sosial dan mekanisme perekrutan.",
+      "url": "https://www.liputan6.com/tag/dpr",
+      "src": "Liputan6.com", "srcIcon": "ti-news",
+      "polDot": "SD", "polBg": "#1A1A3E", "polFg": "#E8E8FF",
+      "polLabel": "Sufmi Dasco Ahmad · Gerindra · Wakil Ketua DPR",
+      "sentClass": "sent-pos", "sentIcon": "ti-check", "sentLabel": "Capaian Legislasi"
+    },
+    {
+      "cat": "Revisi UU KADIN", "catIcon": "ti-briefcase",
+      "hl": "Bamsoet DPR: Revisi UU KADIN Mendesak — Ekonomi Indonesia Butuh Kemitraan Lebih Kuat",
+      "deck": "Anggota DPR sekaligus Waketum KADIN Bambang Soesatyo menegaskan revisi UU No.1/1987 tentang KADIN menjadi kebutuhan mendesak.",
+      "url": "https://news.detik.com/berita/d-8536147/revisi-uu-kadin-jadi-momentum-perkuat-kemitraan-negara-dan-dunia-usaha",
+      "src": "Detik.com", "srcIcon": "ti-news",
+      "polDot": "BS", "polBg": "#7B5A00", "polFg": "#FFF3CC",
+      "polLabel": "Bambang Soesatyo (Bamsoet) · Golkar · DPR RI",
+      "sentClass": "sent-pos", "sentIcon": "ti-trending-up", "sentLabel": "Pro Ekonomi"
+    },
+    {
+      "cat": "Diplomasi & WNI", "catIcon": "ti-passport",
+      "hl": "Junico Siahaan Minta Kemlu Fasilitasi WNI yang Masih Bertahan di Nepal",
+      "deck": "Anggota Komisi I DPR Junico Siahaan mendesak Kementerian Luar Negeri memastikan keamanan WNI di Nepal di tengah situasi politik yang belum stabil.",
+      "url": "https://www.okezone.com/tag/dpr-ri",
+      "src": "Okezone.com", "srcIcon": "ti-news",
+      "polDot": "JS", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Junico Siahaan · PDIP · Komisi I",
+      "sentClass": "sent-pos", "sentIcon": "ti-shield-check", "sentLabel": "Responsif"
+    }
+  ]
+}
