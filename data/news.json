@@ -1,135 +1,135 @@
 {
-  "updatedAt": "2026-06-22T08:00:00.000Z",
+  "updatedAt": "2026-06-23T08:00:00.000Z",
   "items": [
     {
-      "cat": "Demo PMII · 22 Juni", "catIcon": "ti-users",
-      "hl": "PMII Gelar Demo di DPR Hari Ini — 3.000 Massa Tuntut Evaluasi Total Kabinet Prabowo-Gibran",
-      "deck": "PB PMII menggelar unjuk rasa di Gedung DPR RI dengan tajuk 'Evaluasi Total Kabinet Merah Putih Prabowo-Gibran'. Aksi serentak di 300 titik se-Indonesia pada 22–24 Juni. Sebanyak 3.761 personel gabungan Polda Metro disiagakan.",
-      "url": "https://megapolitan.kompas.com/read/2026/06/22/09021461/mahasiswa-pmii-gelar-demo-di-dpr-hari-ini-bawa-5-tuntutan-untuk",
-      "src": "Kompas.com · 22 Jun", "srcIcon": "ti-news",
+      "cat": "Demo PMII Ricuh · 23 Juni", "catIcon": "ti-urgent",
+      "hl": "Demo PMII di DPR Berujung Ricuh — Keranda Dibakar, Mahasiswa Bentrok dengan Polisi",
+      "deck": "Aksi demo PB PMII di depan Gedung DPR RI berlanjut ricuh setelah massa membakar replika keranda. Polisi membubarkan massa dengan APAR dan terjadi saling dorong. Demo serentak di 300 titik se-Indonesia 22–24 Juni menuntut evaluasi total Kabinet Prabowo-Gibran.",
+      "url": "https://www.tribunnews.com/nasional/7845159/demo-pmii-di-depan-gedung-dpr-berujung-ricuh-pembakaran-keranda-picu-ketegangan-dengan-polisi",
+      "src": "Tribunnews.com · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "PM", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Puan Maharani · PDIP · Ketua DPR RI",
+      "sentClass": "sent-neg", "sentIcon": "ti-flame", "sentLabel": "Ricuh"
+    },
+    {
+      "cat": "PDIP vs Koalisi", "catIcon": "ti-swords",
+      "hl": "Ramai-ramai Koalisi Sentil PDIP 'Main 2 Kaki' — PDIP Balik Tantang: Kalah Menang Ingin Ikut Berkuasa?",
+      "deck": "Lima partai koalisi pemerintah kompak menuding PDIP bermain abu-abu. PDIP balik menyerang: 'Emang yang di koalisi jelas?' Pakar komunikasi bela PDIP, nilai posisi penyeimbang sah secara konstitusi.",
+      "url": "https://www.tribunnews.com/nasional/7844629/ramai-ramai-partai-politik-koalisi-prabowo-sentil-posisi-penyeimbang-pdip",
+      "src": "Tribunnews.com · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "DS", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Deddy Sitorus · PDIP · Ketua DPP",
+      "sentClass": "sent-neg", "sentIcon": "ti-swords", "sentLabel": "Panas Antar-Partai"
+    },
+    {
+      "cat": "Golkar Balas PDIP", "catIcon": "ti-message-2",
+      "hl": "Golkar Tepis Deddy Sitorus: Koalisi Pemerintah Baik-baik Saja, Jangan Terburu Ambil Kesimpulan",
+      "deck": "Sekjen Golkar Muhammad Sarmuji membantah tudingan PDIP soal gejolak internal koalisi. 'Sejauh ini baik-baik saja,' kata Sarmuji, Senin (22/6). Ia nilai Deddy Sitorus terburu-buru menyimpulkan ada ketidakharmonisan di koalisi.",
+      "url": "https://news.detik.com/berita/d-8541944/golkar-tepis-deddy-sitorus-pdip-soal-koalisi-pemerintah-bermasalah",
+      "src": "Detik.com · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "MS", "polBg": "#7B5A00", "polFg": "#FFF3CC",
+      "polLabel": "Muhammad Sarmuji · Golkar · Sekjen",
+      "sentClass": "sent-warn", "sentIcon": "ti-info-circle", "sentLabel": "Saling Tunjuk"
+    },
+    {
+      "cat": "Korupsi MBG · KPK & Kejagung", "catIcon": "ti-building-bank",
+      "hl": "Kejagung Usut Korupsi BGN, KPK Terus Telisik Dugaan Korupsi Lain Program MBG",
+      "deck": "Kejaksaan Agung mengusut kasus korupsi tata kelola BGN setelah menetapkan 6 tersangka termasuk mantan Kepala BGN Dadan Hindayana. KPK yang sempat dikalahkan Kejagung tetap lanjutkan penyelidikan dugaan korupsi lain di program MBG.",
+      "url": "https://www.tribunnews.com/nasional/7845375/kejagung-usut-korupsi-bgn-kpk-terus-telisik-dugaan-korupsi-lain-program-mbg",
+      "src": "Tribunnews.com · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "KP", "polBg": "#0A3D62", "polFg": "#D6EAF8",
+      "polLabel": "Komisi IX DPR · Mitra BGN",
+      "sentClass": "sent-neg", "sentIcon": "ti-gavel", "sentLabel": "Korupsi Terungkap"
+    },
+    {
+      "cat": "Felly Runtuwene · MBG", "catIcon": "ti-user-question",
+      "hl": "Ketua Komisi IX DPR Felly Runtuwene Disebut Terlibat Korupsi MBG — Politisi NasDem Ini Merespons Tenang",
+      "deck": "Nama Felly Runtuwene (NasDem), Ketua Komisi IX DPR RI mitra BGN, beredar dalam daftar dugaan terlibat korupsi titik dapur MBG. Felly merespons santai: 'Sebagai Ketua Komisi IX, wajar dikait-kaitkan.' Ia belum ditetapkan sebagai tersangka.",
+      "url": "https://manado.tribunnews.com/sulawesi-utara/1881420/jawaban-anggota-dpr-ri-asal-sulut-felly-runtuwene-soal-namanya-disebut-terlibat-dugaan-korupsi-mbg",
+      "src": "Tribun Manado · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "FR", "polBg": "#0A3D62", "polFg": "#D6EAF8",
+      "polLabel": "Felly Runtuwene · NasDem · Ketua Komisi IX DPR",
+      "sentClass": "sent-warn", "sentIcon": "ti-alert-circle", "sentLabel": "Disorot"
+    },
+    {
+      "cat": "DPR & Check-Balance", "catIcon": "ti-scale",
+      "hl": "Wakil Ketua DPR Bantah DPR Hanya Manut Pemerintah: Check and Balances Tetap Berjalan",
+      "deck": "Wakil Ketua DPR menegaskan DPR tidak sekadar mengikuti kemauan pemerintah dan fungsi pengawasan tetap berjalan. Pernyataan ini merespons kritik bahwa DPR kehilangan independensi di tengah dominasi koalisi.",
+      "url": "https://nasional.kompas.com/read/2026/06/22/19100891/wakil-ketua-dpr-bantah-hanya-manut-kemauan-pemerintah-check-and-balances-tetap-berjalan",
+      "src": "Kompas.com · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "WK", "polBg": "#1A1A3E", "polFg": "#E8E8FF",
+      "polLabel": "Wakil Ketua DPR RI",
+      "sentClass": "sent-pos", "sentIcon": "ti-scale", "sentLabel": "Defensif"
+    },
+    {
+      "cat": "Mahasiswa Demo Lanjut", "catIcon": "ti-users",
+      "hl": "Mahasiswa Demo Lagi di DPR Sore Ini — Massa Masih Bertahan, 5 Tuntutan Belum Direspons",
+      "deck": "Gelombang demo lanjutan kembali digelar di depan Gedung DPR sore ini. Massa mahasiswa menuntut evaluasi kabinet, reset BGN, bubarkan KDMP, sejahterakan guru, dan kembalikan supremasi sipil. DPR belum memberikan respons konkret.",
+      "url": "https://news.detik.com/berita/d-8542602/mahasiswa-demo-di-depan-dpr-sore-ini",
+      "src": "Detik.com · 23 Jun", "srcIcon": "ti-news",
       "polDot": "PM", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
       "polLabel": "Puan Maharani · PDIP · Ketua DPR RI",
       "sentClass": "sent-neg", "sentIcon": "ti-trending-down", "sentLabel": "Tekanan Publik"
     },
     {
-      "cat": "PDIP Semprot Koalisi", "catIcon": "ti-flame",
-      "hl": "Deddy Sitorus PDIP: Jangan Cari Kambing Hitam — Fokus Kerja atau Keluar dari Pemerintahan!",
-      "deck": "Ketua DPP PDIP Deddy Sitorus melayangkan kritik keras kepada partai koalisi Prabowo yang mempersoalkan posisi PDIP. 'Kalau mau nyari kurban, ya pas Lebaran kemarin,' sindir Deddy. PDIP tegaskan konsisten di luar kabinet tapi tetap jalankan fungsi konstitusional.",
-      "url": "https://www.tribunnews.com/nasional/7844678/deddy-sitorus-semprot-parpol-koalisi-prabowo-jangan-cari-kambing-hitam-fokus-kerja-atau-keluar",
-      "src": "Tribunnews.com · 22 Jun", "srcIcon": "ti-news",
+      "cat": "PDIP Tidak Candu Kekuasaan", "catIcon": "ti-flag",
+      "hl": "Dikepung Kritik Koalisi, PDIP: Kami Tidak Candu Kekuasaan — Posisi Penyeimbang Sah Konstitusional",
+      "deck": "Di tengah gempuran kritik dari lima partai koalisi, PDIP menegaskan posisi penyeimbang bukan sikap ambigu melainkan pilihan konstitusional. 'Kami tidak candu kekuasaan,' tegas elite PDIP merespons desakan agar masuk atau keluar kabinet.",
+      "url": "https://jambi.tribunnews.com/news/1198708/dikepung-kritik-koalisi-prabowo-pdip-kami-tidak-candu-kekuasaan",
+      "src": "Tribunnews.com · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "PD", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
+      "polLabel": "Elite PDIP · Partai Oposisi",
+      "sentClass": "sent-warn", "sentIcon": "ti-flag", "sentLabel": "Manuver Politik"
+    },
+    {
+      "cat": "MBG Saat Libur Sekolah", "catIcon": "ti-tools-kitchen-2",
+      "hl": "Pengelola SPPG Protes MBG Dihentikan Saat Libur Sekolah — Pemerintah Akan Komunikasikan",
+      "deck": "Sejumlah pengelola Satuan Pelayanan Pemenuhan Gizi (SPPG) memprotes penghentian program MBG saat libur sekolah karena berdampak pada operasional. Pemerintah menyatakan akan segera berkomunikasi untuk mencari solusi.",
+      "url": "https://nasional.kompas.com/read/2026/06/22/15473531/pemerintah-akan-komunikasi-ke-pengelola-sppg-yang-protes-mbg-dihentikan-saat",
+      "src": "Kompas.com · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "MO", "polBg": "#0A3D62", "polFg": "#D6EAF8",
+      "polLabel": "Moreno Soeprapto · Gerindra · DPR RI",
+      "sentClass": "sent-warn", "sentIcon": "ti-alert-circle", "sentLabel": "Perlu Solusi"
+    },
+    {
+      "cat": "PDIP Saling Tunjuk", "catIcon": "ti-arrow-left-right",
+      "hl": "Saling Tunjuk PDIP dan Koalisi soal Posisi Penyeimbang — Siapa yang Benar?",
+      "deck": "Polemik posisi politik PDIP terus memanas. Koalisi sebut PDIP ambigu, PDIP balik tuding koalisi bermasalah internal. Pengamat nilai perdebatan ini justru merugikan stabilitas politik dan mengalihkan fokus dari isu rakyat.",
+      "url": "https://news.detik.com/berita/d-8541542/saling-tunjuk-pdip-dan-koalisi-pemerintah-gegara-posisi-penyeimbang",
+      "src": "Detik.com · 23 Jun", "srcIcon": "ti-news",
       "polDot": "DS", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
       "polLabel": "Deddy Sitorus · PDIP · Ketua DPP",
-      "sentClass": "sent-neg", "sentIcon": "ti-flame", "sentLabel": "Panas Antar-Partai"
+      "sentClass": "sent-neg", "sentIcon": "ti-arrow-left-right", "sentLabel": "Polemik"
     },
     {
-      "cat": "DPR & Tuntutan Demo", "catIcon": "ti-door-enter",
-      "hl": "Tuntutan Mahasiswa Disambut Janji-janji DPR — Pekik Aspirasi Bergema di Senayan",
-      "deck": "Pimpinan DPR merespons gelombang demo yang terus berlanjut dengan serangkaian janji: evaluasi MBG, transparansi APBN, hingga penghentian pemborosan. Mahasiswa menilai janji DPR harus segera dibuktikan dengan langkah konkret.",
-      "url": "https://nasional.kompas.com/read/2026/06/22/05294961/pekik-tuntutan-mahasiswa-disambut-janji-janji-dpr",
-      "src": "Kompas.com · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "PM", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
-      "polLabel": "Puan Maharani · PDIP · Ketua DPR RI",
-      "sentClass": "sent-warn", "sentIcon": "ti-alert-circle", "sentLabel": "Perlu Dibuktikan"
-    },
-    {
-      "cat": "Listrik & DPR", "catIcon": "ti-bolt",
-      "hl": "Anggota DPR Rivqy Halim: Setiap Listrik Padam, Banyak Pihak Dirugikan — PLN Harus Transparan",
-      "deck": "Anggota Komisi VI DPR Rivqy Halim mendesak PLN memperkuat mitigasi dan memperbaiki sistem antisipasi gangguan. Pemadaman listrik yang kerap terjadi dinilai mengganggu usaha, pelayanan publik, pendidikan, dan produktivitas masyarakat.",
+      "cat": "Listrik & PLN", "catIcon": "ti-bolt",
+      "hl": "Anggota DPR Rivqy Halim: PLN Harus Perkuat Mitigasi — Pemadaman Listrik Rugikan Banyak Pihak",
+      "deck": "Anggota Komisi VI DPR Rivqy Halim mendesak PLN membangun komunikasi transparan kepada masyarakat dan memperbaiki sistem antisipasi gangguan. Pemadaman kerap terjadi di banyak daerah dan ganggu sektor usaha serta pendidikan.",
       "url": "https://nasional.kompas.com/read/2026/06/22/09304771/anggota-dpr-setiap-listrik-padam-banyak-pihak-yang-dirugikan",
-      "src": "Kompas.com · 22 Jun", "srcIcon": "ti-news",
+      "src": "Kompas.com · 23 Jun", "srcIcon": "ti-news",
       "polDot": "RH", "polBg": "#1A4D2E", "polFg": "#E8FFF0",
       "polLabel": "Rivqy Halim · Komisi VI DPR",
       "sentClass": "sent-neg", "sentIcon": "ti-bolt-off", "sentLabel": "Kritis ke PLN"
     },
     {
-      "cat": "MBG & Pemerintah", "catIcon": "ti-tools-kitchen-2",
-      "hl": "Anggota DPR Moreno: Pemerintah Tidak Anti Kritik soal MBG — Tata Kelola BGN Terus Diperbaiki",
-      "deck": "Anggota DPR RI Moreno Soeprapto menegaskan pemerintah terus mengakomodasi kritik masyarakat soal program MBG dengan memperbaiki tata kelola kelembagaan BGN dan pelaksanaan di lapangan.",
-      "url": "https://jatim.antaranews.com/berita/1075333/anggota-dpr-ri-tegaskan-pemerintah-tidak-antikritik-soal-program-mbg",
-      "src": "ANTARA News · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "MO", "polBg": "#0A3D62", "polFg": "#D6EAF8",
-      "polLabel": "Moreno Soeprapto · Gerindra · DPR RI",
-      "sentClass": "sent-pos", "sentIcon": "ti-shield-check", "sentLabel": "Defensif"
-    },
-    {
-      "cat": "PDIP & Koalisi", "catIcon": "ti-message-2",
-      "hl": "PDIP Duga Ada Masalah Internal Koalisi — Deddy: Mengapa Partai Lain Begitu Khawatir dengan PDIP?",
-      "deck": "PDIP menduga ada kegalauan di internal koalisi pemerintah sehingga isu posisi PDIP terus diungkit. Deddy Sitorus mempertanyakan alasan partai koalisi begitu sibuk mengurusi PDIP alih-alih fokus mengurus menteri-menteri mereka sendiri.",
-      "url": "https://news.detik.com/berita/d-8540874/posisi-penyeimbang-disorot-pdip-duga-ada-masalah-di-koalisi-pemerintah",
-      "src": "Detik.com · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "DS", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
-      "polLabel": "Deddy Sitorus · PDIP · Ketua DPP",
-      "sentClass": "sent-neg", "sentIcon": "ti-eye", "sentLabel": "Manuver Politik"
-    },
-    {
-      "cat": "PSI & PDIP", "catIcon": "ti-swords",
-      "hl": "PSI Merespons Isu PDIP 'Abu-abu': Kami Fokus Kawal Prabowo-Gibran, Tak Perlu Komentari PDIP",
-      "deck": "Partai Solidaritas Indonesia (PSI) memilih tidak ikut campur dalam polemik posisi PDIP dan mempertegas komitmen mengawal pemerintahan Prabowo-Gibran. PSI nilai perdebatan soal PDIP tidak produktif.",
-      "url": "https://www.tribunnews.com/nasional/7844830/soal-pdip-disebut-abu-abu-psi-kami-fokus-kawal-prabowo-gibran",
-      "src": "Tribunnews.com · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "PSI", "polBg": "#FFD700", "polFg": "#1A1A1A",
-      "polLabel": "PSI · Partai Solidaritas Indonesia",
-      "sentClass": "sent-warn", "sentIcon": "ti-info-circle", "sentLabel": "Netral"
-    },
-    {
-      "cat": "Roy Suryo · Update", "catIcon": "ti-gavel",
-      "hl": "Roy Suryo & dr Tifa Ditangkap Kamis Lalu — Proses Hukum Kasus Ijazah Jokowi Berlanjut",
-      "deck": "Setelah penangkapan Jumat (19/6), Roy Suryo dan dr Tifauziah Tyassuma kini menjalani pemeriksaan lanjutan oleh penyidik Polda Metro Jaya. Tim hukum tetap mempersoalkan proses penangkapan yang dinilai tidak prosedural.",
+      "cat": "Roy Suryo · Proses Hukum", "catIcon": "ti-gavel",
+      "hl": "Roy Suryo Jalani Pemeriksaan Lanjutan — Kasus Ijazah Jokowi Masuki Tahap Baru",
+      "deck": "Pasca penangkapan Jumat (19/6), Roy Suryo dan dr Tifauziah kini menjalani pemeriksaan intensif oleh penyidik Polda Metro Jaya. Tim hukum Roy masih mempersoalkan legalitas proses penangkapan yang dinilai melanggar prosedur.",
       "url": "https://www.cnnindonesia.com/nasional/20260619075914-12-1370678/roy-suryo-dan-dr-tifa-ditangkap-polisi-kasus-ijazah-jokowi",
-      "src": "CNN Indonesia · 22 Jun", "srcIcon": "ti-news",
+      "src": "CNN Indonesia · 23 Jun", "srcIcon": "ti-news",
       "polDot": "RS", "polBg": "#1A1A3E", "polFg": "#E8E8FF",
       "polLabel": "Roy Suryo · Demokrat · Mantan Menpora",
-      "sentClass": "sent-neg", "sentIcon": "ti-alert-triangle", "sentLabel": "Proses Hukum"
-    },
-    {
-      "cat": "Golkar & Fiskal", "catIcon": "ti-trending-up",
-      "hl": "Golkar Desak Pemerintah Manfaatkan Momentum Harga Minyak Turun untuk Perbaiki Fiskal",
-      "deck": "Fraksi Golkar DPR terus mendorong pemerintah gerak cepat memanfaatkan penurunan harga minyak pasca damai AS-Iran. Momentum ini dinilai tepat untuk memperbaiki fiskal, menurunkan inflasi, dan merangsang ekonomi nasional.",
-      "url": "https://news.detik.com/berita/d-8534766/golkar-sambut-kesepakatan-damai-as-iran-momentum-pemerintah-perbaiki-fiskal",
-      "src": "Detik.com · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "MS", "polBg": "#7B5A00", "polFg": "#FFF3CC",
-      "polLabel": "Muhammad Sarmuji · Golkar · Ketua Fraksi DPR",
-      "sentClass": "sent-pos", "sentIcon": "ti-trending-up", "sentLabel": "Pro Ekonomi"
+      "sentClass": "sent-neg", "sentIcon": "ti-gavel", "sentLabel": "Proses Hukum"
     },
     {
       "cat": "RUU Perampasan Aset", "catIcon": "ti-building-bank",
-      "hl": "RUU Perampasan Aset Masih Jalan di Tempat — Pemerintah Tunggu, DPR Belum Sepakat",
-      "deck": "Pembahasan RUU Perampasan Aset di DPR belum ada kemajuan berarti. Anggota Komisi III masih memperdebatkan frasa 'diduga' yang dinilai multitafsir dan berpotensi melanggar HAM dalam mekanisme Non-Conviction-Based Confiscation.",
+      "hl": "RUU Perampasan Aset Belum Ada Titik Temu — DPR dan Pemerintah Masih Perdebatkan Substansi",
+      "deck": "Pembahasan RUU Perampasan Aset di DPR belum menemukan kesepakatan. Frasa 'diduga' dalam mekanisme NCBC masih diperdebatkan. KPK dan ICW mendesak agar RUU ini tidak hanya jadi alat redam kritik.",
       "url": "https://www.antaranews.com/berita/5614401/pemerintah-tunggu-proses-pembahasan-ruu-perampasan-aset-selesai-di-dpr",
-      "src": "ANTARA News · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "KM", "polBg": "#0A3D62", "polFg": "#D6EAF8",
+      "src": "ANTARA News · 23 Jun", "srcIcon": "ti-news",
+      "polDot": "K3", "polBg": "#0A3D62", "polFg": "#D6EAF8",
       "polLabel": "Komisi III DPR · Bidang Hukum",
       "sentClass": "sent-warn", "sentIcon": "ti-alert-circle", "sentLabel": "Mandek"
-    },
-    {
-      "cat": "Haji & DPR", "catIcon": "ti-moon",
-      "hl": "Cucun Syamsurijal: Prabowo Minta Antrean Haji Dipangkas — Timwas Haji DPR Awasi Ketat",
-      "deck": "Tim Pengawas Haji DPR yang diketuai Cucun Ahmad Syamsurijal terus memantau jalannya implementasi skema percepatan antrean haji dari 35 tahun menjadi 26 tahun sesuai arahan Presiden Prabowo.",
-      "url": "https://news.okezone.com/read/2026/06/18/337/3225086/presiden-prabowo-ingin-antrean-haji-dipangkas-lagi",
-      "src": "Okezone.com · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "CA", "polBg": "#1A4D2E", "polFg": "#E8FFF0",
-      "polLabel": "Cucun A. Syamsurijal · PKB · Ketua Timwas Haji DPR",
-      "sentClass": "sent-pos", "sentIcon": "ti-thumb-up", "sentLabel": "Responsif"
-    },
-    {
-      "cat": "Koperasi Desa", "catIcon": "ti-building-community",
-      "hl": "DPR Soroti Tata Kelola KDMP — Diklat Semi-Militer Manajer Koperasi Dinilai Tak Relevan",
-      "deck": "Sejumlah anggota DPR lintas fraksi mempertanyakan relevansi program diklat bernuansa militer bagi calon manajer Koperasi Desa Merah Putih. Kompetensi bisnis dan akuntansi dinilai jauh lebih penting.",
-      "url": "https://news.detik.com/berita/d-8536322/legislator-pdip-pertanyakan-relevansi-diklat-semi-militer-untuk-manajer-kdmp",
-      "src": "Detik.com · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "MA", "polBg": "#8B1A1A", "polFg": "#FFE8E8",
-      "polLabel": "Mufti Anam · PDIP · Komisi VI",
-      "sentClass": "sent-warn", "sentIcon": "ti-alert-circle", "sentLabel": "Kritis"
-    },
-    {
-      "cat": "Legislasi PPRT", "catIcon": "ti-file-description",
-      "hl": "RUU PPRT Sahkan Usul Inisiatif DPR — 4,2 Juta Pekerja Domestik Nantikan Perlindungan Hukum",
-      "deck": "DPR RI resmi menyetujui RUU Perlindungan Pekerja Rumah Tangga (PPRT) sebagai usul inisiatif parlemen. Setelah 22 tahun diperjuangkan, regulasi ini akan memberikan kepastian jaminan sosial bagi jutaan pekerja domestik.",
-      "url": "https://www.liputan6.com/tag/dpr",
-      "src": "Liputan6.com · 22 Jun", "srcIcon": "ti-news",
-      "polDot": "SD", "polBg": "#1A1A3E", "polFg": "#E8E8FF",
-      "polLabel": "Sufmi Dasco Ahmad · Gerindra · Wakil Ketua DPR",
-      "sentClass": "sent-pos", "sentIcon": "ti-check", "sentLabel": "Capaian Legislasi"
     }
   ]
 }
